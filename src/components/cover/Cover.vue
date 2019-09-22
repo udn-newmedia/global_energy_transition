@@ -2,7 +2,6 @@
   <div class="cover-container">
     <div class="cover">
       <canvas
-        v-if="frogFlag"
         id="frog-bg"
         :width="windowWidth"
         :height="windowHeight"
@@ -18,16 +17,15 @@
 export default {
   name: "Cover",
   props: {
-    // frogFlag: {
-    //   type: Boolean,
-    //   default: true,
-    // },
+    frogFlag: {
+      type: Boolean,
+      default: true,
+    },
   },
   data() {
     return {
       windowWidth: window.innerWidth,
       windowHeight: window.innerHeight,
-      frogFlag: true
     };
   },
   computed: {
@@ -39,7 +37,7 @@ export default {
     frogFlag: {
       handler(flag) {
         if (flag) {
-
+          this.renderFrog();
         }
       },
       deep: true,
