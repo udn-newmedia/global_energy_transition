@@ -151,9 +151,7 @@ export default {
         else this.frogFlag = false;
       // cover text highlihgt event.
       if (document.getElementById('cover-highlight-text').getBoundingClientRect().top > 0 && document.getElementById('cover-highlight-text').getBoundingClientRect().top < window.innerHeight * 1) this.coverHighlightFlag = true;
-        else this.coverHighlightFlag = false;
-
-
+        // else this.coverHighlightFlag = false;
     }, 200),
   },
   mounted() {
@@ -187,12 +185,12 @@ export default {
     }
   }
   .black-bg {
-    background-color: #000000;
+    background-color: #0a0808;
     color: #ffffff;
   }
   .cover-context {
     position: relative;
-    background-color: #000000;
+    background-color: #0a0808;
     padding-bottom: 50px;
     overflow: hidden;
     p {

@@ -161,14 +161,14 @@ export default {
   position: relative;
   width: 100%;
   height: 100vh;
-  background-color: #000000;
+  background-color: #0a0808;
   .cover {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: #000000;
+    background-color: #0a0808;
     .cover-title {
       position: absolute;
       top: 0;
