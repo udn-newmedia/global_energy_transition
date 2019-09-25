@@ -11,7 +11,7 @@
     <div class="hand-drawn-wrapper">
       <svg id="hand-drawn-chart" :width="svgWidth" :height="svgHeight" />
       <div class="chart-description">資料來源／日本資源能源廳</div>
-      <button class="answer-button" name="解答">解答</button>
+      <button id="answer-button" class="answer-button" name="解答">解答</button>
     </div>
   </div>
 </template>
@@ -57,8 +57,10 @@ export default {
         },
       },
       yearList: [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017],
+      drawnYearList: [2011, 2012, 2013, 2014, 2015, 2016, 2017],
       svgWidth: window.innerWidth,
       svgHeight: window.innerHeight * 0.5,
+      drawDataIndex: 4,
       drawnFlag: false,
       drawnStep: 2011,
     };
@@ -71,6 +73,9 @@ export default {
   methods: {
     drawChart() {
       const vm = this;
+      vm.svgWidth =  window.innerWidth;
+      vm.svgHeight = window.innerHeight * 0.5;
+      const _isMob = window.innerWidth <= 768 ? true : false;
       const dataset = Object.values(vm.energyData);
       const marginParams = {
         top: 25,
@@ -82,8 +87,8 @@ export default {
         dataLength: dataset.length,
         xAxisNum: 8,
         yAxisNum: 5,
-        marginSide: vm.isMob ? 50 : (vm.svgWidth - 880) * 0.5,
-        marginSideRatio: vm.isMob ? 0.5 : 1,
+        marginSide: _isMob ? 50 : (vm.svgWidth - 880) * 0.5,
+        marginSideRatio: _isMob ? 0.5 : 1,
       };
 
       const xScale = d3
@@ -101,7 +106,7 @@ export default {
       const customXScale = d3
         .scaleQuantize()
         .domain([config.marginSide, config.width - config.marginSide * config.marginSideRatio])
-        .range([2011, 2012, 2013, 2014, 2015, 2016, 2017]);
+        .range(vm.drawnYearList);
       const line = d3
         .line()
         .x((d, i) => xScale(i))
@@ -113,8 +118,16 @@ export default {
         .y((d) => d)
         .curve(d3.curveMonotoneX);
 
-      const svg = d3.select('#hand-drawn-chart').append('g').attr('transform', 'translate(' + 0 + ',' + marginParams.top + ')');
+      d3.select('#hand-drawn-chart').selectAll('.hand-drawn-chart').remove();
+      const svg = d3.select('#hand-drawn-chart')
+        .append('g')
+        .attr('class', 'hand-drawn-chart')
+        .attr('transform', 'translate(' + 0 + ',' + marginParams.top + ')');
+      const answerButton = d3.select('#answer-button');
       
+      // assign answer button evetn
+      answerButton.on('click', handleAnswerClick)
+
       // draw axis
       svg
         .append('g')
@@ -132,10 +145,11 @@ export default {
 
       // draw line
       for (let i = 0; i < dataset.length; i++) {
-        if (4 === i) {
+        if (vm.drawDataIndex === i) {
           svg
             .append('path')
             .datum([dataset[i].data[0], dataset[i].data[1]])
+            .attr('id', 'active-line')
             .attr('class', 'line line-active')
             .attr('stroke', () => dataset[i].color)
             .attr('d', line);
@@ -153,18 +167,21 @@ export default {
       svg.append('circle')
         .attr('class', 'line-dot')
         .attr('cx', xScale(0))
-        .attr('cy', yScale(vm.energyData[4].data[0]))
+        .attr('cy', yScale(vm.energyData[vm.drawDataIndex].data[0]))
         .attr('r', 6)
-        .style('fill', vm.energyData[4].color);
+        .style('fill', vm.energyData[vm.drawDataIndex].color);
       svg.append('circle')
         .attr('class', 'line-dot')
         .attr('cx', xScale(1))
-        .attr('cy', yScale(vm.energyData[4].data[1]))
+        .attr('cy', yScale(vm.energyData[vm.drawDataIndex].data[1]))
         .attr('r', 6)
-        .style('fill', vm.energyData[4].color);
+        .style('fill', vm.energyData[vm.drawDataIndex].color);
 
       // hand drawing event
-      let customData = [yScale(vm.energyData[4].data[1]), yScale(vm.energyData[4].data[1]), yScale(vm.energyData[4].data[1]), yScale(vm.energyData[4].data[1]), yScale(vm.energyData[4].data[1]), yScale(vm.energyData[4].data[1]), yScale(vm.energyData[4].data[1])];      
+      let customData = [
+        yScale(vm.energyData[vm.drawDataIndex].data[1]),
+      ];      
+      let customCurrentMaxIndex = 1;
       d3.select('#hand-drawn-chart').call(d3.drag()
         .on('start', dragStarted)
         .on('drag', dragged)
@@ -172,9 +189,7 @@ export default {
       );
 
       function dragStarted() {
-        // console.log(d3.event.x, customXScale(d3.event.x));
         if (!vm.drawnFlag) {
-          // customData.push(d3.event.y);
           drawCustomLine();
           vm.drawnFlag = true;
         }
@@ -199,28 +214,32 @@ export default {
           case 2017:
             handleDrawMove(2017);
             break;
-
           default:
             break;
         }
       }
-      function dragEnded() {
-        
-      }
+      function dragEnded() {}
       function drawCustomLine() {
         svg.select('#custom-line').remove();
         svg.append('path')
             .datum(customData)
             .attr('id', 'custom-line')
             .attr('class', 'line line-active')
-            .attr('stroke', vm.energyData[4].color)
+            .attr('stroke', vm.energyData[vm.drawDataIndex].color)
             .attr('stroke-dasharray', 10)
             .attr('stroke-dashoffset', 10)
             .attr('d', customLine);
       }
       function handleDrawMove(year) {
-        customData[vm.yearList.indexOf(year) - 1] = Math.min(d3.event.y - 25, config.height);        
-        drawCustomLine();
+        if (vm.drawnYearList.indexOf(year) > customCurrentMaxIndex) {
+          for (let i = customCurrentMaxIndex; i < vm.drawnYearList.indexOf(year); i++) {
+            customData.push(Math.min(d3.event.y - 25, config.height));
+          }
+          customCurrentMaxIndex = vm.drawnYearList.indexOf(year)            
+        } else {
+          customData[vm.yearList.indexOf(year) - 1] = Math.min(d3.event.y - 25, config.height);
+          drawCustomLine();
+        }
       }
       function drawAxisY() {
         const yAxis = svg.selectAll('g.y.axis');        
@@ -240,11 +259,21 @@ export default {
             .attr('y2', (config.height / config.yAxisNum) * i + 0.5);
         }
       }
+      function handleAnswerClick() {
+        d3.select('#hand-drawn-chart')
+          .select('#active-line')
+          .datum(dataset[vm.drawDataIndex].data)
+          .attr('d', line);
+      }
     },
   },
   mounted() {
     this.drawChart();
-  }
+    window.addEventListener('resize', () => { this.drawChart(); });
+  },
+  destroyed() {
+    window.removeEventListener('resize', () => { this.drawChart(); });    
+  },
 };
 </script>
 
