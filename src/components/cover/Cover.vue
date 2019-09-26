@@ -178,6 +178,12 @@ export default {
       img {
         margin-top: 25%;
         width: 100px;
+        @media only screen and (min-width: 768px) and (max-width: 1024px) {
+          margin-top: 20%;
+        }
+        @media only screen and (min-width: 1025px) {
+          margin-top: 15%;
+        }
       }
     }
   }

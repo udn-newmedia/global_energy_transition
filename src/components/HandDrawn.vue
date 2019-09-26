@@ -26,7 +26,7 @@ export default {
     subTitle: {
       type: String,
       default: null
-    }
+    },
   },
   data() {
     return {

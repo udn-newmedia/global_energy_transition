@@ -1,12 +1,16 @@
 <template>
   <div class="next-section-container">
     <button class="page-button prev-button">
-      {{directInfo.prev}}
+      <a href="http://" target="_blank" name="">
+        {{directInfo.prev}}
+      </a>
     </button>
     <button class="page-button next-button">
-      下一篇：{{directInfo.next.title}}
-      <br>
-      {{directInfo.next.description}}
+      <a href="http://" target="_blank" name="">
+        下一篇：{{directInfo.next.title}}
+        <br>
+        {{directInfo.next.description}}
+      </a>
     </button>
   </div>
 </template>
@@ -41,21 +45,35 @@ export default {
   }
   .page-button {
     position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    text-align: left;
-    outline: none;
     height: 100%;
+    outline: none;
     border: solid 1px #e2e2e2;
     background-color: #f6f6f6;
+    a {
+      position: relative;
+      outline: none;
+      color: inherit;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      text-align: left;
+      padding: 0 10% 0 5%;
+    }
   }
   .prev-button {
-    flex-grow: 1;
+    width: 25%;
+    @media only screen and (min-width: 769px)  {
+      width: 50%;
+    }
   }
   .next-button {
-    flex-grow: 1;
+    width: 75%;
+    @media only screen and (min-width: 769px)  {
+      width: 50%;
+    }
   }
 }
 </style>

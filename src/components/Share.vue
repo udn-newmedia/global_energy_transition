@@ -66,9 +66,13 @@ export default {
 
 <style scoped>
 .share-block {
+  position: relative;
+  width: max-content;
+  max-width: 200px;
   line-height: 0;
   display: flex;
   height: 20px;
+  margin: 0 auto;
 }
 .fb-like-block {
   margin-right: 8px;
