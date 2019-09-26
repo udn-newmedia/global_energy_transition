@@ -11,7 +11,8 @@
     <div class="hand-drawn-wrapper">
       <svg id="hand-drawn-chart" :width="svgWidth" :height="svgHeight" />
       <div class="chart-description">資料來源／日本資源能源廳</div>
-      <button id="answer-button" class="answer-button" name="解答">解答</button>
+      <button v-show="!answerFlag" id="answer-button" class="answer-button" name="解答">解答</button>
+      <div v-show="answerFlag" class="answer-wrapper">日本政府於2014年的能源基本計畫，決定再次擁抱核電。</div>
     </div>
   </div>
 </template>
@@ -56,6 +57,11 @@ export default {
           data: [25.1, 9.3, 1.5, 0.9, 0.0, 0.9, 1.7, 3.1]
         },
       },
+      answerData: {
+        answerYear: 2014,
+        hintText: '畫畫看日本核電佔比變化',
+      },
+      answerFlag: false,
       yearList: [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017],
       drawnYearList: [2011, 2012, 2013, 2014, 2015, 2016, 2017],
       svgWidth: window.innerWidth,
@@ -153,6 +159,20 @@ export default {
             .attr('class', 'line line-active')
             .attr('stroke', () => dataset[i].color)
             .attr('d', line);
+          svg
+            .append('path')
+            .datum([yScale(dataset[i].data[1]), yScale(dataset[i].data[1])])
+            .attr('class', 'hint line line-active')
+            .attr('stroke', () => dataset[i].color)
+            .attr('stroke-dasharray', 10)
+            .attr('stroke-dashoffset', 10)
+            .attr('d', customLine);
+          svg
+            .append('text')
+            .attr('class', 'hint hint-text')
+            .attr('x', xScale(2))
+            .attr('y', yScale(dataset[i].data[1]))
+            .text(vm.answerData.hintText);
         } else {
           svg
             .append('path')
@@ -176,6 +196,18 @@ export default {
         .attr('cy', yScale(vm.energyData[vm.drawDataIndex].data[1]))
         .attr('r', 6)
         .style('fill', vm.energyData[vm.drawDataIndex].color);
+      svg.append('text')
+        .attr('class', 'line-dot-text')
+        .attr('x', xScale(0) + 5)
+        .attr('y', yScale(vm.energyData[vm.drawDataIndex].data[0]) - 10)
+        .style('fill', vm.energyData[vm.drawDataIndex].color)
+        .text(vm.energyData[vm.drawDataIndex].data[0] + '%');
+      svg.append('text')
+        .attr('class', 'line-dot-text')
+        .attr('x', xScale(1) + 5)
+        .attr('y', yScale(vm.energyData[vm.drawDataIndex].data[1]) - 10)
+        .style('fill', vm.energyData[vm.drawDataIndex].color)
+        .text(vm.energyData[vm.drawDataIndex].data[1] + '%');
 
       // hand drawing event
       let customData = [
@@ -190,6 +222,7 @@ export default {
 
       function dragStarted() {
         if (!vm.drawnFlag) {
+          d3.selectAll('.hint').remove();
           drawCustomLine();
           vm.drawnFlag = true;
         }
@@ -260,10 +293,29 @@ export default {
         }
       }
       function handleAnswerClick() {
-        d3.select('#hand-drawn-chart')
-          .select('#active-line')
+        vm.answerFlag = true;
+        const svg = d3.select('#hand-drawn-chart').select('.hand-drawn-chart')
+        svg.select('#active-line')
           .datum(dataset[vm.drawDataIndex].data)
           .attr('d', line);
+        svg.append('line')
+          .attr('class', 'profile-line')
+          .attr('x1', xScaleTime(vm.answerData.answerYear))
+          .attr('x2', xScaleTime(vm.answerData.answerYear))
+          .attr('y1', 0)
+          .attr('y2', config.height)
+        svg.append('circle')
+          .attr('class', 'line-dot')
+          .attr('cx', xScaleTime(vm.answerData.answerYear))
+          .attr('cy', yScale(vm.energyData[vm.drawDataIndex].data[vm.yearList.indexOf(vm.answerData.answerYear)]))
+          .attr('r', 6)
+          .style('fill', vm.energyData[vm.drawDataIndex].color);
+        svg.append('text')
+          .attr('class', 'line-dot-text')
+          .attr('x', xScaleTime(vm.answerData.answerYear) + 5)
+          .attr('y', yScale(vm.energyData[vm.drawDataIndex].data[vm.yearList.indexOf(vm.answerData.answerYear)]) - 10)
+          .style('fill', vm.energyData[vm.drawDataIndex].color)
+          .text(vm.energyData[vm.drawDataIndex].data[vm.yearList.indexOf(vm.answerData.answerYear)] + '%');
       }
     },
   },
@@ -281,14 +333,12 @@ export default {
 .hand-drawn-container {
   width: 100%;
   overflow: hidden;
-  padding-bottom: calc(50vh + 200px);
   .hand-drawn-wrapper {
-    position: absolute;
-    left: 0;
-    bottom: 50px;
+    position: relative;
     width: 100%;
     overflow: hidden;
     text-align: center;
+    margin-top: 20px;
     .line {
       fill: none;
       stroke-width: 4;
@@ -302,6 +352,10 @@ export default {
     }
     .line-dot {
 
+    }
+    .hint-text {
+      fill: #ffffff;
+      font-size: 20px;
     }
     .profile-text {
       fill: #717171;
@@ -334,13 +388,27 @@ export default {
       }
     }
     .answer-button {
+      position: relative;
+      width: 300px;
       outline: none;
       background-color:inherit;
       border-radius: 4px;
       border: solid 1px #989898;
       color: #989898;
-      padding: 20px 125px;
+      padding: 20px 0;
       margin-top: 20px;
+    }
+    .answer-wrapper {
+      position: relative;
+      width: 300px;
+      outline: none;
+      background-color:inherit;
+      border-radius: 4px;
+      border: solid 1px #989898;
+      color: #ffffff;
+      text-align: justify;
+      padding: 30px 20px;
+      margin: 20px auto 0 auto;
     }
   }
   .hand-drawn-title {

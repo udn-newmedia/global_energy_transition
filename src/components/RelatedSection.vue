@@ -1,6 +1,6 @@
 <template>
   <div class="related-section-container">
-
+    <h1>RELATE</h1>
   </div>
 </template>
 
