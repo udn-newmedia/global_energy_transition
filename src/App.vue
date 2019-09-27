@@ -180,6 +180,8 @@
     </section>
     <div class="ending-container">
       <RelatedSection/>
+      <p><br></p>
+      <p><br></p>
       <div class="content">
         <div class="editor-container">
           <div class="editor">
@@ -402,6 +404,7 @@ export default {
         justify-content: center;
         align-items: flex-end;
         background-size: cover;
+        background-position: center center;
         color: #ffffff;
       }
       .section-cover-active {
@@ -546,6 +549,12 @@ export default {
         position: relative;
         text-align: right;
         width: 40%;
+        @media only screen and (max-width: 320px) {
+          width: 30%;
+        }
+        @media only screen and (min-width: 768px) and (max-width: 1024px) {
+          width: 45%;
+        }
         @media only screen and (min-width: 1025px)  {
           width: 45%;      
         }
@@ -553,9 +562,14 @@ export default {
       .editor-member {
         position: relative;
         width: 60%;
-        padding: 0 30px 0 5px;
+        padding: 0 10px 0 0px;
+        @media only screen and (max-width: 320px) {
+          width: 70%;
+          padding: 0 5px 0 5px;
+        }
         @media only screen and (min-width: 768px) and (max-width: 1024px) {
-          padding: 0 35% 0 5px;
+          width: 55%;        
+          padding: 0 30% 0 5px;
         }
         @media only screen and (min-width: 1025px)  {
           width: 55%;

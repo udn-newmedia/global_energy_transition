@@ -57,7 +57,7 @@ export default {
       smokeImage.src = img;
 
       for (let i1 = 0; i1 < puffs; i1++) {
-        let puffDelay = i1 * 1500; //300 ms between puffs
+        let puffDelay = i1 * 300; //300 ms between puffs
         for (let i2 = 0; i2 < particlesPerPuff; i2++) {
           addNewParticle(i2 * 50 + puffDelay);
         }
@@ -68,7 +68,7 @@ export default {
       function addNewParticle(delay) {
         let p = {};
         p.top = canvasHeight;
-        p.left = randBetween(-300, canvasWidth);
+        p.left = randBetween(-canvasWidth * 0.5, canvasWidth);
         p.start = new Date().getTime() + delay;
         p.life = 15000;
         p.speedUp = 50;
@@ -80,7 +80,7 @@ export default {
         p.startOpacity = 0.3;
         p.newTop = p.top;
         p.newLeft = p.left;
-        p.size = 300;
+        p.size = canvasWidth * 0.5;
         p.growth = 10;
 
         pCollection[pCount] = p;
@@ -89,14 +89,12 @@ export default {
 
       function draw(startT, totalT) {
         //Timing
-        let timeDelta = new Date().getTime() - startT;
         let stillAlive = false;
 
         //Grab and clear the canvas
         let c = document.getElementById("frog-bg");
         let ctx = c.getContext("2d");
         ctx.clearRect(0, 0, c.width, c.height);
-        c.width = c.width;
 
         //Loop through particles
         for (let i = 0; i < pCount; i++) {
@@ -133,20 +131,12 @@ export default {
           requestAnimationFrame(function() {
             draw(startT, totalT);
           });
-        } else {}
+        }
       }
 
       function randBetween(n1, n2) {
         let r = Math.random() * (n2 - n1) + n1;
         return r;
-      }
-
-      function randOffset(n, variance) {
-        //e.g. variance could be 0.1 to go between 0.9 and 1.1
-        let max = 1 + variance;
-        let min = 1 - variance;
-        let r = Math.random() * (max - min) + min;
-        return n * r;
       }
     },
   },
@@ -177,12 +167,14 @@ export default {
       text-align: center;
       img {
         margin-top: 25%;
-        width: 100px;
+        width: 80px;
         @media only screen and (min-width: 768px) and (max-width: 1024px) {
           margin-top: 20%;
+          width: 90px;
         }
         @media only screen and (min-width: 1025px) {
-          margin-top: 15%;
+          margin-top: 10%;
+          width: 100px;
         }
       }
     }
