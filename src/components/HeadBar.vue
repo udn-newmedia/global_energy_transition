@@ -1,7 +1,7 @@
 <template>
   <div class="head-bar-container">
     <div class="logo-wrapper" @click="sendLogoGA()">
-      <a href="../" target="_blank" name="udn-logo-button">
+      <a :href="homePath" target="_blank" name="udn-logo-button">
         <i class="udn-icon udn-icon-logo"/>
       </a>
     </div>
@@ -21,12 +21,9 @@ import Utils from 'udn-newmedia-utils';
 
 export default {
   name: 'HeadBar',
-  props: {
-
-  },
   data() {
     return {
-
+      homePath: window.location.origin + '/global_energy_transition/'
     };
   },
   computed: {
@@ -41,7 +38,7 @@ export default {
           method: 'share',
           href: this.href,
         }, 
-        function(response) {}
+        // function(response) {}
       );
       window.ga('newmedia.send', {
         hitType: 'event',

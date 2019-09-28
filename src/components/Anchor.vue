@@ -10,7 +10,7 @@
         'anchor-active': currentPage === 0
         }"
       >
-        <a name="日本" href="http://" target="_blank" rel="noopener noreferrer">
+        <a name="日本" :href="originPath + 'Japan'" target="_blank">
           日本
         </a>
       </button>
@@ -19,7 +19,7 @@
         'anchor-active': currentPage === 1
         }"
       >
-        <a name="南韓" href="http://" target="_blank" rel="noopener noreferrer">
+        <a name="南韓" :href="originPath + 'South_Korea'" target="_blank">
           南韓
         </a>
       </button>
@@ -28,7 +28,7 @@
         'anchor-active': currentPage === 2
         }"
       >
-        <a name="德國" href="http://" target="_blank" rel="noopener noreferrer">
+        <a name="德國" :href="originPath + 'Germany'" target="_blank">
           德國
         </a>
       </button>
@@ -37,7 +37,7 @@
         'anchor-active': currentPage === 3
         }"
       >
-        <a name="荷蘭" href="http://" target="_blank" rel="noopener noreferrer">
+        <a name="荷蘭" :href="originPath + 'The_Netherlands'" target="_blank">
           荷蘭
         </a>
       </button>
@@ -46,7 +46,7 @@
         'anchor-active': currentPage === 4
         }"
       >
-        <a name="英國" href="http://" target="_blank" rel="noopener noreferrer">
+        <a name="英國" :href="originPath + 'United_Kingdom'" target="_blank">
           英國
         </a>
       </button>
@@ -66,6 +66,11 @@ export default {
       type: Number,
       required: true,
     },
+  },
+  data() {
+    return {
+      originPath: window.location.origin + '/global_energy_transition/'
+    }
   },
 };
 </script>

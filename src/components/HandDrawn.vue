@@ -93,7 +93,8 @@ export default {
         dataLength: dataset.length,
         xAxisNum: 8,
         yAxisNum: 5,
-        marginSide: _isMob ? 50 : (vm.svgWidth - 880) * 0.5,
+        marginSide: _isMob ? 50 : 0,
+        // marginSide: _isMob ? 50 : (vm.svgWidth - 880) * 0.5,
         marginSideRatio: _isMob ? 0.5 : 1,
       };
 
@@ -164,7 +165,7 @@ export default {
             .datum([yScale(dataset[i].data[1]), yScale(dataset[i].data[1])])
             .attr('class', 'hint line line-active')
             .attr('stroke', () => dataset[i].color)
-            .attr('stroke-dasharray', 10)
+            .attr('stroke-dasharray', 8)
             .attr('stroke-dashoffset', 10)
             .attr('d', customLine);
           svg
@@ -259,7 +260,7 @@ export default {
             .attr('id', 'custom-line')
             .attr('class', 'line line-active')
             .attr('stroke', vm.energyData[vm.drawDataIndex].color)
-            .attr('stroke-dasharray', 10)
+            .attr('stroke-dasharray', 8)
             .attr('stroke-dashoffset', 10)
             .attr('d', customLine);
       }
@@ -339,6 +340,9 @@ export default {
     overflow: hidden;
     text-align: center;
     margin-top: 20px;
+    path {
+      stroke-linecap: round;
+    }
     .line {
       fill: none;
       stroke-width: 4;
@@ -465,7 +469,10 @@ export default {
     font-size: 0.7rem;
     color: #989898;
     text-align: right;
-    margin-right: 15px;
+    margin-right: 50px;
+    @media only screen and (min-width: 769px) {
+      margin-right: calc(50vw - 440px);
+    }
   }
 }
 </style>

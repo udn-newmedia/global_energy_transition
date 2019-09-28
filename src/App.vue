@@ -24,37 +24,40 @@
         <p><br></p>
         <p>福島縣企畫調整部復興綜合計劃課副課長山田清貴表示，福島的復興不能只是重建，眼光必須看得更遠，過去的福島曾是能源重鎮，未來要成為引領日本新能源的大縣，只有創造走在新時代尖端的產業，福島才能獲得重生。</p>
         <p><br></p>
-        <div id="cover-arrow-end"></div>
-        <div class="title-image-wrapper">
-          <img 
+        <div id="cover-arrow-end"/>
+        <div class="energy-chart-wrapper">
+          <img
+            class="energy-chart-title"
             :src="require('./assets/title/title_2018_tw.svg')"
             alt="2018台灣發電結構"
           >
+          <img
+            class="energy-chart"
+            :src="require(
+              isMob ?
+              './assets/chart/chart_2018_tw_m.svg' :
+              './assets/chart/chart_2018_tw_pc.svg'
+            )"
+            alt="2018台灣發電結構"
+          >
         </div>
-        <img
-          width="100%"
-          :src="require(
-            isMob ?
-            './assets/chart/chart_2018_tw_m.svg' :
-            './assets/chart/chart_2018_tw_pc.svg'
-          )"
-          alt="2018台灣發電結構"
-        >
-        <div class="title-image-wrapper">
-          <img 
+        <div class="energy-chart-wrapper">
+          <img
+            class="energy-chart-title"
             :src="require('./assets/title/title_2018_word.svg')"
             alt="2018全球發電結構"
           >
+          <img
+            class="energy-chart"          
+            :src="require(
+              isMob ?
+              './assets/chart/chart_2018_word_m.svg' :
+              './assets/chart/chart_2018_word_pc.svg'
+            )"
+            alt="2018全球發電結構"
+          >
         </div>
-        <img
-          width="100%"
-          :src="require(
-            isMob ?
-            './assets/chart/chart_2018_word_m.svg' :
-            './assets/chart/chart_2018_word_pc.svg'
-          )"
-          alt="2018全球發電結構"
-        >
+        <p><br></p>
         <p>當能源轉型已勢在必行，各國政府如何協助燃煤產業轉型、催生再生能源產業，民間團體又如何將節能與公民發電落實於日常生活中？</p>
         <p><br></p>
         <p>《聯合報》採訪團隊實際走訪英國、德國、荷蘭、日本、韓國，紀錄這5個國家的能源轉型之路，希望借鏡國外經驗，讓台灣的能源轉型之路走得更順、走得更遠。</p>
@@ -68,7 +71,9 @@
             'section-cover-active': sectionCoverFlag_1,
             'section-cover-1': true,
           }"
-        />
+        >
+          <img :src="require('./assets/title/global_energy_transition_Japan_title.svg')" alt="日本福島能源轉型">
+        </div>
       </div>
     </section>
     <GradientConnection/>
@@ -169,10 +174,12 @@
         <p><br></p>
         <p><br></p>
       </div>
-      <NextSection :directInfo="{
+      <NextSection
+        :directInfo="{
           'prev': null,
           'next': {
             'title': '南韓',
+            'url': 'South_Korea/',
             'description': '南韓再生能源中心落腳新萬金',
           }
         }"
@@ -406,6 +413,23 @@ export default {
         background-size: cover;
         background-position: center center;
         color: #ffffff;
+        img {
+          // section cover title
+          position: absolute;
+          bottom: 15%;
+          left: 50px;
+          width: 80px;
+          @media only screen and (min-width: 768px) and (max-width: 1024px) {
+            width: 120px;
+            bottom: 20%;
+            left: 125px;
+          }
+          @media only screen and (min-width: 1025px)  {
+            width: 120px;
+            bottom: 20%;
+            left: 300px;
+          }
+        }
       }
       .section-cover-active {
         position: fixed;
@@ -457,18 +481,6 @@ export default {
     padding: 20px 60px;
     @media only screen and (min-width: 769px) {
       padding: 20px calc(50vw - 440px);
-    }
-    .title-image-wrapper {
-      position: relative;
-      width: 100%;
-      text-align: center;
-      margin-bottom: 10px;
-      img {
-        width: 50%;
-        &:last-child {
-          margin-top: 30px;
-        }
-      }
     }
     .image-wrapper {
       img {
@@ -586,6 +598,27 @@ export default {
             text-align: left;          
           }
         }
+      }
+    }
+  }
+  .energy-chart-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .energy-chart-title {
+      width: auto;
+      margin-bottom: 10px;
+    }
+    .energy-chart {
+      width: 100%;
+      margin-bottom: 50px;
+      @media only screen and (min-width: 768px) and (max-width: 1024px) {
+        width: 420px;      
+      }
+      @media only screen and (min-width: 1025px) {
+        width: 420px;
       }
     }
   }

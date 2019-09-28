@@ -1,12 +1,12 @@
 <template>
   <div class="next-section-container">
     <button class="page-button prev-button">
-      <a href="http://" target="_blank" name="">
+      <a v-if="directInfo.prev" :href="originPath + directInfo.prev.url" target="_blank" name="上一篇">
         {{directInfo.prev}}
       </a>
     </button>
     <button class="page-button next-button">
-      <a href="http://" target="_blank" name="">
+      <a :href="originPath + directInfo.next.url" target="_blank" name="下一篇">
         下一篇：{{directInfo.next.title}}
         <br>
         {{directInfo.next.description}}
@@ -23,6 +23,11 @@ export default {
       type: Object,
       required: true,
     },
+  },
+  data() {
+    return {
+      originPath: window.location.origin + '/global_energy_transition/'
+    }
   },
   computed: {
     isMob() {
