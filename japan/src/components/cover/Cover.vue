@@ -25,7 +25,7 @@ export default {
   data() {
     return {
       windowWidth: window.innerWidth,
-      windowHeight: window.innerHeight,
+      windowHeight: window.innerHeight + 55,
     };
   },
   computed: {
@@ -72,7 +72,7 @@ export default {
         p.left = randBetween(-canvasWidth * 0.5, canvasWidth);
         p.start = new Date().getTime() + delay;
         p.life = 15000;
-        p.speedUp = vm.isMob ? 60 : 100;
+        p.speedUp = vm.isMob ? 75 : 100;
         p.speedRight = randBetween(0, 30);
         p.rot = randBetween(-1, 1);
         p.red = Math.floor(randBetween(0, 255));
@@ -81,7 +81,7 @@ export default {
         p.startOpacity = 0.3;
         p.newTop = p.top;
         p.newLeft = p.left;
-        p.size = canvasWidth * 0.5;
+        p.size = canvasWidth * (vm.isMob ? 0.55 : 0.3);
         p.growth = 10;
 
         pCollection[pCount] = p;
