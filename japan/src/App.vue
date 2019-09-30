@@ -81,7 +81,7 @@
     <section class="black-bg">
       <div class="content">
         <p><br></p>
-        <h3>日本的兩難：擁核還是廢核？</h3>
+        <h3 class="green-title">日本的兩難：擁核還是廢核？</h3>
         <p><br></p>
         <p>福島核災事件後，日本能源政策在8年間兩次大轉彎，最終考慮降低發電成本、氣候變遷、降低能源海外依存度等因素，決定再次擁抱核電，並計劃在2030年，將核電佔比恢復到逼近核事故前的水準。</p>
         <p><br></p>
@@ -436,6 +436,7 @@ export default {
   },
 };
 </script>
+
 <style lang="scss">
 * {
   margin: 0;
@@ -447,6 +448,7 @@ export default {
     font-size: 18px;
     line-height: 1.67;
     margin: 0;
+    text-align: justify;
     @media only screen and (min-width: 768px) and (max-width: 1024px) {
       font-size: 20px;
       line-height: 1.7;
@@ -546,11 +548,19 @@ export default {
         font-size: 18px;
       }
     }
+    .green-title {
+      display: inline-block;
+      text-align: center;
+      color: #1eee78;
+      line-height: 1.33;
+      border-bottom: solid 1px #1eee78;
+      font-size: 1.4rem;
+    }
   }
   .content {
     position: relative;
     margin: 0 auto;
-    text-align: justify;
+    text-align: center;
     padding: 20px 60px;
     @media only screen and (min-width: 769px) {
       padding: 20px calc(50vw - 440px);
