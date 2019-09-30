@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440.439" height="322" viewBox="0 0 440.439 322">
+  <g id="chart_2018_tw_pc" transform="translate(-420 -1382)">
+    <g id="Y" transform="translate(0 -3)">
+      <text id="_0_" data-name="0%" transform="translate(429.955 1630.136)" fill="#8f8f8f" font-size="14" font-family="ArialMT, Arial"><tspan x="0" y="0">0%</tspan></text>
+      <text id="_10_" data-name="10%" transform="translate(420 1572.803)" fill="#8f8f8f" font-size="14" font-family="ArialMT, Arial"><tspan x="0" y="0">10%</tspan></text>
+      <text id="_20_" data-name="20%" transform="translate(420.239 1515.578)" fill="#8f8f8f" font-size="14" font-family="ArialMT, Arial"><tspan x="0" y="0">20%</tspan></text>
+      <text id="_30_" data-name="30%" transform="translate(420.239 1458.245)" fill="#8f8f8f" font-size="14" font-family="ArialMT, Arial"><tspan x="0" y="0">30%</tspan></text>
+      <text id="_40_" data-name="40%" transform="translate(420.239 1398)" fill="#8f8f8f" font-size="14" font-family="ArialMT, Arial"><tspan x="0" y="0">40%</tspan></text>
+    </g>
+    <text id="資料來源" transform="translate(661 1684)" fill="#989898" font-size="15" font-family="YuGothicUI-Regular, Yu Gothic UI"><tspan x="34" y="16">資料來源／台灣電力公司</tspan></text>
+    <g id="chart_name" transform="translate(0 -3)">
+      <text id="chart_1_name" transform="translate(465.19 1649.939)" fill="#bcbcbc" font-size="18" font-family="MicrosoftJhengHeiRegular, Microsoft JhengHei"><tspan x="0" y="19">燃煤</tspan></text>
+      <text id="chart_2_name" transform="translate(524.899 1649.939)" fill="#bcbcbc" font-size="18" font-family="MicrosoftJhengHeiRegular, Microsoft JhengHei"><tspan x="0" y="19">燃氣</tspan></text>
+      <text id="chart_3_name" transform="translate(584.607 1649.939)" fill="#bcbcbc" font-size="18" font-family="MicrosoftJhengHeiRegular, Microsoft JhengHei"><tspan x="0" y="19">核能</tspan></text>
+      <text id="chart_4_name" transform="translate(644.315 1649.939)" fill="#bcbcbc" font-size="18" font-family="MicrosoftJhengHeiRegular, Microsoft JhengHei"><tspan x="0" y="19">燃油</tspan></text>
+      <text id="chart_5_name" transform="translate(704.023 1649.939)" fill="#bcbcbc" font-size="18" font-family="MicrosoftJhengHeiRegular, Microsoft JhengHei"><tspan x="0" y="19">汽電</tspan></text>
+      <text id="chart_6_name" transform="translate(763.731 1649.939)" fill="#65b1ff" font-size="18" font-family="MicrosoftJhengHeiRegular, Microsoft JhengHei"><tspan x="0" y="19">再生</tspan></text>
+      <text id="chart_7_name" transform="translate(823.439 1649.939)" fill="#bcbcbc" font-size="18" font-family="MicrosoftJhengHeiRegular, Microsoft JhengHei"><tspan x="0" y="19">抽蓄</tspan></text>
+    </g>
+    <g id="line" transform="translate(0 -3)">
+      <line id="Line_617" data-name="Line 617" x2="438.703" transform="translate(420.273 1578.899)" fill="none" stroke="#3e3e3e" stroke-miterlimit="10" stroke-width="1"/>
+      <line id="Line_619" data-name="Line 619" x2="438.703" transform="translate(420.273 1521.29)" fill="none" stroke="#3e3e3e" stroke-miterlimit="10" stroke-width="1"/>
+      <line id="Line_621" data-name="Line 621" x2="438.703" transform="translate(420.273 1463.785)" fill="none" stroke="#3e3e3e" stroke-miterlimit="10" stroke-width="1"/>
+      <line id="Line_623" data-name="Line 623" x2="438.703" transform="translate(420.273 1406.176)" fill="none" stroke="#3e3e3e" stroke-miterlimit="10" stroke-width="1"/>
+    </g>
+    <rect id="chart_1" width="37.718" height="223.344" transform="translate(465.19 1410.093)" fill="#dbdbdb"/>
+    <rect id="chart_2" width="37.718" height="222.198" transform="translate(524.899 1411.229)" fill="#dbdbdb"/>
+    <rect id="chart_3" width="37.718" height="65.621" transform="translate(583.15 1567.846)" fill="#dbdbdb"/>
+    <rect id="chart_4" width="37.718" height="16.116" transform="translate(642.859 1617.299)" fill="#dbdbdb"/>
+    <rect id="chart_5" width="37.718" height="11.511" transform="translate(702.567 1621.946)" fill="#dbdbdb"/>
+    <rect id="chart_6" width="37.718" height="28.206" transform="translate(762.275 1605.22)" fill="#2d95ff"/>
+    <rect id="chart_7" width="37.718" height="8.063" transform="translate(820.527 1625.352)" fill="#dbdbdb"/>
+    <text id="_4.9_" data-name="4.9%" transform="translate(760.819 1596.212)" fill="#2d95ff" font-size="25" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">4.9</tspan><tspan y="0" font-size="14">%</tspan></text>
+    <line id="Line_605" data-name="Line 605" x2="438.846" transform="translate(420 1634.789)" fill="none" stroke="#3e3e3e" stroke-miterlimit="10" stroke-width="4"/>
+  </g>
+</svg>
