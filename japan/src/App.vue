@@ -1,17 +1,26 @@
 <template>
   <div id="app">
-    <HeadBar/>
+    <HeadBar page="Japan"/>
     <Cover :frogFlag="frogFlag"/>
     <GradientConnection/>
     <div class="cover-context black-bg">
-      <div class="content">
-        <ArticleArrow v-if="!isIE" startPosition="cover-arrow-start" endPosition="cover-arrow-end" :coverHighlightFlag="coverHighlightFlag"/>
+      <div class="content content-thin">
+        <ArticleArrow
+          v-if="!isIE"
+          startPosition="cover-highlight-text"
+          endPosition="cover-arrow-end"
+          leftPosition="cover-arrow-start"
+          :coverHighlightFlag="coverHighlightFlag"
+        />
         <p><br></p>
-        <p>車子一路駛於福島田間道路，稻田與太陽能板不斷在眼前交錯，越往東南的海邊走，太陽能板的數量也越來越多。福島縣在2011年東日本大地震中受到核事故重創後，正力爭轉型，從核災縣變為引領日本再生能源發展的新能源大縣。</p>
+        <p>儘管全球的減碳、廢核聲量正高漲，各國政府、民間團體在推動能源轉型時，卻仍面臨各式難題。</p>
         <p><br></p>
-        <div id="cover-arrow-start"/>
+        <p>「能源轉型就像革命一樣，」一位推動南韓社區能源轉型的市民想到自己曾面臨的阻礙，不禁搖了搖頭。</p>
+        <p><br></p>
         <p id="cover-highlight-text">
+          能源轉型確實是場長期戰役。在台灣，蔡英文總統自上任來，積極推動非核、減煤目標，
           <mark
+            id="cover-arrow-start"
             :class="{
               'text-highlight-ie': isIE,
               'text-highlight': !isIE ? true : false,
@@ -19,11 +28,10 @@
               'text-highlight-animate': !isIE && coverHighlightFlag,
             }"
           >
-            福島縣府在核事故一年後、2012年3月立刻修訂了福島再生能源推進展望，基本理念是打造安心、安全可持續發展的社會，從此不再仰賴核能。福島縣府並訂下2040年全縣使用再生能源的目標。
+            並計劃在2025年，再生能源發電佔比達20%
           </mark>
+          ，但節節高漲的電費、供電問題卻也隨之而來；放眼全球，加速老舊燃煤電廠退役、發展綠能產業正成國際趨勢，不過各國也面臨扼制綠能產業發展的法規、過時的電力產業結構等阻礙。
         </p>
-        <p><br></p>
-        <p>福島縣企畫調整部復興綜合計劃課副課長山田清貴表示，福島的復興不能只是重建，眼光必須看得更遠，過去的福島曾是能源重鎮，未來要成為引領日本新能源的大縣，只有創造走在新時代尖端的產業，福島才能獲得重生。</p>
         <p><br></p>
         <div id="cover-arrow-end"/>
         <div class="energy-chart-wrapper">
@@ -97,7 +105,18 @@
         <p><br></p>
         <p>車子一路駛於福島田間道路，稻田與太陽能板不斷在眼前交錯，越往東南的海邊走，太陽能板的數量也越來越多。福島縣在2011年東日本大地震中受到核事故重創後，正力爭轉型，從核災縣變為引領日本再生能源發展的新能源大縣。</p>
         <p><br></p>
-        <p>福島縣府在核事故一年後、2012年3月立刻修訂了福島再生能源推進展望，基本理念是打造安心、安全可持續發展的社會，從此不再仰賴核能。福島縣府並訂下2040年全縣使用再生能源的目標。</p>
+        <p id="text-highlight-1">
+          <mark
+            :class="{
+              'text-highlight-ie': isIE,
+              'text-highlight': !isIE ? true : false,
+              'text-highlight-white': !isIE ? true : false,
+              'text-highlight-animate': !isIE && textHighlightFlag_1,
+            }"
+          >
+            福島縣府在核事故一年後、2012年3月立刻修訂了福島再生能源推進展望，基本理念是打造安心、安全可持續發展的社會，從此不再仰賴核能。福島縣府並訂下2040年全縣使用再生能源的目標。
+          </mark>
+        </p>
         <p><br></p>
         <p>福島縣企畫調整部復興綜合計劃課副課長山田清貴表示，福島的復興不能只是重建，眼光必須看得更遠，過去的福島曾是能源重鎮，未來要成為引領日本新能源的大縣，只有創造走在新時代尖端的產業，福島才能獲得重生。</p>
         <p><br></p>
@@ -116,10 +135,10 @@
           }"
         />
       </div>
-      <div class="content gray-bg">
+      <div class="content gray-bg padding-top-none">
         <div class="section-cover-description">原本是日本核能大縣的福島縣在核災後，選擇全面擁抱再生能源。記者蔡佩芳／攝影</div>
         <p><br></p>
-        <h2>一場大地震 扭轉福島發展方向</h2>
+        <h3>一場大地震 扭轉福島發展方向</h3>
         <p><br></p>
         <p>福島除了是農作種類豐富的農業大縣，傳統上更是日本的能源大縣，不僅水力發電興盛，也是火力、核能發電重鎮，東日本大地震前，福島提供首都東京在內首都圈4成用電。</p>
         <p><br></p>
@@ -137,7 +156,7 @@
           }"
         />
       </div>
-      <div class="content gray-bg">
+      <div class="content gray-bg padding-top-none">
         <div class="section-cover-description">原本是日本核能大縣的福島縣在核災後，選擇全面擁抱再生能源。記者蔡佩芳／攝影</div>
         <p><br></p>
         <p>福島縣企畫調整部能源課主幹（相當於課長）武內正志表示，利用政府補助，福島大力推進太陽能光電收購以及蓄電池設施的興建，2017年已順利將再生能源所占電源比例提升到30.3%，對2020年達到4成的近程目標，縣府充滿信心。</p>
@@ -156,7 +175,7 @@
           <div class="image-description">福島的可移動式氫能系統。記者蔡佩芳／攝影</div>
         </div>
         <p><br></p>
-        <h2>重生的福島 不會再走回頭路</h2>
+        <h3>重生的福島 不會再走回頭路</h3>
         <p><br></p>
         <p>前往福島縣廳訪問的這天午後，福島下了場彷彿能洗淨一切的滂沱大雨，隨著天氣放晴後也為福島帶來了一個好消息。</p>
         <p><br></p>
@@ -164,13 +183,13 @@
         <p><br></p>
         <p>但福島追求的還要更多，山田清貴表示，縣府的目標不只是停止所有核電廠運作，而是將所有與核有關的事務，包括儲存在縣內的燃料棒、核廢料都移出縣外，讓福島成為沒有核能沒有輻射的縣。</p>
         <p><br></p>
-        <p id="text-highlight-1">福島在核事故後也持續與中央聯繫，提供各種資料，希望遊說政府放棄核能。但
+        <p id="text-highlight-2">福島在核事故後也持續與中央聯繫，提供各種資料，希望遊說政府放棄核能。但
           <mark
             :class="{
               'text-highlight-ie': isIE,
               'text-highlight': !isIE ? true : false,
               'text-highlight-black': !isIE ? true : false,
-              'text-highlight-animate': !isIE && textHighlightFlag_1,
+              'text-highlight-animate': !isIE && textHighlightFlag_2,
             }"
           >
             相對於福島的去核決心，日本中央政府再次將核電定義為重要基礎電源，決定重啟核電，8年間也有多個核電廠取得地方同意重新商轉。
@@ -200,18 +219,18 @@
       <div class="content">
         <div class="editor-container">
           <div class="editor">
+            <div class="editor-title">製作人</div>
+            <div class="editor-member">
+              <div class="editor-member-name">謝汶均<span style="opacity: 0">、</span></div>
+            </div>
+          </div>
+          <div class="editor">
             <div class="editor-title">採訪團隊</div>
             <div class="editor-member">
               <div class="editor-member-name">彭慧明、</div>
               <div class="editor-member-name">董俞佳、</div>
               <div class="editor-member-name">蔡佩芳、</div>
               <div class="editor-member-name">謝汶均</div>
-            </div>
-          </div>
-          <div class="editor">
-            <div class="editor-title">製作人</div>
-            <div class="editor-member">
-              <div class="editor-member-name">謝汶均<span style="opacity: 0">、</span></div>
             </div>
           </div>
           <div class="editor">
@@ -229,12 +248,6 @@
             <div class="editor-title">設計</div>
             <div class="editor-member">
               <div class="editor-member-name">張心慈<span style="opacity: 0">、</span></div>
-            </div>
-          </div>
-          <div class="editor">
-            <div class="editor-title">數位行銷</div>
-            <div class="editor-member">
-              <div class="editor-member-name">－－－<span style="opacity: 0">、</span></div>
             </div>
           </div>
           <div class="editor">
@@ -275,13 +288,13 @@
         <p><br></p>
         <div class="logo-container">
           <a href="https://udn.com/news/index" target="_blank" name="聯合新聞網" @click="sendLogoGA('.com')">
-            <img :src="require('./assets/logo/udn.jpg')" alt="聯合新聞網" >
+            <img :src="require('./assets/logo/udn.svg')" alt="聯合新聞網" >
           </a>
           <a href="https://vision.udn.com/index.html" target="_blank" name="願景工程" @click="sendLogoGA('vision')">
-            <img :src="require('./assets/logo/vision.jpg')" alt="願景工程">
+            <img :src="require('./assets/logo/vision.svg')" alt="願景工程">
           </a>
           <a href="https://www.facebook.com/udnNewMediaLab/" target="_blank" name="新媒體中心" @click="sendLogoGA('newmedia')">
-            <img :src="require('./assets/logo/nm.jpg')" alt="新媒體中心" @click="sendLogoGA('newmedia')">
+            <img :src="require('./assets/logo/nm.svg')" alt="新媒體中心" @click="sendLogoGA('newmedia')">
           </a>
         </div>
         <p><br></p>
@@ -344,6 +357,7 @@ export default {
       frogFlag: false,
       coverHighlightFlag: false,
       textHighlightFlag_1: false,
+      textHighlightFlag_2: false,
       sectionCoverFlag_1: false,
       sectionCoverFlag_2: false,
       sectionCoverFlag_3: false,
@@ -363,7 +377,8 @@ export default {
     handleScroll() {
       const anchorPosition = document.getElementById('anchor').getBoundingClientRect();
       const coverPostition = document.getElementById('cover-highlight-text').getBoundingClientRect();
-      const textHighlightPosition = document.getElementById('text-highlight-1').getBoundingClientRect();
+      const textHighlightPosition_1 = document.getElementById('text-highlight-1').getBoundingClientRect();
+      const textHighlightPosition_2 = document.getElementById('text-highlight-2').getBoundingClientRect();
       const scoverPostition_1 = document.getElementById('section-cover-1').getBoundingClientRect();
       const scoverPostition_2 = document.getElementById('section-cover-2').getBoundingClientRect();
       const scoverPostition_3 = document.getElementById('section-cover-3').getBoundingClientRect();
@@ -373,12 +388,17 @@ export default {
       else this.anchorFixedFlag = false;
 
       // cover frog event
-      if (window.pageYOffset < window.innerHeight) this.frogFlag = true;
+      if (
+        window.pageYOffset < window.innerHeight * 2 &&
+        window.pageYOffset > window.innerHeight
+      ) this.frogFlag = true;
       else this.frogFlag = false;
       // cover text highlihgt event.
       if ( coverPostition.top < window.innerHeight * 0.5 ) this.coverHighlightFlag = true;
       // text highlihgt 1 event.
-      if ( textHighlightPosition.top < window.innerHeight * 0.5 ) this.textHighlightFlag_1 = true;
+      if ( textHighlightPosition_1.top < window.innerHeight * 0.5 ) this.textHighlightFlag_1 = true;
+      // text highlihgt 2 event.
+      if ( textHighlightPosition_2.top < window.innerHeight * 0.5 ) this.textHighlightFlag_2 = true;
 
       // section-cover-1
       if (
@@ -458,17 +478,8 @@ export default {
       line-height: 1.45;
     }
   }
-  h2 {
-    font-size: 24px;
-    line-height: 1.33;
-    @media only screen and (min-width: 768px) and (max-width: 1024px) {
-      font-size: 32px;
-      line-height: 1.3;
-    }
-    @media only screen and (min-width: 1025px) {
-      font-size: 35px;
-      line-height: 1.34;
-    }
+  h3 {
+    text-align: left;
   }
   section {
     position: relative;
@@ -544,6 +555,9 @@ export default {
     .section-cover-description {
       font-size: 15px;
       margin-bottom: 50px;
+      padding-top: 5px;
+      text-align: justify;
+      line-height: 1.33;
       @media only screen and (min-width: 769px) {
         font-size: 18px;
       }
@@ -554,16 +568,22 @@ export default {
       color: #1eee78;
       line-height: 1.33;
       border-bottom: solid 1px #1eee78;
-      font-size: 1.4rem;
+      font-size: 18px;
+      @media only screen and (min-width: 769px) {
+        font-size: 21px;
+      }
     }
   }
   .content {
     position: relative;
     margin: 0 auto;
     text-align: center;
-    padding: 20px 60px;
-    @media only screen and (min-width: 769px) {
-      padding: 20px calc(50vw - 440px);
+    padding: 20px 20px;
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+      padding: 20px calc(50% - 320px);
+    }
+    @media only screen and (min-width: 1025px) {
+      padding: 20px calc(50% - 440px);
     }
     .image-wrapper {
       img {
@@ -584,6 +604,12 @@ export default {
         font-size: 15px;
       }
     }
+  }
+  .content-thin {
+    padding: 20px 60px !important;
+  }
+  .padding-top-none {
+    padding-top: 0;
   }
   .black-bg {
     // background-color: #0a0808;
@@ -643,6 +669,7 @@ export default {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: left;
     .editor {
       position: relative;
       width: 100%;
@@ -653,6 +680,7 @@ export default {
         width: 40%;
         @media only screen and (max-width: 320px) {
           width: 30%;
+          white-space: nowrap;
         }
         @media only screen and (min-width: 768px) and (max-width: 1024px) {
           width: 45%;
@@ -663,10 +691,9 @@ export default {
       }
       .editor-member {
         position: relative;
-        width: 60%;
+        width: 70%;
         padding: 0 10px 0 0px;
         @media only screen and (max-width: 320px) {
-          width: 70%;
           padding: 0 5px 0 5px;
         }
         @media only screen and (min-width: 768px) and (max-width: 1024px) {
@@ -681,6 +708,7 @@ export default {
           position: relative;
           display: inline-block;
           width: 50%;
+          white-space: nowrap;
           &:nth-child(odd) {
             text-align: right;
           }

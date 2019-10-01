@@ -14,10 +14,10 @@
         <div class="mask"/>
         <div class="mask"/>
       </div>
-      <div class="chart-description">資料來源／日本資源能源廳</div>
+      <div class="chart-description">資料來源／韓國電力公司</div>
       <button v-show="!answerFlag" id="answer-button" class="answer-button" name="解答">解答</button>
       <div class="content">
-        <div v-show="answerFlag" class="answer-wrapper">日本政府於2014年的能源基本計畫，決定再次擁抱核電。</div>
+        <div v-show="answerFlag" class="answer-wrapper">文在寅將南韓帶向反核之路，計畫2060年全面廢核。</div>
       </div>
     </div>
   </div>
@@ -41,32 +41,32 @@ export default {
         0: {
           title: "燃煤",
           color: "#b86f52",
-          data: [27.8, 28.0, 31.0, 32.9, 33.4, 34.1, 32.8, 32.7]
+          data: [41.7, 40.3, 39.0, 38.8, 40.0, 38.7, 39.6, 43.1]
         },
         1: {
           title: "天然氣",
           color: "#9b287b",
-          data: [29.0, 37.7, 40.1, 40.9, 43.0, 40.9, 41.2, 39.5]
+          data: [20.4, 20.5, 22.4, 24.7, 22.0, 19.1, 22.4, 22.2]
         },
         2: {
           title: "石油",
           color: "#ffa552",
-          data: [8.6, 14.5, 17.5, 14.5, 11.1, 9.8, 9.7, 8.7]
+          data: [2.7, 2.5, 3.0, 3.0, 4.8, 6.0, 2.6, 1.2]
         },
         3: {
           title: "再生能源",
           color: "#2d95ff",
-          data: [9.4, 10.3, 9.9, 10.8, 12.5, 14.2, 14.6, 16]
+          data: [3.9, 5.6, 6.1, 6.7, 4.3, 5.1, 5.5, 6.3]
         },
         4: {
           title: "核能",
           color: "#cdee1e",
-          data: [25.1, 9.3, 1.5, 0.9, 0.0, 0.9, 1.7, 3.1]
+          data: [31.3, 31.1, 29.5, 26.8, 30.0, 31.2, 30.0, 26.8]
         },
       },
       answerData: {
-        answerYear: 2014,
-        hintText: '畫畫看日本核電佔比變化',
+        answerYear: 2017,
+        hintText: '畫畫看南韓核電佔比變化',
       },
       answerFlag: false,
       yearList: [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017],
@@ -323,7 +323,7 @@ export default {
           .style('fill', vm.energyData[vm.drawDataIndex].color);
         svg.append('text')
           .attr('class', 'line-dot-text')
-          .attr('x', xScaleTime(vm.answerData.answerYear) + 5)
+          .attr('x', xScaleTime(vm.answerData.answerYear) - 10)
           .attr('y', yScale(vm.energyData[vm.drawDataIndex].data[vm.yearList.indexOf(vm.answerData.answerYear)]) - 10)
           .style('fill', vm.energyData[vm.drawDataIndex].color)
           .text(vm.energyData[vm.drawDataIndex].data[vm.yearList.indexOf(vm.answerData.answerYear)] + '%');
@@ -383,12 +383,13 @@ export default {
     .line-active {
       opacity: 1;
     }
-    .line-dot {
-
+    .line-dot-text {
+      font-size: 12px;
     }
     .hint-text {
       fill: #ffffff;
-      font-size: 20px;
+      font-size: 18px;
+      alignment-baseline: middle;
     }
     .profile-text {
       fill: #717171;
@@ -471,13 +472,16 @@ export default {
   }
   .hand-drawn-title {
     position: relative;
-    width: 100px;
+    width: 80px;
     padding: 3px 8px;
     margin: 0 auto;
     border-radius: 2px;
     border: solid 1px #ffffff;
     letter-spacing: 1.8px;
     text-align: center;
+    @media only screen and (min-width: 769px) {
+      width: 100px;  
+    }
   }
   .hand-drawn-sub-title {
     text-align: center;

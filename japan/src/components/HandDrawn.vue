@@ -291,7 +291,7 @@ export default {
           yProfileLineGroup.append('text')
             .attr('class', 'profile-text')
             .attr('x', config.marginSide - 30 * config.marginSideRatio)
-            .attr('y', (config.height / config.yAxisNum) * i - 10)
+            .attr('y', (config.height / config.yAxisNum) * i - 6)
             .text(() => (50- i * 10) + '%');
           yProfileLineGroup.append('line')
             .attr('class', () => {
@@ -323,7 +323,7 @@ export default {
           .style('fill', vm.energyData[vm.drawDataIndex].color);
         svg.append('text')
           .attr('class', 'line-dot-text')
-          .attr('x', xScaleTime(vm.answerData.answerYear) + 5)
+          .attr('x', xScaleTime(vm.answerData.answerYear) - 5)
           .attr('y', yScale(vm.energyData[vm.drawDataIndex].data[vm.yearList.indexOf(vm.answerData.answerYear)]) - 10)
           .style('fill', vm.energyData[vm.drawDataIndex].color)
           .text(vm.energyData[vm.drawDataIndex].data[vm.yearList.indexOf(vm.answerData.answerYear)] + '%');
@@ -383,12 +383,13 @@ export default {
     .line-active {
       opacity: 1;
     }
-    .line-dot {
-
+    .line-dot-text {
+      font-size: 12px;
     }
     .hint-text {
       fill: #ffffff;
-      font-size: 20px;
+      font-size: 18px;
+      alignment-baseline: middle;
     }
     .profile-text {
       fill: #717171;
@@ -471,13 +472,16 @@ export default {
   }
   .hand-drawn-title {
     position: relative;
-    width: 100px;
+    width: 80px;
     padding: 3px 8px;
     margin: 0 auto;
     border-radius: 2px;
     border: solid 1px #ffffff;
     letter-spacing: 1.8px;
     text-align: center;
+    @media only screen and (min-width: 769px) {
+      width: 100px;  
+    }
   }
   .hand-drawn-sub-title {
     text-align: center;
@@ -524,9 +528,9 @@ export default {
     font-size: 0.7rem;
     color: #989898;
     text-align: right;
-    margin-right: 50px;
+    margin-right: 13px;
     @media only screen and (min-width: 769px) {
-      margin-right: calc(50vw - 440px);
+      margin-right: calc(50vw - 475px);
     }
   }
 }

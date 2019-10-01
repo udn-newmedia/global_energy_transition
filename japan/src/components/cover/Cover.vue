@@ -1,14 +1,14 @@
 <template>
   <div class="cover-container">
     <div class="cover">
+      <div class="cover-title">
+        <img :src="require(isMob ? '../../assets/title/titile_index_m.svg' : '../../assets/title/titile_index_PC.svg')" alt="無煤家園真的可行嗎？">
+      </div>
       <canvas
         id="frog-bg"
         :width="windowWidth"
         :height="windowHeight"
       />
-      <div class="cover-title">
-        <img :src="require(isMob ? '../../assets/title/titile_index_m.svg' : '../../assets/title/titile_index_PC.svg')" alt="無煤家園真的可行嗎？">
-      </div>
     </div>
   </div>
 </template>
@@ -68,21 +68,21 @@ export default {
 
       function addNewParticle(delay) {
         let p = {};
-        p.top = canvasHeight;
-        p.left = randBetween(-canvasWidth * 0.5, canvasWidth);
+        p.top = canvasHeight * (vm.isMob ? 0.95 : 0.85);
+        p.left = randBetween(-canvasWidth * 0.6, canvasWidth);
         p.start = new Date().getTime() + delay;
         p.life = 15000;
-        p.speedUp = vm.isMob ? 75 : 100;
+        p.speedUp = vm.isMob ? 100 : 135;
         p.speedRight = randBetween(0, 30);
         p.rot = randBetween(-1, 1);
         p.red = Math.floor(randBetween(0, 255));
         p.blue = Math.floor(randBetween(0, 255));
         p.green = Math.floor(randBetween(0, 255));
-        p.startOpacity = 0.3;
+        p.startOpacity = 0.2;
         p.newTop = p.top;
         p.newLeft = p.left;
-        p.size = canvasWidth * (vm.isMob ? 0.55 : 0.3);
-        p.growth = 10;
+        p.size = canvasWidth * (vm.isMob ? 1 : 0.35);
+        p.growth = vm.isMob ? 10 : 30;
 
         pCollection[pCount] = p;
         pCount++;
@@ -162,23 +162,31 @@ export default {
     background-color: #0a0808;
     .cover-title {
       position: absolute;
+      z-index: 10;
       top: 0;
       left: 0;
       width: 100%;
       text-align: center;
       img {
-        margin-top: 25%;
         width: 80px;
+        margin-top: 25%;
+        margin-left: 40px;
         @media only screen and (min-width: 768px) and (max-width: 1024px) {
-          margin-top: 20%;
           width: 90px;
+          margin-top: 20%;
+          margin-left: 45px;
         }
         @media only screen and (min-width: 1025px) {
-          margin-top: 10%;
           width: 100px;
+          margin-top: 10%;
+          margin-left: 50px;
         }
       }
     }
+  }
+  canvas {
+    position: relative;
+    z-index: 20;
   }
 }
 </style>

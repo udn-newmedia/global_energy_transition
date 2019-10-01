@@ -25,7 +25,7 @@
           target="_blank"
           @click="sendRelatedGA('R1')"
         >
-          <img :src="require('../assets/1.jpg')" alt="日本能源">
+          <img :src="require('../assets/read/read_jp_01.jpg')" alt="日本能源">
           <div class="related-article-name">日本的兩難：擁核還是廢核？</div>
         </a>
         <a
@@ -35,7 +35,7 @@
           target="_blank"
           @click="sendRelatedGA('R2')"
         >
-          <img :src="require('../assets/1.jpg')" alt="日本能源">
+          <img :src="require('../assets/read/read_jp_02.jpg')" alt="日本能源">
           <div class="related-article-name">日企打造智慧城，追求能源零消耗</div>
         </a>
         <a
@@ -45,7 +45,7 @@
           target="_blank"
           @click="sendRelatedGA('R3')"
         >
-          <img :src="require('../assets/1.jpg')" alt="日本能源">
+          <img :src="require('../assets/read/read_jp_03.jpg')" alt="日本能源">
           <div class="related-article-name">日企打造智慧城，追求能源零消耗</div>
         </a>
         </Slick>
@@ -62,7 +62,7 @@
           target="_blank"
           @click="sendRelatedGA('R1')"
         >
-          <img :src="require('../assets/1.jpg')" alt="日本能源">
+          <img :src="require('../assets/read/read_jp_01.jpg')" alt="日本能源">
           <div class="related-article-name">日本的兩難：擁核還是廢核？</div>
         </a>
         <a
@@ -72,7 +72,7 @@
           target="_blank"
           @click="sendRelatedGA('R2')"
         >
-          <img :src="require('../assets/1.jpg')" alt="日本能源">
+          <img :src="require('../assets/read/read_jp_02.jpg')" alt="日本能源">
           <div class="related-article-name">日企打造智慧城，追求能源零消耗</div>
         </a>
         <a
@@ -82,7 +82,7 @@
           target="_blank"
           @click="sendRelatedGA('R3')"
         >
-          <img :src="require('../assets/1.jpg')" alt="日本能源">
+          <img :src="require('../assets/read/read_jp_03.jpg')" alt="日本能源">
           <div class="related-article-name">日企打造智慧城，追求能源零消耗</div>
         </a>
       </div>

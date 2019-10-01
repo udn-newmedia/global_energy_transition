@@ -108,7 +108,7 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: solid 1px #707070;
+    border-top: solid 1px #707070;
     background-color: #000000;
     transition: border .333s ease-in-out;
     padding: 0 60px;

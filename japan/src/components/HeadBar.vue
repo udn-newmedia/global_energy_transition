@@ -21,6 +21,12 @@ import Utils from 'udn-newmedia-utils';
 
 export default {
   name: 'HeadBar',
+  props: {
+    page: {
+      type: String,
+      require: true,
+    },
+  },
   data() {
     return {
       homePath: window.location.origin + '/newmedia/2019/global_energy_transition/'
@@ -36,7 +42,7 @@ export default {
       window.FB.ui(
         {
           method: 'share',
-          href: this.href,
+          href: this.homePath + this.page + '/',
         }, 
         // function(response) {}
       );
@@ -50,7 +56,7 @@ export default {
     lineShare() {
       if (Utils.detectMob()) {
         // 手機
-        window.location.assign(`https://line.me/R/msg/text/?${document.querySelector('title').innerHTML}%0D%0A%0D%0A${document.querySelector('meta[property="og:description"]').content}%0D%0A%0D%0A${this.href}`);
+        window.location.assign(`https://line.me/R/msg/text/?${document.querySelector('title').innerHTML}%0D%0A%0D%0A${document.querySelector('meta[property="og:description"]').content}%0D%0A%0D%0A${this.homePath + this.page + '/'}`);
       } else {
         window.open(`https://line.me/R/msg/text/?${document.querySelector('title').innerHTML}%0D%0A%0D%0A${document.querySelector('meta[property="og:description"]').content}%0D%0A%0D%0A`);
       }
@@ -84,7 +90,7 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.64));
+  // background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.64));
   a {
     text-decoration: none;
     color: inherit;
