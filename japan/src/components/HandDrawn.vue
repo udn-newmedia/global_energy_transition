@@ -351,10 +351,10 @@ export default {
   },
   mounted() {
     this.drawChart();
-    window.addEventListener('resize', () => { this.drawChart(); });
+    // window.addEventListener('resize', () => { this.drawChart(); });
   },
   destroyed() {
-    window.removeEventListener('resize', () => { this.drawChart(); });    
+    // window.removeEventListener('resize', () => { this.drawChart(); });    
   },
 };
 </script>

@@ -52,7 +52,19 @@
     <GradientConnection/>
     <section class="black-bg">
       <div class="content">
-        <p>燃煤會惡化空氣，還會增加排碳量，造成地球暖化，不過，德國一個反煤、推動再生能源地方化的公民團體「柏林人能源圓桌（Berliner Energietish）」提倡，燃煤可能還會壞了德國的啤酒，對於熱愛啤酒的德國人，這件事情更加無法接受。</p>
+        <p id="text-highlight-1">燃煤會惡化空氣，還會增加排碳量，造成地球暖化，不過，
+          <mark
+            :class="{
+              'text-highlight-ie': isIE,
+              'text-highlight': !isIE ? true : false,
+              'text-highlight-white': !isIE ? true : false,
+              'text-highlight-animate': !isIE && textHighlightFlag_1,
+            }"
+          >
+            德國一個反煤、推動再生能源地方化的公民團體「柏林人能源圓桌（Berliner Energietish）」提倡，燃煤可能還會壞了德國的啤酒，
+          </mark>
+          對於熱愛啤酒的德國人，這件事情更加無法接受。
+        </p>
         <p><br></p>
         <p>能源轉型的過程之中，民眾的參與與支持非常重要。德國推動2038年非煤家園、2050年完全使用綠能，除了政府訂定政策目標之外，更多是由微小的個人齊聚成的集體力量。柏林人能源圓桌每個月固定在柏林發起一場城市能源導覽之旅，喊出「別讓燃煤壞了德國啤酒」的口號，導覽目的是要讓民眾了解能源的重要性，對燃煤電廠更加同仇敵愾，並透過增加民眾參與，推動成功的能源轉型。</p>
         <p><br></p>
@@ -99,7 +111,19 @@
         </div>
         <p><br></p>
         <p><br></p>
-        <p>羅德說，以前東德有一個很大的褐煤場，現在這個煤場幾乎已經變成月球表面，呈現一片荒蕪的樣子，可是還是一直往下開採，地層被翻來覆去，使得地下水變得很混濁，這個地下水流到人工運河，預期未來10到30年再這樣開採下去的話，柏林的水一定會變差，變差的水，釀出來的啤酒也會不好喝。</p>
+        <p id="text-highlight-2">
+          羅德說，以前東德有一個很大的褐煤場，現在這個煤場幾乎已經變成月球表面，呈現一片荒蕪的樣子，可是還是一直往下開採，地層被翻來覆去，使得地下水變得很混濁，這個地下水流到人工運河，
+          <mark
+            :class="{
+              'text-highlight-ie': isIE,
+              'text-highlight': !isIE ? true : false,
+              'text-highlight-black': !isIE ? true : false,
+              'text-highlight-animate': !isIE && textHighlightFlag_2,
+            }"
+          >
+            預期未來10到30年再這樣開採下去的話，柏林的水一定會變差，變差的水，釀出來的啤酒也會不好喝。
+          </mark>
+        </p>
         <p><br></p>
         <p><br></p>
         <h3>柏林人：拿回發電自主權</h3>
@@ -121,7 +145,18 @@
           <div class="image-description">導覽員耶斯馬丁羅德向民眾介紹能源轉型的重要性。記者余承翰／攝影</div>
           <p><br></p>
           <p><br></p>
-          <p>過去，德國把燃煤電廠趕出城市，現在則要讓再生能源在城市長出來。德國預計在2050年全面使用綠能，策略是在城市使用太陽能、風能、生質能等。</p>
+          <p id="text-highlight-3">
+            <mark
+              :class="{
+                'text-highlight-ie': isIE,
+                'text-highlight': !isIE ? true : false,
+                'text-highlight-black': !isIE ? true : false,
+                'text-highlight-animate': !isIE && textHighlightFlag_3,
+              }"
+            >
+              過去，德國把燃煤電廠趕出城市，現在則要讓再生能源在城市長出來。德國預計在2050年全面使用綠能，策略是在城市使用太陽能、風能、生質能等。
+            </mark>
+          </p>
           <p><br></p>
           <p>羅德表示，現在柏林的城市產電能力還很小、很低弱，但希望未來，柏林不只是讓燃煤退場，還要全部用再生能源；此外，也要把仍由跨國企業掌握的發電、供電權拿回柏林人手中，分散式的讓公民參與，讓公民獲得發電利潤，進而可以跟大型發電廠競爭。</p>
           <p><br></p>
@@ -250,6 +285,8 @@
 </template>
 
 <script>
+import Utils from 'udn-newmedia-utils';
+
 import Anchor from './components/Anchor.vue'
 import GradientConnection from './components/GradientConnection.vue'
 import HandDrawn from './components/HandDrawn.vue'
@@ -278,6 +315,8 @@ export default {
   data() {
     return {
       textHighlightFlag_1: false,
+      textHighlightFlag_2: false,
+      textHighlightFlag_3: false,
       sectionCoverFlag_video: false,
       sectionCoverFlag_2: false,
       totalPageHeight: 0,
@@ -296,6 +335,9 @@ export default {
     handleScroll() {
       const scoverPostition_video = document.getElementById('section-cover-video').getBoundingClientRect();
       const scoverPostition_2 = document.getElementById('section-cover-2').getBoundingClientRect();
+      const textHighlightPosition_1 = document.getElementById('text-highlight-1').getBoundingClientRect();
+      const textHighlightPosition_2 = document.getElementById('text-highlight-2').getBoundingClientRect();
+      const textHighlightPosition_3 = document.getElementById('text-highlight-3').getBoundingClientRect();
 
       // section-cover-video
       if (
@@ -315,6 +357,12 @@ export default {
         scoverPostition_2.bottom > 0
       ) this.sectionCoverFlag_2 = true;
       else this.sectionCoverFlag_2 = false;
+
+      // text highlihgt 1 event.
+      if ( textHighlightPosition_1.top < window.innerHeight * 0.5 ) this.textHighlightFlag_1 = true;
+      // text highlihgt 2 event.
+      if ( textHighlightPosition_2.top < window.innerHeight * 0.5 ) this.textHighlightFlag_2 = true;// text highlihgt 3 event.
+      if ( textHighlightPosition_3.top < window.innerHeight * 0.5 ) this.textHighlightFlag_3 = true;
     },
   },
   mounted() {
