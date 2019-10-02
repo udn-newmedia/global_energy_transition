@@ -42,6 +42,9 @@
               'https://p3.udn.com.tw/global_energy_transition/south_korea/korea_m.mp4' :
               'https://p3.udn.com.tw/global_energy_transition/south_korea/korea_pc.mp4'
             "
+            webkit-playsinline
+            playsinline
+            preload="auto"
             paused
             muted
           />

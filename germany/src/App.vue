@@ -42,6 +42,9 @@
               'https://p3.udn.com.tw/global_energy_transition/germany/longform_Germany_m2.mp4' :
               'https://p3.udn.com.tw/global_energy_transition/germany/longform_Germany_pc.mp4'
             "
+            webkit-playsinline
+            playsinline
+            preload="auto"
             paused
             muted
           />

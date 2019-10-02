@@ -42,6 +42,9 @@
               'https://p3.udn.com.tw/global_energy_transition/uk/UK_m.mp4' :
               'https://p3.udn.com.tw/global_energy_transition/uk/UK_pc.mp4'
             "
+            webkit-playsinline
+            playsinline
+            preload="auto"
             paused
             muted
           />
