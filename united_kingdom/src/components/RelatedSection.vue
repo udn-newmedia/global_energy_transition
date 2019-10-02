@@ -2,7 +2,7 @@
   <div class="related-section-container">
     <div v-if="isMob" class="related-section related-section-mob">
       <div class="related-title-container">
-        <img :src="require('../assets/title/global_energy_transition_South_Korea_title_read.svg')" alt="南韓能源轉型列報導">
+        <img :src="require('../assets/title/global_energy_transition_United_Kingdom_titile_read.svg')" alt="英國能源轉型列報導">
       </div>
       <Slick
         ref="slick"
@@ -20,70 +20,70 @@
       >
         <a
           href=""
-          name="南韓能源轉型列報導"
+          name="英國能源轉型列報導"
           class="related-article"
           target="_blank"
           @click="sendRelatedGA('R1')"
         >
-          <img :src="require('../assets/read/read_korea_01.jpg')" alt="南韓能源轉型列報導">
-          <div class="related-article-name">首爾盛大谷的能源革命</div>
+          <img :src="require('../assets/read/read_uk_01.jpg')" alt="英國能源轉型列報導">
+          <div class="related-article-name">零碳大業 英國無煤倒數</div>
         </a>
         <a
           href=""
-          name="南韓能源轉型列報導"
+          name="英國能源轉型列報導"
           class="related-article"
           target="_blank"
           @click="sendRelatedGA('R2')"
         >
-          <img :src="require('../assets/read/read_korea_02.jpg')" alt="南韓能源轉型列報導">
-          <div class="related-article-name">用太陽能點亮赤貧孩子的家</div>
+          <img :src="require('../assets/read/read_uk_02.jpg')" alt="英國能源轉型列報導">
+          <div class="related-article-name">風電進駐 漁村的願景與怨嘆</div>
         </a>
         <a
           href=""
-          name="南韓能源轉型列報導"
+          name="英國能源轉型列報導"
           class="related-article"
           target="_blank"
           @click="sendRelatedGA('R3')"
         >
-          <img :src="require('../assets/read/read_korea_03.jpg')" alt="南韓能源轉型列報導">
-          <div class="related-article-name">首爾官民攜手 脫離核電不再只是口號</div>
+          <img :src="require('../assets/read/read_uk_03.jpg')" alt="英國能源轉型列報導">
+          <div class="related-article-name">擁抱核能的掙扎</div>
         </a>
         </Slick>
     </div>
     <div v-else class="related-section related-section-pc">
       <div class="related-title-container">
-        <img :src="require('../assets/title/global_energy_transition_South_Korea_title_read.svg')" alt="南韓能源轉型列報導轉型列報導">        
+        <img :src="require('../assets/title/global_energy_transition_United_Kingdom_titile_read.svg')" alt="英國能源轉型列報導轉型列報導">        
       </div>
       <div class="related-article-container">
         <a
           href=""
-          name="南韓能源轉型列報導"
+          name="英國能源轉型列報導"
           class="related-article"
           target="_blank"
           @click="sendRelatedGA('R1')"
         >
-          <img :src="require('../assets/read/read_korea_01.jpg')" alt="南韓能源轉型列報導">
-          <div class="related-article-name">首爾盛大谷的能源革命</div>
+          <img :src="require('../assets/read/read_uk_01.jpg')" alt="英國能源轉型列報導">
+          <div class="related-article-name">零碳大業 英國無煤倒數</div>
         </a>
         <a
           href=""
-          name="南韓能源轉型列報導"
+          name="英國能源轉型列報導"
           class="related-article"
           target="_blank"
           @click="sendRelatedGA('R2')"
         >
-          <img :src="require('../assets/read/read_korea_02.jpg')" alt="南韓能源轉型列報導">
-          <div class="related-article-name">用太陽能點亮赤貧孩子的家</div>
+          <img :src="require('../assets/read/read_uk_02.jpg')" alt="英國能源轉型列報導">
+          <div class="related-article-name">風電進駐 漁村的願景與怨嘆</div>
         </a>
         <a
           href=""
-          name="南韓能源轉型列報導"
+          name="英國能源轉型列報導"
           class="related-article"
           target="_blank"
           @click="sendRelatedGA('R3')"
         >
-          <img :src="require('../assets/read/read_korea_03.jpg')" alt="南韓能源轉型列報導">
-          <div class="related-article-name">首爾官民攜手 脫離核電不再只是口號</div>
+          <img :src="require('../assets/read/read_uk_03.jpg')" alt="英國能源轉型列報導">
+          <div class="related-article-name">擁抱核能的掙扎</div>
         </a>
       </div>
     </div>
@@ -206,15 +206,15 @@ export default {
     }
   }
   .related-section-mob {
-    background-image: url('../assets/mob/global_energy_transition_South_Korea_background_image_m.jpg');
+    background-image: url('../assets/mob/global_energy_transition_United_Kingdom_background_image_m.jpg');
     background-position: 75% 0;
     @media only screen and (min-width: 768px) {
-      background-image: url('../assets/pad/global_energy_transition_South_Korea_background_image_pad.jpg');
+      background-image: url('../assets/pad/global_energy_transition_United_Kingdom_background_image_pad.jpg');
       background-position: 95% 0;
     }
   }
   .related-section-pc {
-    background-image: url('../assets/pc/global_energy_transition_South_Korea_background_image.jpg');
+    background-image: url('../assets/pc/global_energy_transition_United_Kingdom_background_image.jpg');
   }
 }
 </style>

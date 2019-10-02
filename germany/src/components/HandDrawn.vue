@@ -14,10 +14,10 @@
         <div class="mask"/>
         <div class="mask"/>
       </div>
-      <div class="chart-description">資料來源／韓國電力公司</div>
+      <div class="chart-description">資料來源／Fraunhofer</div>
       <button v-show="!answerFlag" id="answer-button" class="answer-button" name="解答">解答</button>
       <div class="content">
-        <div v-show="answerFlag" class="answer-wrapper">文在寅將南韓帶向反核之路，計畫2060年全面廢核。</div>
+        <div v-show="answerFlag" class="answer-wrapper">2019年初，德綠能發電佔比已達40%，能源轉型的電價上升由全民共同負擔。</div>
       </div>
     </div>
   </div>
@@ -41,39 +41,34 @@ export default {
         0: {
           title: "燃煤",
           color: "#b86f52",
-          data: [41.7, 40.3, 39.0, 38.8, 40.0, 38.7, 39.6, 43.1]
+          data: [42.7, 44.2, 45.8, 46.9, 46.3, 44.6, 42.6, 39.1, 37.2]
         },
         1: {
-          title: "天然氣",
-          color: "#9b287b",
-          data: [20.4, 20.5, 22.4, 24.7, 22.0, 19.1, 22.4, 22.2]
+          title: "核能",
+          color: "#cdee1e",
+          data: [24.7, 19.6, 17.5, 16.9, 17.1, 15.8, 14.6, 13.1, 13.2]
         },
         2: {
-          title: "石油",
-          color: "#ffa552",
-          data: [2.7, 2.5, 3.0, 3.0, 4.8, 6.0, 2.6, 1.2]
+          title: "天然氣",
+          color: "#9b287b",
+          data: [11.8, 11.5, 9.3, 7.3, 5.9, 5.5, 8.5, 8.9, 8.2]
         },
         3: {
           title: "再生能源",
           color: "#2d95ff",
-          data: [3.9, 5.6, 6.1, 6.7, 4.3, 5.1, 5.5, 6.3]
-        },
-        4: {
-          title: "核能",
-          color: "#cdee1e",
-          data: [31.3, 31.1, 29.5, 26.8, 30.0, 31.2, 30.0, 26.8]
+          data: [19, 23.5, 25.9, 27.6, 29.5, 33.4, 33.5, 37.9, 40]
         },
       },
       answerData: {
-        answerYear: 2017,
-        hintText: '畫畫看南韓核電佔比變化',
+        answerYear: 2018,
+        hintText: '畫畫看德國再生能源佔比變化',
       },
       answerFlag: false,
-      yearList: [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017],
-      drawnYearList: [2011, 2012, 2013, 2014, 2015, 2016, 2017],
+      yearList: [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018],
+      drawnYearList: [2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018],
       svgWidth: window.innerWidth,
       svgHeight: window.innerHeight * 0.5,
-      drawDataIndex: 4,
+      drawDataIndex: 3,
       drawnFlag: false,
       drawnStep: 2011,
     };
@@ -98,7 +93,7 @@ export default {
         width: vm.svgWidth,
         height: vm.svgHeight - marginParams.top - marginParams.bottom,
         dataLength: dataset.length,
-        xAxisNum: 8,
+        xAxisNum: 9,
         yAxisNum: 5,
         // marginSide: _isMob ? 50 : 0,
         marginSide: _isMob ? 50 : Math.max(100, (vm.svgWidth - 880) * 0.5),
@@ -111,7 +106,7 @@ export default {
         .range([config.marginSide, config.width - config.marginSide * config.marginSideRatio]); // output
       const xScaleTime = d3
         .scaleLinear()
-        .domain([2010, 2017]) // input
+        .domain([2010, 2018]) // input
         .range([config.marginSide, config.width - config.marginSide * config.marginSideRatio]); // output
       const yScale = d3
         .scaleLinear()
@@ -256,6 +251,9 @@ export default {
           case 2017:
             handleDrawMove(2017);
             break;
+          case 2018:
+            handleDrawMove(2018);
+            break;
           default:
             break;
         }
@@ -291,7 +289,7 @@ export default {
           yProfileLineGroup.append('text')
             .attr('class', 'profile-text')
             .attr('x', config.marginSide - 30 * config.marginSideRatio)
-            .attr('y', (config.height / config.yAxisNum) * i - 10)
+            .attr('y', (config.height / config.yAxisNum) * i - 6)
             .text(() => (50- i * 10) + '%');
           yProfileLineGroup.append('line')
             .attr('class', () => {
@@ -528,9 +526,9 @@ export default {
     font-size: 0.7rem;
     color: #989898;
     text-align: right;
-    margin-right: 50px;
+    margin-right: 13px;
     @media only screen and (min-width: 769px) {
-      margin-right: calc(50vw - 440px);
+      margin-right: calc(50vw - 475px);
     }
   }
 }

@@ -9,7 +9,7 @@
             'section-cover-1': true,
           }"
         >
-          <img :src="require('./assets/title/global_energy_transition_Germany_title.svg')" alt="南韓能源轉型">
+          <img :src="require('./assets/title/global_energy_transition_Germany_title.svg')" alt="德國能源轉型">
         </div>
       </div>
     </section>
@@ -29,7 +29,7 @@
     </section>
     <section class="black-bg">
       <GradientConnection :reverse="true" :inner="true" :top="true" :upper="true"/>
-      <div id="section-cover-video" class="section-cover-container">
+      <div id="section-cover-video" class="section-cover-container section-cover-video">
         <div :class="{
             'section-cover': true,
             'section-cover-active': sectionCoverFlag_video,
@@ -37,7 +37,6 @@
         >
           <video
             id="video-1"
-            height="100%"
             :src="
               isMob ?
               'https://p3.udn.com.tw/global_energy_transition/germany/longform_Germany_m2.mp4' :
@@ -133,7 +132,7 @@
         <p>最後，柏林政府在公民的壓力以及環境趨勢的考量之下，未再與大瀑布電力集團簽下20年的合約，這件事也讓羅德等夥伴從中學到公民參與的重要性。</p>
         <p><br></p>
         <p><br></p>
-        <div class="image-wrapper">
+        <div class="image-wrapper-column-2">
           <img
             :src="require(isMob ? './assets/mob/global_energy_transition_Germany_artical_image02_m.jpg' : './assets/pc/global_energy_transition_Germany_artical_image02.jpg')"
             alt="德國能源轉型"
@@ -143,27 +142,27 @@
             alt="德國能源轉型"
           >
           <div class="image-description">導覽員耶斯馬丁羅德向民眾介紹能源轉型的重要性。記者余承翰／攝影</div>
-          <p><br></p>
-          <p><br></p>
-          <p id="text-highlight-3">
-            <mark
-              :class="{
-                'text-highlight-ie': isIE,
-                'text-highlight': !isIE ? true : false,
-                'text-highlight-black': !isIE ? true : false,
-                'text-highlight-animate': !isIE && textHighlightFlag_3,
-              }"
-            >
-              過去，德國把燃煤電廠趕出城市，現在則要讓再生能源在城市長出來。德國預計在2050年全面使用綠能，策略是在城市使用太陽能、風能、生質能等。
-            </mark>
-          </p>
-          <p><br></p>
-          <p>羅德表示，現在柏林的城市產電能力還很小、很低弱，但希望未來，柏林不只是讓燃煤退場，還要全部用再生能源；此外，也要把仍由跨國企業掌握的發電、供電權拿回柏林人手中，分散式的讓公民參與，讓公民獲得發電利潤，進而可以跟大型發電廠競爭。</p>
-          <p><br></p>
-          <p>從德國人最重視的啤酒出發，柏林人能源圓桌要讓民眾更了解能源，進而促進民眾選擇綠電供應商，用公民的力量合力推動能源轉型。</p>
-          <p><br></p>
-          <p><br></p>
         </div>
+        <p><br></p>
+        <p><br></p>
+        <p id="text-highlight-3">
+          <mark
+            :class="{
+              'text-highlight-ie': isIE,
+              'text-highlight': !isIE ? true : false,
+              'text-highlight-black': !isIE ? true : false,
+              'text-highlight-animate': !isIE && textHighlightFlag_3,
+            }"
+          >
+            過去，德國把燃煤電廠趕出城市，現在則要讓再生能源在城市長出來。德國預計在2050年全面使用綠能，策略是在城市使用太陽能、風能、生質能等。
+          </mark>
+        </p>
+        <p><br></p>
+        <p>羅德表示，現在柏林的城市產電能力還很小、很低弱，但希望未來，柏林不只是讓燃煤退場，還要全部用再生能源；此外，也要把仍由跨國企業掌握的發電、供電權拿回柏林人手中，分散式的讓公民參與，讓公民獲得發電利潤，進而可以跟大型發電廠競爭。</p>
+        <p><br></p>
+        <p>從德國人最重視的啤酒出發，柏林人能源圓桌要讓民眾更了解能源，進而促進民眾選擇綠電供應商，用公民的力量合力推動能源轉型。</p>
+        <p><br></p>
+        <p><br></p>
       </div>
       <NextSection
         :directInfo="{
@@ -342,7 +341,7 @@ export default {
       // section-cover-video
       if (
         scoverPostition_video.top < 0 &&
-        scoverPostition_video.bottom > 0
+        scoverPostition_video.bottom > -window.innerHeight * 0.5
       ) {
         this.sectionCoverFlag_video = true;
         document.getElementById('video-1').play();
@@ -361,7 +360,8 @@ export default {
       // text highlihgt 1 event.
       if ( textHighlightPosition_1.top < window.innerHeight * 0.5 ) this.textHighlightFlag_1 = true;
       // text highlihgt 2 event.
-      if ( textHighlightPosition_2.top < window.innerHeight * 0.5 ) this.textHighlightFlag_2 = true;// text highlihgt 3 event.
+      if ( textHighlightPosition_2.top < window.innerHeight * 0.5 ) this.textHighlightFlag_2 = true;
+      // text highlihgt 3 event.
       if ( textHighlightPosition_3.top < window.innerHeight * 0.5 ) this.textHighlightFlag_3 = true;
     },
   },
@@ -462,6 +462,23 @@ export default {
         }
       }
     }
+    .section-cover-video {
+      background-color: #000000;
+      .section-cover {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #000000;
+      }
+      video {
+        // height: 100%;
+        // width: auto;
+        // @media only screen and (min-width: 769px)  {
+          height: auto;
+          width: 100%;
+        // }
+      }
+    }
     .section-cover-description {
       font-size: 15px;
       margin-bottom: 50px;
@@ -509,10 +526,26 @@ export default {
           }
         }
       }
-      .image-description {
-        color: #5a5a5a;
-        font-size: 15px;
+    }
+    .image-wrapper-column-2 {
+      img {
+        width: 100%;
+        margin: 5px 0;
+        @media only screen and (min-width: 768px) {
+          width: 50%;
+          &:first-child {
+            padding-right: 5px;
+          }
+          &:last-child {
+            padding-left: 5px;
+          }
+        }
       }
+    }
+    .image-description {
+      color: #5a5a5a;
+      font-size: 15px;
+      text-align: justify;
     }
   }
   .padding-top-none {

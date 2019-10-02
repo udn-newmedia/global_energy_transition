@@ -63,7 +63,7 @@
           @click="sendRelatedGA('R1')"
         >
           <img :src="require('../assets/read/read_Netherlands_01.jpg')" alt="荷蘭能源轉型列報導">
-          <div class="related-article-name">日本的兩難：擁核還是廢核？</div>
+          <div class="related-article-name">太陽能電動車：白天駕駛、晚上充電到你家</div>
         </a>
         <a
           href=""
@@ -73,7 +73,7 @@
           @click="sendRelatedGA('R2')"
         >
           <img :src="require('../assets/read/read_Netherlands_02.jpg')" alt="荷蘭能源轉型列報導">
-          <div class="related-article-name">日企打造智慧城，追求能源零消耗</div>
+          <div class="related-article-name">HyGear氫氣做為未來新能源，荷蘭準備好了</div>
         </a>
         <a
           href=""
@@ -83,7 +83,7 @@
           @click="sendRelatedGA('R3')"
         >
           <img :src="require('../assets/read/read_Netherlands_03.jpg')" alt="荷蘭能源轉型列報導">
-          <div class="related-article-name">日企打造智慧城，追求能源零消耗</div>
+          <div class="related-article-name">永續城市解決方案的先行者：台夫特理工大學Green Village計畫</div>
         </a>
       </div>
     </div>

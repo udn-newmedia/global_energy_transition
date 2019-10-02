@@ -163,7 +163,7 @@
         <p><br></p>
         <p>武內分析，包括太陽能、風力甚至生質能發電，福島具備了發展再生能源豐沛條件，且再生能源發電都不是巨型電廠，中小企業也能發展，在推動再生能源的普及上，並不需要仰賴大型電力公司的協助。</p>
         <p><br></p>
-        <div class="image-wrapper">
+        <div class="image-wrapper-column-2">
           <img
             :src="require(isMob ? './assets/mob/global_energy_transition_Japan_artical_image01_m.jpg' : './assets/pc/global_energy_transition_Japan_artical_image01.jpg')"
             alt="能源轉型"
@@ -590,6 +590,21 @@ export default {
         width: 100%;
         margin: 5px 0;
         @media only screen and (min-width: 768px) {
+          width: 100%;
+          &:first-child {
+            padding-right: 5px;
+          }
+          &:last-child {
+            padding-left: 5px;
+          }
+        }
+      }
+    }
+    .image-wrapper-column-2 {
+      img {
+        width: 100%;
+        margin: 5px 0;
+        @media only screen and (min-width: 768px) {
           width: 50%;
           &:first-child {
             padding-right: 5px;
@@ -599,14 +614,21 @@ export default {
           }
         }
       }
-      .image-description {
-        color: #5a5a5a;
-        font-size: 15px;
-      }
+    }
+    .image-description {
+      color: #5a5a5a;
+      font-size: 15px;
+      text-align: justify;
     }
   }
   .content-thin {
-    padding: 20px 60px !important;
+    padding: 20px 60px;
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+      padding: 20px calc(50% - 320px);
+    }
+    @media only screen and (min-width: 1025px) {
+      padding: 20px calc(50% - 440px);
+    }
   }
   .padding-top-none {
     padding-top: 0;

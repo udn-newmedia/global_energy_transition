@@ -29,7 +29,7 @@
     </section>
     <section class="black-bg">
       <GradientConnection :reverse="true" :inner="true" :top="true" :upper="true"/>
-      <div id="section-cover-video" class="section-cover-container">
+      <div id="section-cover-video" class="section-cover-container section-cover-video">
         <div :class="{
             'section-cover': true,
             'section-cover-active': sectionCoverFlag_video,
@@ -37,7 +37,6 @@
         >
           <video
             id="video-1"
-            height="100%"
             :src="
               isMob ?
               'https://p3.udn.com.tw/global_energy_transition/south_korea/korea_m.mp4' :
@@ -345,11 +344,12 @@ export default {
       const scoverPostition_2 = document.getElementById('section-cover-2').getBoundingClientRect();
       const scoverPostition_3 = document.getElementById('section-cover-3').getBoundingClientRect();
       const scoverPostition_4 = document.getElementById('section-cover-4').getBoundingClientRect();
+      const textHighlightPosition_1 = document.getElementById('text-highlight-1').getBoundingClientRect();
 
       // section-cover-video
       if (
         scoverPostition_video.top < 0 &&
-        scoverPostition_video.bottom > 0
+        scoverPostition_video.bottom > -window.innerHeight * 0.5
       ) {
         this.sectionCoverFlag_video = true;
         document.getElementById('video-1').play();
@@ -378,6 +378,9 @@ export default {
         scoverPostition_4.bottom > 0
       ) this.sectionCoverFlag_4 = true;
       else this.sectionCoverFlag_4 = false;
+
+      // text highlihgt 1 event.
+      if ( textHighlightPosition_1.top < window.innerHeight * 0.5 ) this.textHighlightFlag_1 = true;
     },
   },
   mounted() {
@@ -495,6 +498,23 @@ export default {
         }
       }
     }
+    .section-cover-video {
+      background-color: #000000;
+      .section-cover {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #000000;
+      }
+      video {
+        // height: 100%;
+        // width: auto;
+        // @media only screen and (min-width: 769px)  {
+          height: auto;
+          width: 100%;
+        // }
+      }
+    }
     .section-cover-description {
       font-size: 15px;
       margin-bottom: 50px;
@@ -542,10 +562,26 @@ export default {
           }
         }
       }
-      .image-description {
-        color: #5a5a5a;
-        font-size: 15px;
+    }
+    .image-wrapper-column-2 {
+      img {
+        width: 100%;
+        margin: 5px 0;
+        @media only screen and (min-width: 768px) {
+          width: 50%;
+          &:first-child {
+            padding-right: 5px;
+          }
+          &:last-child {
+            padding-left: 5px;
+          }
+        }
       }
+    }
+    .image-description {
+      color: #5a5a5a;
+      font-size: 15px;
+      text-align: justify;
     }
   }
   .padding-top-none {

@@ -48,6 +48,7 @@ export default {
   transform: translateY(2px);
 }
 .reverse {
+
   background-image: linear-gradient(to bottom, #000000, rgba(0, 0, 0, 0));
 }
 .inner {

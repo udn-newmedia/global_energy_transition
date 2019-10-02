@@ -46,7 +46,7 @@
           @click="sendRelatedGA('R3')"
         >
           <img :src="require('../assets/read/read_jp_03.jpg')" alt="日本能源">
-          <div class="related-article-name">日企打造智慧城，追求能源零消耗</div>
+          <div class="related-article-name">三人四腳，打造日本再生能源電能躉購費率企業第一號</div>
         </a>
         </Slick>
     </div>
@@ -83,7 +83,7 @@
           @click="sendRelatedGA('R3')"
         >
           <img :src="require('../assets/read/read_jp_03.jpg')" alt="日本能源">
-          <div class="related-article-name">日企打造智慧城，追求能源零消耗</div>
+          <div class="related-article-name">三人四腳，打造日本再生能源電能躉購費率企業第一號</div>
         </a>
       </div>
     </div>

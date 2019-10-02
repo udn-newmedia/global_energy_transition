@@ -291,7 +291,7 @@ export default {
           yProfileLineGroup.append('text')
             .attr('class', 'profile-text')
             .attr('x', config.marginSide - 30 * config.marginSideRatio)
-            .attr('y', (config.height / config.yAxisNum) * i - 10)
+            .attr('y', (config.height / config.yAxisNum) * i - 6)
             .text(() => (50- i * 10) + '%');
           yProfileLineGroup.append('line')
             .attr('class', () => {
@@ -528,9 +528,9 @@ export default {
     font-size: 0.7rem;
     color: #989898;
     text-align: right;
-    margin-right: 50px;
+    margin-right: 13px;
     @media only screen and (min-width: 769px) {
-      margin-right: calc(50vw - 440px);
+      margin-right: calc(50vw - 475px);
     }
   }
 }

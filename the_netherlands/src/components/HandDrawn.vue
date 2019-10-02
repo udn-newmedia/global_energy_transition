@@ -11,20 +11,20 @@
     <div class="hand-drawn-wrapper">
       <svg id="hand-drawn-chart" :width="svgWidth" :height="svgHeight" />
       <div class="hand-drawn-mask">
-        <div class="mask"/>
-        <div class="mask"/>
+        <div class="mask" />
+        <div class="mask" />
       </div>
-      <div class="chart-description">資料來源／韓國電力公司</div>
+      <div class="chart-description">資料來源／荷蘭中央統計局</div>
       <button v-show="!answerFlag" id="answer-button" class="answer-button" name="解答">解答</button>
       <div class="content">
-        <div v-show="answerFlag" class="answer-wrapper">文在寅將南韓帶向反核之路，計畫2060年全面廢核。</div>
+        <div v-show="answerFlag" class="answer-wrapper">荷蘭政府自2015年開始意識到，應減少使用傳統能源發電，改以風機、太陽能等再生能源代替。</div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import Utils from 'udn-newmedia-utils';
+import Utils from "udn-newmedia-utils";
 import * as d3 from "d3";
 
 export default {
@@ -33,204 +33,226 @@ export default {
     subTitle: {
       type: String,
       default: null
-    },
+    }
   },
   data() {
     return {
       energyData: {
         0: {
-          title: "燃煤",
-          color: "#b86f52",
-          data: [41.7, 40.3, 39.0, 38.8, 40.0, 38.7, 39.6, 43.1]
-        },
-        1: {
           title: "天然氣",
           color: "#9b287b",
-          data: [20.4, 20.5, 22.4, 24.7, 22.0, 19.1, 22.4, 22.2]
+          data: [48.3, 45.3, 43.1, 44.1, 40.5, 39.0, 40.3, 41.3, 41.6]
         },
-        2: {
+        1: {
           title: "石油",
           color: "#ffa552",
-          data: [2.7, 2.5, 3.0, 3.0, 4.8, 6.0, 2.6, 1.2]
+          data: [36.2, 37.2, 37.4, 36.0, 37.5, 37.0, 37.6, 37.8, 37.5]
         },
-        3: {
+        2: {
           title: "再生能源",
           color: "#2d95ff",
-          data: [3.9, 5.6, 6.1, 6.7, 4.3, 5.1, 5.5, 6.3]
+          data: [4.0, 4.4, 4.6, 4.7, 5.0, 5.2, 5.3, 5.8, 6.4]
+        },
+        3: {
+          title: "核能",
+          color: "#cdee1e",
+          data: [1.1, 1.2, 1.2, 0.9, 1.3, 1.3, 1.2, 1.1, 1.1]
         },
         4: {
-          title: "核能",
+          title: "其他",
           color: "#cdee1e",
           data: [31.3, 31.1, 29.5, 26.8, 30.0, 31.2, 30.0, 26.8]
         },
+        5: {
+          title: "燃煤",
+          color: "#b86f52",
+          data: [9.1, 9.6, 10.5, 10.8, 12.6, 15.0, 13.7, 12.2, 11.1]
+        },
       },
       answerData: {
-        answerYear: 2017,
-        hintText: '畫畫看南韓核電佔比變化',
+        answerYear: 2015,
+        hintText: "畫畫看荷蘭燃煤佔比變化"
       },
       answerFlag: false,
-      yearList: [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017],
-      drawnYearList: [2011, 2012, 2013, 2014, 2015, 2016, 2017],
+      yearList: [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018],
+      drawnYearList: [2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018],
       svgWidth: window.innerWidth,
       svgHeight: window.innerHeight * 0.5,
       drawDataIndex: 4,
       drawnFlag: false,
-      drawnStep: 2011,
+      drawnStep: 2011
     };
   },
   computed: {
     isMob() {
       return window.innerWidth <= 768 ? true : false;
-    },
+    }
   },
   methods: {
     drawChart() {
       const vm = this;
-      vm.svgWidth =  window.innerWidth;
+      vm.svgWidth = window.innerWidth;
       vm.svgHeight = window.innerHeight * 0.5;
       const _isMob = window.innerWidth <= 768 ? true : false;
       const dataset = Object.values(vm.energyData);
       const marginParams = {
         top: 25,
-        bottom: 25,
+        bottom: 25
       };
       const config = {
         width: vm.svgWidth,
         height: vm.svgHeight - marginParams.top - marginParams.bottom,
         dataLength: dataset.length,
-        xAxisNum: 8,
+        xAxisNum: 9,
         yAxisNum: 5,
         // marginSide: _isMob ? 50 : 0,
         marginSide: _isMob ? 50 : Math.max(100, (vm.svgWidth - 880) * 0.5),
-        marginSideRatio: _isMob ? 0.5 : 1,
+        marginSideRatio: _isMob ? 0.5 : 1
       };
 
       const xScale = d3
         .scaleLinear()
         .domain([0, config.xAxisNum - 1]) // input
-        .range([config.marginSide, config.width - config.marginSide * config.marginSideRatio]); // output
+        .range([
+          config.marginSide,
+          config.width - config.marginSide * config.marginSideRatio
+        ]); // output
       const xScaleTime = d3
         .scaleLinear()
-        .domain([2010, 2017]) // input
-        .range([config.marginSide, config.width - config.marginSide * config.marginSideRatio]); // output
+        .domain([2010, 2018]) // input
+        .range([
+          config.marginSide,
+          config.width - config.marginSide * config.marginSideRatio
+        ]); // output
       const yScale = d3
         .scaleLinear()
         .domain([0, 50])
         .range([config.height, 0]);
       const customXScale = d3
         .scaleQuantize()
-        .domain([config.marginSide, config.width - config.marginSide * config.marginSideRatio])
+        .domain([
+          config.marginSide,
+          config.width - config.marginSide * config.marginSideRatio
+        ])
         .range(vm.drawnYearList);
       const line = d3
         .line()
         .x((d, i) => xScale(i))
-        .y((d) => yScale(d))
+        .y(d => yScale(d))
         .curve(d3.curveLinear);
       const customLine = d3
         .line()
         .x((d, i) => xScale(i + 1))
-        .y((d) => d)
+        .y(d => d)
         .curve(d3.curveMonotoneX);
 
-      d3.select('#hand-drawn-chart').selectAll('.hand-drawn-chart').remove();
-      const svg = d3.select('#hand-drawn-chart')
-        .append('g')
-        .attr('class', 'hand-drawn-chart')
-        .attr('transform', 'translate(' + 0 + ',' + marginParams.top + ')');
-      const answerButton = d3.select('#answer-button');
-      
+      d3.select("#hand-drawn-chart")
+        .selectAll(".hand-drawn-chart")
+        .remove();
+      const svg = d3
+        .select("#hand-drawn-chart")
+        .append("g")
+        .attr("class", "hand-drawn-chart")
+        .attr("transform", "translate(" + 0 + "," + marginParams.top + ")");
+      const answerButton = d3.select("#answer-button");
+
       // assign answer button evetn
-      answerButton.on('click', handleAnswerClick)
+      answerButton.on("click", handleAnswerClick);
 
       // draw axis
       svg
-        .append('g')
-        .attr('class', 'x axis')
-        .attr('transform', 'translate(0,' + config.height + ')')
+        .append("g")
+        .attr("class", "x axis")
+        .attr("transform", "translate(0," + config.height + ")")
         .call(
-          d3.axisBottom(xScaleTime)
-            .tickFormat(d3.format('d'))
+          d3
+            .axisBottom(xScaleTime)
+            .tickFormat(d3.format("d"))
             .tickValues(vm.yearList)
         );
       svg
-        .append('g')
-        .attr('class', 'y axis')
+        .append("g")
+        .attr("class", "y axis")
         .call(drawAxisY);
 
       // draw line
       for (let i = 0; i < dataset.length; i++) {
         if (vm.drawDataIndex === i) {
           svg
-            .append('path')
+            .append("path")
             .datum([dataset[i].data[0], dataset[i].data[1]])
-            .attr('id', 'active-line')
-            .attr('class', 'line line-active')
-            .attr('stroke', () => dataset[i].color)
-            .attr('d', line);
+            .attr("id", "active-line")
+            .attr("class", "line line-active")
+            .attr("stroke", () => dataset[i].color)
+            .attr("d", line);
           svg
-            .append('path')
+            .append("path")
             .datum([yScale(dataset[i].data[1]), yScale(dataset[i].data[1])])
-            .attr('class', 'hint line line-active')
-            .attr('stroke', () => dataset[i].color)
-            .attr('stroke-dasharray', 8)
-            .attr('stroke-dashoffset', 10)
-            .attr('d', customLine);
+            .attr("class", "hint line line-active")
+            .attr("stroke", () => dataset[i].color)
+            .attr("stroke-dasharray", 8)
+            .attr("stroke-dashoffset", 10)
+            .attr("d", customLine);
           svg
-            .append('text')
-            .attr('class', 'hint hint-text')
-            .attr('x', xScale(2))
-            .attr('y', yScale(dataset[i].data[1]))
+            .append("text")
+            .attr("class", "hint hint-text")
+            .attr("x", xScale(2))
+            .attr("y", yScale(dataset[i].data[1]))
             .text(vm.answerData.hintText);
         } else {
           svg
-            .append('path')
+            .append("path")
             .datum(dataset[i].data)
-            .attr('class', 'line')
-            .attr('stroke', () => dataset[i].color)
-            .attr('d', line);
+            .attr("class", "line")
+            .attr("stroke", () => dataset[i].color)
+            .attr("d", line);
         }
       }
 
       // draw dots
-      svg.append('circle')
-        .attr('class', 'line-dot')
-        .attr('cx', xScale(0))
-        .attr('cy', yScale(vm.energyData[vm.drawDataIndex].data[0]))
-        .attr('r', 6)
-        .style('fill', vm.energyData[vm.drawDataIndex].color);
-      svg.append('circle')
-        .attr('class', 'line-dot')
-        .attr('cx', xScale(1))
-        .attr('cy', yScale(vm.energyData[vm.drawDataIndex].data[1]))
-        .attr('r', 6)
-        .style('fill', vm.energyData[vm.drawDataIndex].color);
-      svg.append('text')
-        .attr('class', 'line-dot-text')
-        .attr('x', xScale(0) + 5)
-        .attr('y', yScale(vm.energyData[vm.drawDataIndex].data[0]) - 10)
-        .style('fill', vm.energyData[vm.drawDataIndex].color)
-        .text(vm.energyData[vm.drawDataIndex].data[0] + '%');
-      svg.append('text')
-        .attr('class', 'line-dot-text')
-        .attr('x', xScale(1) + 5)
-        .attr('y', yScale(vm.energyData[vm.drawDataIndex].data[1]) - 10)
-        .style('fill', vm.energyData[vm.drawDataIndex].color)
-        .text(vm.energyData[vm.drawDataIndex].data[1] + '%');
+      svg
+        .append("circle")
+        .attr("class", "line-dot")
+        .attr("cx", xScale(0))
+        .attr("cy", yScale(vm.energyData[vm.drawDataIndex].data[0]))
+        .attr("r", 6)
+        .style("fill", vm.energyData[vm.drawDataIndex].color);
+      svg
+        .append("circle")
+        .attr("class", "line-dot")
+        .attr("cx", xScale(1))
+        .attr("cy", yScale(vm.energyData[vm.drawDataIndex].data[1]))
+        .attr("r", 6)
+        .style("fill", vm.energyData[vm.drawDataIndex].color);
+      svg
+        .append("text")
+        .attr("class", "line-dot-text")
+        .attr("x", xScale(0) + 5)
+        .attr("y", yScale(vm.energyData[vm.drawDataIndex].data[0]) - 10)
+        .style("fill", vm.energyData[vm.drawDataIndex].color)
+        .text(vm.energyData[vm.drawDataIndex].data[0] + "%");
+      svg
+        .append("text")
+        .attr("class", "line-dot-text")
+        .attr("x", xScale(1) + 5)
+        .attr("y", yScale(vm.energyData[vm.drawDataIndex].data[1]) - 10)
+        .style("fill", vm.energyData[vm.drawDataIndex].color)
+        .text(vm.energyData[vm.drawDataIndex].data[1] + "%");
 
       // hand drawing event
-      let customData = [
-        yScale(vm.energyData[vm.drawDataIndex].data[1]),
-      ];      
+      let customData = [yScale(vm.energyData[vm.drawDataIndex].data[1])];
       let customCurrentMaxIndex = 1;
-      d3.select('#hand-drawn-chart').call(d3.drag()
-        .on('start', dragStarted)
-        .on('drag', dragged)
-        .on('end', dragEnded)
+      d3.select("#hand-drawn-chart").call(
+        d3
+          .drag()
+          .on("start", dragStarted)
+          .on("drag", dragged)
+          .on("end", dragEnded)
       );
 
       function dragStarted() {
         if (!vm.drawnFlag) {
-          d3.selectAll('.hint').remove();
+          d3.selectAll(".hint").remove();
           drawCustomLine();
           vm.drawnFlag = true;
         }
@@ -256,106 +278,154 @@ export default {
           case 2017:
             handleDrawMove(2017);
             break;
+          case 2018:
+            handleDrawMove(2018);
+            break;
           default:
             break;
         }
       }
       function dragEnded() {}
       function drawCustomLine() {
-        svg.select('#custom-line').remove();
-        svg.append('path')
-            .datum(customData)
-            .attr('id', 'custom-line')
-            .attr('class', 'line line-active')
-            .attr('stroke', vm.energyData[vm.drawDataIndex].color)
-            .attr('stroke-dasharray', 8)
-            .attr('stroke-dashoffset', 10)
-            .attr('d', customLine);
+        svg.select("#custom-line").remove();
+        svg
+          .append("path")
+          .datum(customData)
+          .attr("id", "custom-line")
+          .attr("class", "line line-active")
+          .attr("stroke", vm.energyData[vm.drawDataIndex].color)
+          .attr("stroke-dasharray", 8)
+          .attr("stroke-dashoffset", 10)
+          .attr("d", customLine);
       }
       function handleDrawMove(year) {
         if (vm.drawnYearList.indexOf(year) > customCurrentMaxIndex) {
-          for (let i = customCurrentMaxIndex; i < vm.drawnYearList.indexOf(year); i++) {
+          for (
+            let i = customCurrentMaxIndex;
+            i < vm.drawnYearList.indexOf(year);
+            i++
+          ) {
             customData.push(Math.min(d3.event.y - 25, config.height));
           }
-          customCurrentMaxIndex = vm.drawnYearList.indexOf(year)            
+          customCurrentMaxIndex = vm.drawnYearList.indexOf(year);
         } else {
-          customData[vm.yearList.indexOf(year) - 1] = Math.min(d3.event.y - 25, config.height);
+          customData[vm.yearList.indexOf(year) - 1] = Math.min(
+            d3.event.y - 25,
+            config.height
+          );
           drawCustomLine();
         }
       }
       function drawAxisY() {
-        const yAxis = svg.selectAll('g.y.axis');        
-        const yProfileLine = yAxis.attr('class', '.y-profile-lines');
+        const yAxis = svg.selectAll("g.y.axis");
+        const yProfileLine = yAxis.attr("class", ".y-profile-lines");
         for (let i = 0; i < config.yAxisNum + 1; i++) {
-          const yProfileLineGroup = yProfileLine.append('g').attr('class', '.y-profile-line-group');
-          yProfileLineGroup.append('text')
-            .attr('class', 'profile-text')
-            .attr('x', config.marginSide - 30 * config.marginSideRatio)
-            .attr('y', (config.height / config.yAxisNum) * i - 10)
-            .text(() => (50- i * 10) + '%');
-          yProfileLineGroup.append('line')
-            .attr('class', () => {
-              return i === config.yAxisNum ? 'profile-line profile-line-last' : 'profile-line';
+          const yProfileLineGroup = yProfileLine
+            .append("g")
+            .attr("class", ".y-profile-line-group");
+          yProfileLineGroup
+            .append("text")
+            .attr("class", "profile-text")
+            .attr("x", config.marginSide - 30 * config.marginSideRatio)
+            .attr("y", (config.height / config.yAxisNum) * i - 6)
+            .text(() => 50 - i * 10 + "%");
+          yProfileLineGroup
+            .append("line")
+            .attr("class", () => {
+              return i === config.yAxisNum
+                ? "profile-line profile-line-last"
+                : "profile-line";
             })
-            .attr('x1', 0)
-            .attr('x2', config.width)
-            .attr('y1', (config.height / config.yAxisNum) * i + 0.5)
-            .attr('y2', (config.height / config.yAxisNum) * i + 0.5);
+            .attr("x1", 0)
+            .attr("x2", config.width)
+            .attr("y1", (config.height / config.yAxisNum) * i + 0.5)
+            .attr("y2", (config.height / config.yAxisNum) * i + 0.5);
         }
       }
       function handleAnswerClick() {
         vm.answerFlag = true;
-        const svg = d3.select('#hand-drawn-chart').select('.hand-drawn-chart')
-        svg.select('#active-line')
+        const svg = d3.select("#hand-drawn-chart").select(".hand-drawn-chart");
+        svg
+          .select("#active-line")
           .datum(dataset[vm.drawDataIndex].data)
-          .attr('d', line);
-        svg.append('line')
-          .attr('class', 'profile-line')
-          .attr('x1', xScaleTime(vm.answerData.answerYear))
-          .attr('x2', xScaleTime(vm.answerData.answerYear))
-          .attr('y1', 0)
-          .attr('y2', config.height)
-        svg.append('circle')
-          .attr('class', 'line-dot')
-          .attr('cx', xScaleTime(vm.answerData.answerYear))
-          .attr('cy', yScale(vm.energyData[vm.drawDataIndex].data[vm.yearList.indexOf(vm.answerData.answerYear)]))
-          .attr('r', 6)
-          .style('fill', vm.energyData[vm.drawDataIndex].color);
-        svg.append('text')
-          .attr('class', 'line-dot-text')
-          .attr('x', xScaleTime(vm.answerData.answerYear) - 10)
-          .attr('y', yScale(vm.energyData[vm.drawDataIndex].data[vm.yearList.indexOf(vm.answerData.answerYear)]) - 10)
-          .style('fill', vm.energyData[vm.drawDataIndex].color)
-          .text(vm.energyData[vm.drawDataIndex].data[vm.yearList.indexOf(vm.answerData.answerYear)] + '%');
-
+          .attr("d", line);
+        svg
+          .append("line")
+          .attr("class", "profile-line")
+          .attr("x1", xScaleTime(vm.answerData.answerYear))
+          .attr("x2", xScaleTime(vm.answerData.answerYear))
+          .attr("y1", 0)
+          .attr("y2", config.height);
+        svg
+          .append("circle")
+          .attr("class", "line-dot")
+          .attr("cx", xScaleTime(vm.answerData.answerYear))
+          .attr(
+            "cy",
+            yScale(
+              vm.energyData[vm.drawDataIndex].data[
+                vm.yearList.indexOf(vm.answerData.answerYear)
+              ]
+            )
+          )
+          .attr("r", 6)
+          .style("fill", vm.energyData[vm.drawDataIndex].color);
+        svg
+          .append("text")
+          .attr("class", "line-dot-text")
+          .attr("x", xScaleTime(vm.answerData.answerYear) - 10)
+          .attr(
+            "y",
+            yScale(
+              vm.energyData[vm.drawDataIndex].data[
+                vm.yearList.indexOf(vm.answerData.answerYear)
+              ]
+            ) - 10
+          )
+          .style("fill", vm.energyData[vm.drawDataIndex].color)
+          .text(
+            vm.energyData[vm.drawDataIndex].data[
+              vm.yearList.indexOf(vm.answerData.answerYear)
+            ] + "%"
+          );
 
         vm.sendSolutionGA();
       }
     },
     sendDrawGA() {
       window.ga("newmedia.send", {
-        "hitType": "event",
-        "eventCategory": "test",
-        "eventAction": "draw",
-        "eventLabel": "[" + Utils.detectPlatform() + "] [" + document.querySelector('title').innerHTML + "] [畫畫看]",
+        hitType: "event",
+        eventCategory: "test",
+        eventAction: "draw",
+        eventLabel:
+          "[" +
+          Utils.detectPlatform() +
+          "] [" +
+          document.querySelector("title").innerHTML +
+          "] [畫畫看]"
       });
     },
     sendSolutionGA() {
       window.ga("newmedia.send", {
-        "hitType": "event",
-        "eventCategory": "test",
-        "eventAction": "draw",
-        "eventLabel": "[" + Utils.detectPlatform() + "] [" + document.querySelector('title').innerHTML + "] [answer]",
+        hitType: "event",
+        eventCategory: "test",
+        eventAction: "draw",
+        eventLabel:
+          "[" +
+          Utils.detectPlatform() +
+          "] [" +
+          document.querySelector("title").innerHTML +
+          "] [answer]"
       });
-    },
+    }
   },
   mounted() {
     this.drawChart();
     // window.addEventListener('resize', () => { this.drawChart(); });
   },
   destroyed() {
-    // window.removeEventListener('resize', () => { this.drawChart(); });    
-  },
+    // window.removeEventListener('resize', () => { this.drawChart(); });
+  }
 };
 </script>
 
@@ -480,7 +550,7 @@ export default {
     letter-spacing: 1.8px;
     text-align: center;
     @media only screen and (min-width: 769px) {
-      width: 100px;  
+      width: 100px;
     }
   }
   .hand-drawn-sub-title {
@@ -528,9 +598,9 @@ export default {
     font-size: 0.7rem;
     color: #989898;
     text-align: right;
-    margin-right: 50px;
+    margin-right: 13px;
     @media only screen and (min-width: 769px) {
-      margin-right: calc(50vw - 440px);
+      margin-right: calc(50vw - 475px);
     }
   }
 }
