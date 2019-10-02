@@ -133,10 +133,15 @@
             'section-cover-active': sectionCoverFlag_2,
             'section-cover-2': true,
           }"
-        />
+        >
+          <GradientConnection :inner="true" :bottom="true"/>
+          <div class="content">
+            <div class="section-cover-description">原本是日本核能大縣的福島縣在核災後，選擇全面擁抱再生能源。記者蔡佩芳／攝影</div>
+          </div>
+        </div>
       </div>
       <div class="content gray-bg padding-top-none">
-        <div class="section-cover-description">原本是日本核能大縣的福島縣在核災後，選擇全面擁抱再生能源。記者蔡佩芳／攝影</div>
+        <p><br></p>
         <p><br></p>
         <h3>一場大地震 扭轉福島發展方向</h3>
         <p><br></p>
@@ -154,10 +159,15 @@
             'section-cover-active': sectionCoverFlag_3,
             'section-cover-3': true,
           }"
-        />
+        >
+          <GradientConnection :inner="true" :bottom="true"/>
+          <div class="content">
+            <div class="section-cover-description">福島具備發展再生能源的豐沛條件。記者蔡佩芳／攝影</div>
+          </div>
+        </div>
       </div>
       <div class="content gray-bg padding-top-none">
-        <div class="section-cover-description">原本是日本核能大縣的福島縣在核災後，選擇全面擁抱再生能源。記者蔡佩芳／攝影</div>
+        <p><br></p>
         <p><br></p>
         <p>福島縣企畫調整部能源課主幹（相當於課長）武內正志表示，利用政府補助，福島大力推進太陽能光電收購以及蓄電池設施的興建，2017年已順利將再生能源所占電源比例提升到30.3%，對2020年達到4成的近程目標，縣府充滿信心。</p>
         <p><br></p>
