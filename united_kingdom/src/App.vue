@@ -69,7 +69,7 @@
         <p><br></p>
         <p>當能源轉型已勢在必行，各國政府如何協助燃煤產業轉型、催生再生能源產業，民間團體又如何將節能與公民發電落實於日常生活中？</p>
         <p><br></p>
-        <p>《聯合報》採訪團隊實際走訪英國、德國、荷蘭、日本、韓國，紀錄這5個國家的能源轉型之路，希望借鏡國外經驗，讓台灣的能源轉型之路走得更順、走得更遠。</p>
+        <p>《聯合報》採訪團隊實際走訪英國、德國、荷蘭、日本、南韓，紀錄這5個國家的能源轉型之路，希望借鏡國外經驗，讓台灣的能源轉型之路走得更順、走得更遠。</p>
       </div>
     </div>
     <Anchor :currentPage="4" :anchorFixedFlag="anchorFixedFlag"/>
@@ -128,22 +128,19 @@
       <div class="content">
         <p>8月位在英國倫敦東南方的布萊頓（Brighton）正值夏季觀光旺季，沙灘上一個個穿著比基尼、曬日光浴的遊客，正享受海風吹拂。過去，布萊頓已有賞豚、海釣等海上觀光之旅，現在又多了一種觀光行程─離岸風機之旅。</p>
         <p><br></p>
-        <p id="text-highlight-1">英國預計在2025年前關閉最後一波燃煤電廠。
-          <mark
+        <p id="text-highlight-1">英國預計在2025年前關閉最後一波燃煤電廠。<mark
             :class="{
               'text-highlight-ie': isIE,
               'text-highlight': !isIE ? true : false,
               'text-highlight-white': !isIE ? true : false,
               'text-highlight-animate': !isIE && textHighlightFlag_1,
             }"
-          >
-            為完成減碳大業，英國正致力提升離岸風電發電量、核能佔比，除了離岸風電的發電量領先各國之外，在社區發展方面，也長出布萊頓這類地區創生的典範區域。
-          </mark>
+          >為完成減碳大業，英國正致力提升離岸風電發電量、核能佔比，除了離岸風電的發電量領先各國之外，在社區發展方面，也長出布萊頓這類地區創生的典範區域。</mark>
         </p>
         <p><br></p>
         <p>採訪團隊自倫敦出發，一進到布萊頓市區，遠望就看到一座座白色風機矗立海上，與海景相互輝映。</p>
         <p><br></p>
-        <p>這片離岸風電於5年前開始發電，英商海德益公司再生能源專案經理馬克伯朗（ODE Renewables Project Manager Mark BROWN）表示，這個離岸風電廠於2017年4月完成，目前共有116座風機，最大發電量是4億瓦特。</p>
+        <p>這片離岸風電於5年前開始發電，英商海德益公司（ODE）再生能源專案經理馬克伯朗（Mark BROWN）表示，這個離岸風電廠於2017年4月完成，目前共有116座風機，最大發電量是4億瓦特。</p>
         <p><br></p>
         <p>行至碼頭，我們踏上船長大衛羅斯（David Ross）的觀光船，預計進行一趟來回3小時的離岸風電之旅。當天雖然風感覺不大，但出發時，天色看來有些陰暗，幸好，大衛點點頭表示，今天的風況看來還可以，出海應是沒問題。</p>
         <p><br></p>
@@ -234,7 +231,7 @@
           'prev': {
             'title': '荷蘭',
             'url': 'The_Netherlands/#article',
-            'description': '南韓再生能源中心落腳新萬金',
+            'description': '荷蘭用風力開火車',
           },
           'next': {
             'title': '日本',
@@ -347,6 +344,7 @@
       </div>
     </div>
     <Foot/>
+    <GoTop/>
   </div>
 </template>
 
@@ -356,6 +354,7 @@ import Utils from 'udn-newmedia-utils';
 import Anchor from '@generals/components/Anchor.vue'
 import ArticleArrow from '@generals/components/ArticleArrow.vue'
 import Cover from './components/Cover.vue'
+import GoTop from '@generals/components/GoTop.vue'
 import GradientConnection from '@generals/components/GradientConnection.vue'
 import FBComment from './components/FBComment.vue'
 import Foot from '@generals/components/Foot.vue'
@@ -373,6 +372,7 @@ export default {
     Anchor,
     ArticleArrow,
     Cover,
+    GoTop,
     GradientConnection,
     FBComment,
     Foot,
@@ -387,7 +387,7 @@ export default {
   data() {
     return {
       anchorFixedFlag: false,
-      frogFlag: false,
+      frogFlag: true,
       coverHighlightFlag: false,
       textHighlightFlag_1: false,
       sectionCoverFlag_video: false,
@@ -422,7 +422,7 @@ export default {
       // cover frog event
       if (
         window.pageYOffset < window.innerHeight * 2 &&
-        window.pageYOffset > window.innerHeight
+        window.pageYOffset >= -window.innerHeight * 0.5
       ) this.frogFlag = true;
       else this.frogFlag = false;
 
@@ -441,7 +441,7 @@ export default {
       // section-cover-1
       if (
         scoverPostition_1.top < 0 &&
-        scoverPostition_1.bottom > 0
+        scoverPostition_1.bottom > -window.innerHeight * 0.5
       ) this.sectionCoverFlag_1 = true;
       else this.sectionCoverFlag_1 = false;
       // section-cover-2

@@ -54,14 +54,14 @@ export default {
           data: [2.7, 2.5, 3.0, 3.0, 4.8, 6.0, 2.6, 1.2]
         },
         3: {
-          title: "再生能源",
-          color: "#2d95ff",
-          data: [3.9, 5.6, 6.1, 6.7, 4.3, 5.1, 5.5, 6.3]
-        },
-        4: {
           title: "核能",
           color: "#cdee1e",
           data: [31.3, 31.1, 29.5, 26.8, 30.0, 31.2, 30.0, 26.8]
+        },
+        4: {
+          title: "其他（再生能源）",
+          color: "#2d95ff",
+          data: [3.9, 5.6, 6.1, 6.7, 4.3, 5.1, 5.5, 6.3]
         },
       },
       answerData: {
@@ -73,7 +73,7 @@ export default {
       drawnYearList: [2011, 2012, 2013, 2014, 2015, 2016, 2017],
       svgWidth: window.innerWidth,
       svgHeight: window.innerHeight * 0.5,
-      drawDataIndex: 4,
+      drawDataIndex: 3,
       drawnFlag: false,
       drawnStep: 2011,
     };

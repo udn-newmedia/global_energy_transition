@@ -32,7 +32,7 @@ export default {
   props: {
     subTitle: {
       type: String,
-      default: null
+      default: null,
     }
   },
   data() {
@@ -59,14 +59,14 @@ export default {
           data: [1.1, 1.2, 1.2, 0.9, 1.3, 1.3, 1.2, 1.1, 1.1]
         },
         4: {
-          title: "其他",
-          color: "#cdee1e",
-          data: [31.3, 31.1, 29.5, 26.8, 30.0, 31.2, 30.0, 26.8]
-        },
-        5: {
           title: "燃煤",
           color: "#b86f52",
           data: [9.1, 9.6, 10.5, 10.8, 12.6, 15.0, 13.7, 12.2, 11.1]
+        },
+        5: {
+          title: "其他",
+          color: "#00f6ff",
+          data: [1.4, 2.2, 3.1, 3.4, 3.2, 2.4, 2.0, 1.9, 2.3]
         },
       },
       answerData: {

@@ -36,9 +36,7 @@ export default {
   watch: {
     frogFlag: {
       handler(flag) {
-        if (flag) {
-          this.renderFrog();
-        }
+        if (flag) this.renderFrog();
       },
       deep: true,
     },
@@ -130,7 +128,8 @@ export default {
         //Repeat if there's still a living particle
         if (stillAlive) {
           requestAnimationFrame(function() {
-            draw(startT, totalT);
+            if (vm.frogFlag) draw(startT, totalT);
+            else ctx.clearRect(0, 0, c.width, c.height);
           });
         }
       }

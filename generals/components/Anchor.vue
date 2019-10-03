@@ -123,6 +123,11 @@ export default {
       background-color: #000000;
       border-bottom: 2px solid transparent;
       a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
         outline: none;
         color: inherit;
       }

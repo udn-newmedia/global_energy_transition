@@ -19,9 +19,7 @@ export default {
     }
   },
   created () {
-    if (this.$props.href === undefined && this.$props.jsonProps === null) {
-      console.error('請輸入 href ex: <fb-comment> href="{Url}"></fb-comment>')
-    }
+
   }
 }
 </script>

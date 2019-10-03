@@ -18,8 +18,7 @@
         <p>「能源轉型就像革命一樣，」一位推動南韓社區能源轉型的市民想到自己曾面臨的阻礙，不禁搖了搖頭。</p>
         <p><br></p>
         <p id="cover-highlight-text">
-          能源轉型確實是場長期戰役。在台灣，蔡英文總統自上任來，積極推動非核、減煤目標，
-          <mark
+          能源轉型確實是場長期戰役。在台灣，蔡英文總統自上任來，積極推動非核、減煤目標，<mark
             id="cover-arrow-start"
             :class="{
               'text-highlight-ie': isIE,
@@ -27,10 +26,7 @@
               'text-highlight-white': !isIE ? true : false,
               'text-highlight-animate': !isIE && coverHighlightFlag,
             }"
-          >
-            並計劃在2025年，再生能源發電佔比達20%
-          </mark>
-          ，但節節高漲的電費、供電問題卻也隨之而來；放眼全球，加速老舊燃煤電廠退役、發展綠能產業正成國際趨勢，不過各國也面臨扼制綠能產業發展的法規、過時的電力產業結構等阻礙。
+          >並計劃在2025年，再生能源發電佔比達20%</mark>，但節節高漲的電費、供電問題卻也隨之而來；放眼全球，加速老舊燃煤電廠退役、發展綠能產業正成國際趨勢，不過各國也面臨扼制綠能產業發展的法規、過時的電力產業結構等阻礙。
         </p>
         <p><br></p>
         <div id="cover-arrow-end"/>
@@ -69,7 +65,7 @@
         <p><br></p>
         <p>當能源轉型已勢在必行，各國政府如何協助燃煤產業轉型、催生再生能源產業，民間團體又如何將節能與公民發電落實於日常生活中？</p>
         <p><br></p>
-        <p>《聯合報》採訪團隊實際走訪英國、德國、荷蘭、日本、韓國，紀錄這5個國家的能源轉型之路，希望借鏡國外經驗，讓台灣的能源轉型之路走得更順、走得更遠。</p>
+        <p>《聯合報》採訪團隊實際走訪英國、德國、荷蘭、日本、南韓，紀錄這5個國家的能源轉型之路，希望借鏡國外經驗，讓台灣的能源轉型之路走得更順、走得更遠。</p>
       </div>
     </div>
     <Anchor :currentPage="1" :anchorFixedFlag="anchorFixedFlag"/>
@@ -129,18 +125,14 @@
         <p>南韓西岸全羅北道的新萬金有一道長33.9公里的世界最長人工海堤，其宏偉景象連在外太空也看得見，在南韓政府的規劃下，新萬金海堤內已變身409平方公里的填海造陸地區，而未來，該填海造陸地區還會再創一個世界之最──世界最大再生能源中心。</p>
         <p><br></p>
         <p id="text-highlight-1">
-          「我們要在新萬金打造世界數一數二的太陽能和離岸風力發電設備，」
-          <mark
+          「我們要在新萬金打造世界數一數二的太陽能和離岸風力發電設備，」<mark
             :class="{
               'text-highlight-ie': isIE,
               'text-highlight': !isIE ? true : false,
               'text-highlight-white': !isIE ? true : false,
               'text-highlight-animate': !isIE && textHighlightFlag_1,
             }"
-          >
-            南韓總統文在寅於2017年上任後，誓言將廠齡超過30年的老舊火力發電廠除役，同時計劃在2030年，將再生能源在總發電量的佔比從目前的7%提高到20%
-          </mark>
-          ，新萬金再生能源計畫正是此願景的關鍵一步。
+          >南韓總統文在寅於2017年上任後，誓言將廠齡超過30年的老舊火力發電廠除役，同時計劃在2030年，將再生能源在總發電量的佔比從目前的7%提高到20%</mark>，新萬金再生能源計畫正是此願景的關鍵一步。
         </p>
         <p><br></p>
         <p><br></p>
@@ -365,6 +357,7 @@
       </div>
     </div>
     <Foot/>
+    <GoTop/>
   </div>
 </template>
 
@@ -374,6 +367,7 @@ import Utils from 'udn-newmedia-utils';
 import Anchor from '@generals/components/Anchor.vue'
 import ArticleArrow from '@generals/components/ArticleArrow.vue'
 import Cover from './components/Cover.vue'
+import GoTop from '@generals/components/GoTop.vue'
 import GradientConnection from '@generals/components/GradientConnection.vue'
 import FBComment from './components/FBComment.vue'
 import Foot from '@generals/components/Foot.vue'
@@ -391,6 +385,7 @@ export default {
     Anchor,
     ArticleArrow,
     Cover,
+    GoTop,
     GradientConnection,
     FBComment,
     Foot,
@@ -405,7 +400,7 @@ export default {
   data() {
     return {
       anchorFixedFlag: false,
-      frogFlag: false,
+      frogFlag: true,
       coverHighlightFlag: false,
       textHighlightFlag_1: false,
       sectionCoverFlag_video: false,
@@ -442,7 +437,7 @@ export default {
       // cover frog event
       if (
         window.pageYOffset < window.innerHeight * 2 &&
-        window.pageYOffset > window.innerHeight
+        window.pageYOffset >= -window.innerHeight * 0.5
       ) this.frogFlag = true;
       else this.frogFlag = false;
 
@@ -461,7 +456,7 @@ export default {
       // section-cover-1
       if (
         scoverPostition_1.top < 0 &&
-        scoverPostition_1.bottom > 0
+        scoverPostition_1.bottom > -window.innerHeight * 0.5
       ) this.sectionCoverFlag_1 = true;
       else this.sectionCoverFlag_1 = false;
       // section-cover-2

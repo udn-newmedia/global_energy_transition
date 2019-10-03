@@ -15,7 +15,7 @@
       >
         <i class="arrow left"/>
         <div v-if="!isMob" class="page-button-text">
-          下一篇：{{directInfo.prev.title}}
+          上一篇：{{directInfo.prev.title}}
           <br>
           {{directInfo.prev.description}}
         </div>

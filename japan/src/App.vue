@@ -18,8 +18,7 @@
         <p>「能源轉型就像革命一樣，」一位推動南韓社區能源轉型的市民想到自己曾面臨的阻礙，不禁搖了搖頭。</p>
         <p><br></p>
         <p id="cover-highlight-text">
-          能源轉型確實是場長期戰役。在台灣，蔡英文總統自上任來，積極推動非核、減煤目標，
-          <mark
+          能源轉型確實是場長期戰役。在台灣，蔡英文總統自上任來，積極推動非核、減煤目標，<mark
             id="cover-arrow-start"
             :class="{
               'text-highlight-ie': isIE,
@@ -27,10 +26,7 @@
               'text-highlight-white': !isIE ? true : false,
               'text-highlight-animate': !isIE && coverHighlightFlag,
             }"
-          >
-            並計劃在2025年，再生能源發電佔比達20%
-          </mark>
-          ，但節節高漲的電費、供電問題卻也隨之而來；放眼全球，加速老舊燃煤電廠退役、發展綠能產業正成國際趨勢，不過各國也面臨扼制綠能產業發展的法規、過時的電力產業結構等阻礙。
+          >並計劃在2025年，再生能源發電佔比達20%</mark>，但節節高漲的電費、供電問題卻也隨之而來；放眼全球，加速老舊燃煤電廠退役、發展綠能產業正成國際趨勢，不過各國也面臨扼制綠能產業發展的法規、過時的電力產業結構等阻礙。
         </p>
         <p><br></p>
         <div id="cover-arrow-end"/>
@@ -69,7 +65,7 @@
         <p><br></p>
         <p>當能源轉型已勢在必行，各國政府如何協助燃煤產業轉型、催生再生能源產業，民間團體又如何將節能與公民發電落實於日常生活中？</p>
         <p><br></p>
-        <p>《聯合報》採訪團隊實際走訪英國、德國、荷蘭、日本、韓國，紀錄這5個國家的能源轉型之路，希望借鏡國外經驗，讓台灣的能源轉型之路走得更順、走得更遠。</p>
+        <p>《聯合報》採訪團隊實際走訪英國、德國、荷蘭、日本、南韓，紀錄這5個國家的能源轉型之路，希望借鏡國外經驗，讓台灣的能源轉型之路走得更順、走得更遠。</p>
       </div>
     </div>
     <Anchor :currentPage="0" :anchorFixedFlag="anchorFixedFlag"/>
@@ -113,9 +109,7 @@
               'text-highlight-white': !isIE ? true : false,
               'text-highlight-animate': !isIE && textHighlightFlag_1,
             }"
-          >
-            福島縣府在核事故一年後、2012年3月立刻修訂了福島再生能源推進展望，基本理念是打造安心、安全可持續發展的社會，從此不再仰賴核能。福島縣府並訂下2040年全縣使用再生能源的目標。
-          </mark>
+          >福島縣府在核事故一年後、2012年3月立刻修訂了福島再生能源推進展望，基本理念是打造安心、安全可持續發展的社會，從此不再仰賴核能。福島縣府並訂下2040年全縣使用再生能源的目標。</mark>
         </p>
         <p><br></p>
         <p>福島縣企畫調整部復興綜合計劃課副課長山田清貴表示，福島的復興不能只是重建，眼光必須看得更遠，過去的福島曾是能源重鎮，未來要成為引領日本新能源的大縣，只有創造走在新時代尖端的產業，福島才能獲得重生。</p>
@@ -193,17 +187,15 @@
         <p><br></p>
         <p>但福島追求的還要更多，山田清貴表示，縣府的目標不只是停止所有核電廠運作，而是將所有與核有關的事務，包括儲存在縣內的燃料棒、核廢料都移出縣外，讓福島成為沒有核能沒有輻射的縣。</p>
         <p><br></p>
-        <p id="text-highlight-2">福島在核事故後也持續與中央聯繫，提供各種資料，希望遊說政府放棄核能。但
-          <mark
+        <p id="text-highlight-2">
+          福島在核事故後也持續與中央聯繫，提供各種資料，希望遊說政府放棄核能。但<mark
             :class="{
               'text-highlight-ie': isIE,
               'text-highlight': !isIE ? true : false,
               'text-highlight-black': !isIE ? true : false,
               'text-highlight-animate': !isIE && textHighlightFlag_2,
             }"
-          >
-            相對於福島的去核決心，日本中央政府再次將核電定義為重要基礎電源，決定重啟核電，8年間也有多個核電廠取得地方同意重新商轉。
-          </mark>
+          >相對於福島的去核決心，日本中央政府再次將核電定義為重要基礎電源，決定重啟核電，8年間也有多個核電廠取得地方同意重新商轉。</mark>
         </p>
         <p><br></p>
         <p>山田表示，能源是國家政策的一環，有很多考慮的面向，福島縣無法干涉國家的決定。在國家補助下，有些地方在確保安全運轉前提下願意接受核電，但他表示，「福島不會再走回頭路。」</p>
@@ -325,6 +317,7 @@
       </div>
     </div>
     <Foot/>
+    <GoTop/>
   </div>
 </template>
 
@@ -334,6 +327,7 @@ import Utils from 'udn-newmedia-utils';
 import Anchor from '@generals/components/Anchor.vue'
 import ArticleArrow from '@generals/components/ArticleArrow.vue'
 import Cover from './components/Cover.vue'
+import GoTop from '@generals/components/GoTop.vue'
 import GradientConnection from '@generals/components/GradientConnection.vue'
 import FBComment from './components/FBComment.vue'
 import Foot from '@generals/components/Foot.vue'
@@ -351,6 +345,7 @@ export default {
     Anchor,
     ArticleArrow,
     Cover,
+    GoTop,
     GradientConnection,
     FBComment,
     Foot,
@@ -365,7 +360,7 @@ export default {
   data() {
     return {
       anchorFixedFlag: false,
-      frogFlag: false,
+      frogFlag: true,
       coverHighlightFlag: false,
       textHighlightFlag_1: false,
       textHighlightFlag_2: false,
@@ -401,9 +396,10 @@ export default {
       // cover frog event
       if (
         window.pageYOffset < window.innerHeight * 2 &&
-        window.pageYOffset > window.innerHeight
+        window.pageYOffset >= -window.innerHeight * 0.5
       ) this.frogFlag = true;
       else this.frogFlag = false;
+      
       // cover text highlihgt event.
       if ( coverPostition.top < window.innerHeight * 0.5 ) this.coverHighlightFlag = true;
       // text highlihgt 1 event.

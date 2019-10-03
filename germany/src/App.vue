@@ -18,8 +18,7 @@
         <p>「能源轉型就像革命一樣，」一位推動南韓社區能源轉型的市民想到自己曾面臨的阻礙，不禁搖了搖頭。</p>
         <p><br></p>
         <p id="cover-highlight-text">
-          能源轉型確實是場長期戰役。在台灣，蔡英文總統自上任來，積極推動非核、減煤目標，
-          <mark
+          能源轉型確實是場長期戰役。在台灣，蔡英文總統自上任來，積極推動非核、減煤目標，<mark
             id="cover-arrow-start"
             :class="{
               'text-highlight-ie': isIE,
@@ -27,10 +26,7 @@
               'text-highlight-white': !isIE ? true : false,
               'text-highlight-animate': !isIE && coverHighlightFlag,
             }"
-          >
-            並計劃在2025年，再生能源發電佔比達20%
-          </mark>
-          ，但節節高漲的電費、供電問題卻也隨之而來；放眼全球，加速老舊燃煤電廠退役、發展綠能產業正成國際趨勢，不過各國也面臨扼制綠能產業發展的法規、過時的電力產業結構等阻礙。
+          >並計劃在2025年，再生能源發電佔比達20%</mark>，但節節高漲的電費、供電問題卻也隨之而來；放眼全球，加速老舊燃煤電廠退役、發展綠能產業正成國際趨勢，不過各國也面臨扼制綠能產業發展的法規、過時的電力產業結構等阻礙。
         </p>
         <p><br></p>
         <div id="cover-arrow-end"/>
@@ -69,7 +65,7 @@
         <p><br></p>
         <p>當能源轉型已勢在必行，各國政府如何協助燃煤產業轉型、催生再生能源產業，民間團體又如何將節能與公民發電落實於日常生活中？</p>
         <p><br></p>
-        <p>《聯合報》採訪團隊實際走訪英國、德國、荷蘭、日本、韓國，紀錄這5個國家的能源轉型之路，希望借鏡國外經驗，讓台灣的能源轉型之路走得更順、走得更遠。</p>
+        <p>《聯合報》採訪團隊實際走訪英國、德國、荷蘭、日本、南韓，紀錄這5個國家的能源轉型之路，希望借鏡國外經驗，讓台灣的能源轉型之路走得更順、走得更遠。</p>
       </div>
     </div>
     <Anchor :currentPage="2" :anchorFixedFlag="anchorFixedFlag"/>
@@ -126,18 +122,14 @@
     <GradientConnection/>
     <section class="black-bg">
       <div class="content">
-        <p id="text-highlight-1">燃煤會惡化空氣，還會增加排碳量，造成地球暖化，不過，
-          <mark
+        <p id="text-highlight-1">燃煤會惡化空氣，還會增加排碳量，造成地球暖化，不過，<mark
             :class="{
               'text-highlight-ie': isIE,
               'text-highlight': !isIE ? true : false,
               'text-highlight-white': !isIE ? true : false,
               'text-highlight-animate': !isIE && textHighlightFlag_1,
             }"
-          >
-            德國一個反煤、推動再生能源地方化的公民團體「柏林人能源圓桌（Berliner Energietish）」提倡，燃煤可能還會壞了德國的啤酒，
-          </mark>
-          對於熱愛啤酒的德國人，這件事情更加無法接受。
+          >德國一個反煤、推動再生能源地方化的公民團體「柏林人能源圓桌（Berliner Energietish）」提倡，燃煤可能還會壞了德國的啤酒，</mark>對於熱愛啤酒的德國人，這件事情更加無法接受。
         </p>
         <p><br></p>
         <p>能源轉型的過程之中，民眾的參與與支持非常重要。德國推動2038年非煤家園、2050年完全使用綠能，除了政府訂定政策目標之外，更多是由微小的個人齊聚成的集體力量。柏林人能源圓桌每個月固定在柏林發起一場城市能源導覽之旅，喊出「別讓燃煤壞了德國啤酒」的口號，導覽目的是要讓民眾了解能源的重要性，對燃煤電廠更加同仇敵愾，並透過增加民眾參與，推動成功的能源轉型。</p>
@@ -186,17 +178,14 @@
         <p><br></p>
         <p><br></p>
         <p id="text-highlight-2">
-          羅德說，以前東德有一個很大的褐煤場，現在這個煤場幾乎已經變成月球表面，呈現一片荒蕪的樣子，可是還是一直往下開採，地層被翻來覆去，使得地下水變得很混濁，這個地下水流到人工運河，
-          <mark
+          羅德說，以前東德有一個很大的褐煤場，現在這個煤場幾乎已經變成月球表面，呈現一片荒蕪的樣子，可是還是一直往下開採，地層被翻來覆去，使得地下水變得很混濁，這個地下水流到人工運河，<mark
             :class="{
               'text-highlight-ie': isIE,
               'text-highlight': !isIE ? true : false,
               'text-highlight-black': !isIE ? true : false,
               'text-highlight-animate': !isIE && textHighlightFlag_2,
             }"
-          >
-            預期未來10到30年再這樣開採下去的話，柏林的水一定會變差，變差的水，釀出來的啤酒也會不好喝。
-          </mark>
+          >預期未來10到30年再這樣開採下去的話，柏林的水一定會變差，變差的水，釀出來的啤酒也會不好喝。</mark>
         </p>
         <p><br></p>
         <p><br></p>
@@ -228,9 +217,7 @@
               'text-highlight-black': !isIE ? true : false,
               'text-highlight-animate': !isIE && textHighlightFlag_3,
             }"
-          >
-            過去，德國把燃煤電廠趕出城市，現在則要讓再生能源在城市長出來。德國預計在2050年全面使用綠能，策略是在城市使用太陽能、風能、生質能等。
-          </mark>
+          >過去，德國把燃煤電廠趕出城市，現在則要讓再生能源在城市長出來。德國預計在2050年全面使用綠能，策略是在城市使用太陽能、風能、生質能等。</mark>
         </p>
         <p><br></p>
         <p>羅德表示，現在柏林的城市產電能力還很小、很低弱，但希望未來，柏林不只是讓燃煤退場，還要全部用再生能源；此外，也要把仍由跨國企業掌握的發電、供電權拿回柏林人手中，分散式的讓公民參與，讓公民獲得發電利潤，進而可以跟大型發電廠競爭。</p>
@@ -249,7 +236,7 @@
           'next': {
             'title': '荷蘭',
             'url': 'The_Netherlands/#article',
-            'description': '南韓再生能源中心落腳新萬金',
+            'description': '荷蘭用風力開火車',
           }
         }"
       />
@@ -357,6 +344,7 @@
       </div>
     </div>
     <Foot/>
+    <GoTop/>
   </div>
 </template>
 
@@ -366,6 +354,7 @@ import Utils from 'udn-newmedia-utils';
 import Anchor from '@generals/components/Anchor.vue'
 import ArticleArrow from '@generals/components/ArticleArrow.vue'
 import Cover from './components/Cover.vue'
+import GoTop from '@generals/components/GoTop.vue'
 import GradientConnection from '@generals/components/GradientConnection.vue'
 import FBComment from './components/FBComment.vue'
 import Foot from '@generals/components/Foot.vue'
@@ -383,6 +372,7 @@ export default {
     Anchor,
     ArticleArrow,
     Cover,
+    GoTop,
     GradientConnection,
     FBComment,
     Foot,
@@ -397,7 +387,7 @@ export default {
   data() {
     return {
       anchorFixedFlag: false,
-      frogFlag: false,
+      frogFlag: true,
       coverHighlightFlag: false,
       textHighlightFlag_1: false,
       textHighlightFlag_2: false,
@@ -434,7 +424,7 @@ export default {
       // cover frog event
       if (
         window.pageYOffset < window.innerHeight * 2 &&
-        window.pageYOffset > window.innerHeight
+        window.pageYOffset >= -window.innerHeight * 0.5
       ) this.frogFlag = true;
       else this.frogFlag = false;
       
@@ -453,7 +443,7 @@ export default {
       // section-cover-1
       if (
         scoverPostition_1.top < 0 &&
-        scoverPostition_1.bottom > 0
+        scoverPostition_1.bottom > -window.innerHeight * 0.5
       ) this.sectionCoverFlag_1 = true;
       else this.sectionCoverFlag_1 = false;
       // section-cover-2
@@ -526,6 +516,15 @@ export default {
   }
   @media only screen and (min-width: 1025px)  {
     background-image: url('./assets/pc/global_energy_transition_Germany_image01.jpg');
+  }
+}
+.section-cover img {
+  width: 70px !important;
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    width: 100px !important;
+  }
+  @media only screen and (min-width: 1025px)  {
+    width: 105px !important;
   }
 }
 </style>

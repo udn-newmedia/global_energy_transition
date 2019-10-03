@@ -18,8 +18,7 @@
         <p>「能源轉型就像革命一樣，」一位推動南韓社區能源轉型的市民想到自己曾面臨的阻礙，不禁搖了搖頭。</p>
         <p><br></p>
         <p id="cover-highlight-text">
-          能源轉型確實是場長期戰役。在台灣，蔡英文總統自上任來，積極推動非核、減煤目標，
-          <mark
+          能源轉型確實是場長期戰役。在台灣，蔡英文總統自上任來，積極推動非核、減煤目標，<mark
             id="cover-arrow-start"
             :class="{
               'text-highlight-ie': isIE,
@@ -27,10 +26,7 @@
               'text-highlight-white': !isIE ? true : false,
               'text-highlight-animate': !isIE && coverHighlightFlag,
             }"
-          >
-            並計劃在2025年，再生能源發電佔比達20%
-          </mark>
-          ，但節節高漲的電費、供電問題卻也隨之而來；放眼全球，加速老舊燃煤電廠退役、發展綠能產業正成國際趨勢，不過各國也面臨扼制綠能產業發展的法規、過時的電力產業結構等阻礙。
+          >並計劃在2025年，再生能源發電佔比達20%</mark>，但節節高漲的電費、供電問題卻也隨之而來；放眼全球，加速老舊燃煤電廠退役、發展綠能產業正成國際趨勢，不過各國也面臨扼制綠能產業發展的法規、過時的電力產業結構等阻礙。
         </p>
         <p><br></p>
         <div id="cover-arrow-end"/>
@@ -69,7 +65,7 @@
         <p><br></p>
         <p>當能源轉型已勢在必行，各國政府如何協助燃煤產業轉型、催生再生能源產業，民間團體又如何將節能與公民發電落實於日常生活中？</p>
         <p><br></p>
-        <p>《聯合報》採訪團隊實際走訪英國、德國、荷蘭、日本、韓國，紀錄這5個國家的能源轉型之路，希望借鏡國外經驗，讓台灣的能源轉型之路走得更順、走得更遠。</p>
+        <p>《聯合報》採訪團隊實際走訪英國、德國、荷蘭、日本、南韓，紀錄這5個國家的能源轉型之路，希望借鏡國外經驗，讓台灣的能源轉型之路走得更順、走得更遠。</p>
       </div>
     </div>
     <Anchor :currentPage="3" :anchorFixedFlag="anchorFixedFlag"/>
@@ -102,17 +98,14 @@
         <p>在荷蘭，永續、環保的觀念很早就深入生活各個角落。荷蘭民眾大量使用公共運輸工具，該國火車在2017年全數轉為風力發電，火車站內設置許多永續概念設計，而為了將綠色交通落實在人們從家裡到火車站的「最後一哩路」，荷蘭中央及地方政府也積極鼓勵民眾以腳踏車取代汽機車，要減少荷蘭碳排放量、一步步邁向綠能大國。</p>
         <p><br></p>
         <p id="text-highlight-1">
-          荷蘭國鐵（Nederlandse Spoorwegen, NS）每年使用超過1.2億千瓦度的電力，占荷蘭每年用電總量的1%，相當於阿姆斯特丹市的總用電量。
-          <mark
+          荷蘭國鐵（Nederlandse Spoorwegen, NS）每年使用超過1.2億千瓦度的電力，占荷蘭每年用電總量的1%，相當於阿姆斯特丹市的總用電量。<mark
             :class="{
               'text-highlight-ie': isIE,
               'text-highlight': !isIE ? true : false,
               'text-highlight-white': !isIE ? true : false,
               'text-highlight-animate': !isIE && textHighlightFlag_1,
             }"
-          >
-            包括火車在內的交通工具，是荷蘭最先達到「零碳排放」的項目，荷蘭國鐵更比原訂目標提前一年、在2017年就達到全面使用風力發電。
-          </mark>
+          >包括火車在內的交通工具，是荷蘭最先達到「零碳排放」的項目，荷蘭國鐵更比原訂目標提前一年、在2017年就達到全面使用風力發電。</mark>
         </p>
         <p><br></p>
         <p>荷蘭國鐵發言人吉爾特柯倫（Geert Koolen）指出，最大困難是要確保綠能供應量穩定持續，因此在能源供應上採多方採購，與荷蘭最大永續能源業者Eneco合作，確保能源來自新的永續能源供應地區。目前，一半的風能來自荷蘭，另一半來自瑞典（33%），芬蘭（15%）和比利時（2%）。吉爾特柯倫說，荷蘭鐵路每天運送超過百萬名乘客，但不排放任何二氧化碳。他說，如果每個汽車用戶每年乘坐一次火車，每年就可以減少14萬噸二氧化碳排放，希望幫助政府實現氣候協定目標。</p>
@@ -167,10 +160,7 @@
               'text-highlight-black': !isIE ? true : false,
               'text-highlight-animate': !isIE && textHighlightFlag_2,
             }"
-          >
-            荷蘭國鐵也逐漸汰舊換新，最能廢物利用的部分是「賣火車」：將不能再使用的舊火車車廂逐步拆解，除了讓回收業者買走外，內部裝設用來做新產品
-          </mark>
-          ，包括椅子、火車車窗、室內裝潢、衣帽鉤、行李架甚至廣播揚聲器都可以拿來「翻新」，在車站內可見用火車地板及垃圾桶製成的乒乓球桌，還有垃圾桶拿來種植物、用舊火車座套製成袋子，回收再製了約1170萬公斤的廢物。
+          >荷蘭國鐵也逐漸汰舊換新，最能廢物利用的部分是「賣火車」：將不能再使用的舊火車車廂逐步拆解，除了讓回收業者買走外，內部裝設用來做新產品</mark>，包括椅子、火車車窗、室內裝潢、衣帽鉤、行李架甚至廣播揚聲器都可以拿來「翻新」，在車站內可見用火車地板及垃圾桶製成的乒乓球桌，還有垃圾桶拿來種植物、用舊火車座套製成袋子，回收再製了約1170萬公斤的廢物。
         </p>
         <p><br></p>
         <p>吉爾特柯倫也邀請觀光客到車站「盪鞦韆」，在烏特勒支中央火車站引入特殊的鞦韆，旅客可以盪鞦韆產生能量為手機充電，每天都吸引大人小孩到車站玩鞦韆兼充電，還是熱門打卡景點。</p>
@@ -206,7 +196,7 @@
           >
             <GradientConnection :inner="true" :bottom="true"/>
             <div class="content">
-              <div class="section-cover-description">烏特勒支市擁有荷蘭最大的腳踏車停車場。記者葉信菉／攝影</div>
+              <div class="section-cover-description">荷蘭人人都有腳踏車，騎腳踏車通勤是民眾日常。記者葉信菉／攝影</div>
             </div>
           </div>
         </div>
@@ -367,6 +357,7 @@
       </div>
     </div>
     <Foot/>
+    <GoTop/>
   </div>
 </template>
 
@@ -376,6 +367,7 @@ import Utils from 'udn-newmedia-utils';
 import Anchor from '@generals/components/Anchor.vue'
 import ArticleArrow from '@generals/components/ArticleArrow.vue'
 import Cover from './components/Cover.vue'
+import GoTop from '@generals/components/GoTop.vue'
 import GradientConnection from '@generals/components/GradientConnection.vue'
 import FBComment from './components/FBComment.vue'
 import Foot from '@generals/components/Foot.vue'
@@ -393,6 +385,7 @@ export default {
     Anchor,
     ArticleArrow,
     Cover,
+    GoTop,
     GradientConnection,
     FBComment,
     Foot,
@@ -407,7 +400,7 @@ export default {
   data() {
     return {
       anchorFixedFlag: false,
-      frogFlag: false,
+      frogFlag: true,
       coverHighlightFlag: false,
       textHighlightFlag_1: false,
       textHighlightFlag_2: false,
@@ -449,14 +442,14 @@ export default {
       // cover frog event
       if (
         window.pageYOffset < window.innerHeight * 2 &&
-        window.pageYOffset > window.innerHeight
+        window.pageYOffset >= -window.innerHeight * 0.5
       ) this.frogFlag = true;
       else this.frogFlag = false;
 
       // section-cover-1
       if (
         scoverPostition_1.top < 0 &&
-        scoverPostition_1.bottom > 0
+        scoverPostition_1.bottom > -window.innerHeight * 0.5
       ) this.sectionCoverFlag_1 = true;
       else this.sectionCoverFlag_1 = false;
       // section-cover-2
@@ -593,6 +586,15 @@ export default {
   }
   @media only screen and (min-width: 1025px)  {
     background-image: url('./assets/pc/global_energy_transition_The_Netherlands_image05.jpg');
+  }
+}
+.section-cover img {
+  width: 65px !important;
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    width: 100px !important;
+  }
+  @media only screen and (min-width: 1025px)  {
+    width: 105px !important;
   }
 }
 </style>

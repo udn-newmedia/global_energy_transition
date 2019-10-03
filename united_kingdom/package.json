@@ -11,8 +11,10 @@
     "core-js": "^2.6.5",
     "d3": "^5.12.0",
     "jquery": "^3.4.1",
+    "lodash.throttle": "^4.1.1",
     "udn-newmedia-utils": "^1.1.0",
     "vue": "^2.6.10",
+    "vue-scrollto": "^2.17.1",
     "vue-slick": "^1.1.15"
   },
   "devDependencies": {
