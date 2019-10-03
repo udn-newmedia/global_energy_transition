@@ -29,7 +29,7 @@ export default {
   },
   data() {
     return {
-      homePath: window.location.origin + '/newmedia/2019/global_energy_transition/Japan/'
+      homePath: window.location.origin + '/newmedia/2019/global_energy_transition/'
     };
   },
   computed: {

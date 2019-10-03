@@ -72,6 +72,7 @@ export default {
   }
 }
 .go-top {
+  cursor: pointer;
   transition: .666s ease-in-out;
   transform: translateY(45px);
 }

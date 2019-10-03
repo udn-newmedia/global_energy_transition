@@ -10,6 +10,7 @@
         'anchor-active': currentPage === 0
         }"
         @click="sendAnchorGA('JP')"
+        name="看日本專題"
       >
         <a name="日本" :href="originPath + 'Japan/#article'" target="_blank">
           日本
@@ -20,6 +21,7 @@
         'anchor-active': currentPage === 1
         }"
         @click="sendAnchorGA('SK')"
+        name="看南韓專題"
       >
         <a name="南韓" :href="originPath + 'South_Korea/#article'" target="_blank">
           南韓
@@ -30,6 +32,7 @@
         'anchor-active': currentPage === 2
         }"
         @click="sendAnchorGA('Germany')"
+        name="看德國專題"
       >
         <a name="德國" :href="originPath + 'Germany/#article'" target="_blank">
           德國
@@ -40,6 +43,7 @@
         'anchor-active': currentPage === 3
         }"
         @click="sendAnchorGA('NL')"
+        name="看荷蘭專題"
       >
         <a name="荷蘭" :href="originPath + 'The_Netherlands/#article'" target="_blank">
           荷蘭
@@ -50,6 +54,7 @@
         'anchor-active': currentPage === 4
         }"
         @click="sendAnchorGA('UK')"
+        name="看英國專題"
       >
         <a name="英國" :href="originPath + 'United_Kingdom/#article'" target="_blank">
           英國
@@ -83,7 +88,7 @@ export default {
     sendAnchorGA(title) {
       window.ga("newmedia.send", {
         "hitType": "event",
-        "eventCategory": "menubar",
+        "eventCategory": "menu bar",
         "eventAction": "click",
         "eventLabel": "[" + Utils.detectPlatform() + "] [" + document.querySelector('title').innerHTML + "] [" + title + "]",
       });

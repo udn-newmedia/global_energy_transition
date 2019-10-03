@@ -101,7 +101,7 @@ export default {
         xAxisNum: 8,
         yAxisNum: 5,
         // marginSide: _isMob ? 50 : 0,
-        marginSide: _isMob ? 50 : Math.max(100, (vm.svgWidth - 880) * 0.5),
+        marginSide: _isMob ? 50 : Math.max(100, (vm.svgWidth - 810) * 0.5),
         marginSideRatio: _isMob ? 0.5 : 1,
       };
 
@@ -172,8 +172,8 @@ export default {
             .datum([yScale(dataset[i].data[1]), yScale(dataset[i].data[1])])
             .attr('class', 'hint line line-active')
             .attr('stroke', () => dataset[i].color)
-            .attr('stroke-dasharray', 8)
-            .attr('stroke-dashoffset', 10)
+            .attr('stroke-dasharray', 10)
+            // .attr('stroke-dashoffset', 10)
             .attr('d', customLine);
           svg
             .append('text')
@@ -268,8 +268,8 @@ export default {
             .attr('id', 'custom-line')
             .attr('class', 'line line-active')
             .attr('stroke', vm.energyData[vm.drawDataIndex].color)
-            .attr('stroke-dasharray', 8)
-            .attr('stroke-dashoffset', 10)
+            .attr('stroke-dasharray', 10)
+            // .attr('stroke-dashoffset', 10)
             .attr('d', customLine);
       }
       function handleDrawMove(year) {
@@ -392,6 +392,11 @@ export default {
       font-size: 18px;
       alignment-baseline: middle;
     }
+    .hint.line {
+      @media only screen and (min-width: 769px) {
+        stroke-width: 5;
+      }
+    }
     .profile-text {
       fill: #717171;
       font-size: 13px;
@@ -441,7 +446,7 @@ export default {
       }
       .mask {
         position: relative;
-        width: calc(50vw - 500px);
+        width: calc(50vw - 470px);
         height: 100%;
         background-color: #000000;
       }
@@ -531,7 +536,7 @@ export default {
     text-align: right;
     margin-right: 13px;
     @media only screen and (min-width: 769px) {
-      margin-right: calc(50vw - 475px);
+      margin-right: calc(50vw - 440px);
     }
   }
 }
