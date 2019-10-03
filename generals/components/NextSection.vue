@@ -1,17 +1,18 @@
 <template>
   <div class="next-section-container">
-    <button
+    <a
       class="page-button prev-button"
       :style="{
         cursor: directInfo.prev ? 'pointer' : 'default',
       }"
+      :href="directInfo.prev ? originPath + directInfo.prev.url : null"
+      target="_blank"
+      name="上一篇"
+      @click="sendNextArticleGA('上一篇')"
     >
-      <a
+      <button
         v-if="directInfo.prev"
-        :href="originPath + directInfo.prev.url"
-        target="_blank"
         name="上一篇"
-        @click="sendNextArticleGA('上一篇')"
       >
         <i class="arrow left"/>
         <div v-if="!isMob" class="page-button-text">
@@ -19,14 +20,17 @@
           <br>
           {{directInfo.prev.description}}
         </div>
-      </a>
-    </button>
-    <button class="page-button next-button">
-      <a
-        :href="originPath + directInfo.next.url"
-        target="_blank"
+      </button>
+    </a>
+    <a
+      class="page-button next-button"
+      :href="originPath + directInfo.next.url"
+      target="_blank"
+      name="下一篇"
+      @click="sendNextArticleGA('下一篇')"
+    >
+      <button
         name="下一篇"
-        @click="sendNextArticleGA('下一篇')"
       >
         <div class="page-button-text">
           下一篇：{{directInfo.next.title}}
@@ -34,8 +38,8 @@
           {{directInfo.next.description}}
         </div>
         <i class="arrow right"/>
-      </a>
-    </button>
+      </button>
+    </a>
   </div>
 </template>
 
@@ -87,10 +91,7 @@ export default {
   .page-button {
     position: relative;
     height: 100%;
-    outline: none;
-    border: solid 1px #e2e2e2;
-    background-color: #f6f6f6;
-    a {
+    button {
       position: relative;
       outline: none;
       color: inherit;
@@ -101,6 +102,10 @@ export default {
       align-items: center;
       text-align: left;
       padding: 0 10% 0 5%;
+      background-color: #f6f6f6;
+      border: solid 1px #e2e2e2;
+      outline: none;
+
     }
     .page-button-text {
       position: relative;
@@ -109,6 +114,7 @@ export default {
       justify-content: center;
       align-items: flex-start;
       padding: 0 10px;
+      color: #333333;
       @media only screen and (min-width: 768px)  {
         padding: 0 30px;    
       }

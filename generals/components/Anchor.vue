@@ -5,61 +5,71 @@
         'anchor-fixed': anchorFixedFlag,
       }"
     >
-      <button :class="{
+      <a :class="{
         'anchor': true,
         'anchor-active': currentPage === 0
         }"
         @click="sendAnchorGA('JP')"
         name="看日本專題"
+        target="_blank"
+        :href="originPath + 'Japan/#article'"
       >
-        <a name="日本" :href="originPath + 'Japan/#article'" target="_blank">
+        <button name="日本">
           日本
-        </a>
-      </button>
-      <button :class="{
+        </button>
+      </a>
+      <a :class="{
         'anchor': true,
         'anchor-active': currentPage === 1
         }"
         @click="sendAnchorGA('SK')"
         name="看南韓專題"
+        target="_blank"
+        :href="originPath + 'South_Korea/#article'"
       >
-        <a name="南韓" :href="originPath + 'South_Korea/#article'" target="_blank">
+        <button name="南韓" >
           南韓
-        </a>
-      </button>
-      <button :class="{
+        </button>
+      </a>
+      <a :class="{
         'anchor': true,
         'anchor-active': currentPage === 2
         }"
         @click="sendAnchorGA('Germany')"
         name="看德國專題"
+        target="_blank"
+        :href="originPath + 'Germany/#article'"
       >
-        <a name="德國" :href="originPath + 'Germany/#article'" target="_blank">
+        <button name="德國">
           德國
-        </a>
-      </button>
-      <button :class="{
+        </button>
+      </a>
+      <a :class="{
         'anchor': true,
         'anchor-active': currentPage === 3
         }"
         @click="sendAnchorGA('NL')"
         name="看荷蘭專題"
+        target="_blank"
+        :href="originPath + 'The_Netherlands/#article'"
       >
-        <a name="荷蘭" :href="originPath + 'The_Netherlands/#article'" target="_blank">
+        <button name="荷蘭">
           荷蘭
-        </a>
-      </button>
-      <button :class="{
+        </button>
+      </a>
+      <a :class="{
         'anchor': true,
         'anchor-active': currentPage === 4
         }"
         @click="sendAnchorGA('UK')"
         name="看英國專題"
+        target="_blank"
+        :href="originPath + 'United_Kingdom/#article'"
       >
-        <a name="英國" :href="originPath + 'United_Kingdom/#article'" target="_blank">
+        <button name="英國">
           英國
-        </a>
-      </button>
+        </button>
+      </a>
     </div>
   </div>
 </template>
@@ -125,21 +135,22 @@ export default {
       outline: none;
       border: none;
       color: #ababab;
-      background-color: #000000;
       border-bottom: 2px solid transparent;
-      a {
+      button {
         display: flex;
         justify-content: center;
         align-items: center;
         width: 100%;
         height: 100%;
         outline: none;
+        border: none;
         color: inherit;
+        background-color: #000000;
       }
     }
     .anchor-active {
       color: #1eee78;
-      border-bottom: 2px solid #1eee78;
+      border-bottom: 3px solid #1eee78;
     }
   }
   .anchor-fixed {

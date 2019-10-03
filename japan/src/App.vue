@@ -33,15 +33,15 @@
         <div class="energy-chart-wrapper">
           <img
             class="energy-chart-title"
-            :src="require('./assets/title/title_2018_tw.svg')"
+            :src="require('@generals/assets/title/title_2018_tw.svg')"
             alt="2018台灣發電結構"
           >
           <img
             class="energy-chart"
             :src="require(
               isMob ?
-              './assets/chart/chart_2018_tw_m.svg' :
-              './assets/chart/chart_2018_tw_pc.svg'
+              '@generals/assets/chart/chart_2018_tw_m.svg' :
+              '@generals/assets/chart/chart_2018_tw_pc.svg'
             )"
             alt="2018台灣發電結構"
           >
@@ -49,15 +49,15 @@
         <div class="energy-chart-wrapper">
           <img
             class="energy-chart-title"
-            :src="require('./assets/title/title_2018_word.svg')"
+            :src="require('@generals/assets/title/title_2018_word.svg')"
             alt="2018全球發電結構"
           >
           <img
             class="energy-chart"          
             :src="require(
               isMob ?
-              './assets/chart/chart_2018_word_m.svg' :
-              './assets/chart/chart_2018_word_pc.svg'
+              '@generals/assets/chart/chart_2018_word_m.svg' :
+              '@generals/assets/chart/chart_2018_word_pc.svg'
             )"
             alt="2018全球發電結構"
           >

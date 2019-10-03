@@ -154,6 +154,7 @@ export default {
   background-color: #0a0808;
   .cover {
     position: fixed;
+    z-index: 0;
     top: 0;
     left: 0;
     width: 100%;
