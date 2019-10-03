@@ -328,6 +328,7 @@ export default {
       }
       function handleAnswerClick() {
         vm.answerFlag = true;
+        d3.selectAll('.hint').remove();
         const svg = d3.select("#hand-drawn-chart").select(".hand-drawn-chart");
         svg
           .select("#active-line")
@@ -548,7 +549,7 @@ export default {
     max-width: 880px;
     margin: 0 auto;
     padding: 0 10%;
-    @media only screen and (min-width: 769px) {
+    @media only screen and (min-width: 768px) {
       float: none;
       display: flex;
       justify-content: center;

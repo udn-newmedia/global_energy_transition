@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="295" height="230" viewBox="0 0 295 230">
+  <g id="chart_2018_tw_m" transform="translate(-52 -1434)">
+    <text id="資料來源_台灣電力公司" data-name="資料來源／台灣電力公司" transform="translate(202 1646)" fill="#989898" font-size="12" font-family="YuGothicUI-Regular, Yu Gothic UI"><tspan x="13" y="13">資料來源／台灣電力公司</tspan></text>
+    <g id="Y">
+      <text id="_0_" data-name="0%" transform="translate(58.672 1602.402)" fill="#d1d1d1" font-size="10" font-family="ArialMT, Arial"><tspan x="0" y="0">0%</tspan></text>
+      <text id="_10_" data-name="10%" transform="translate(52 1563.033)" fill="#d1d1d1" font-size="10" font-family="ArialMT, Arial"><tspan x="0" y="0">10%</tspan></text>
+      <text id="_20_" data-name="20%" transform="translate(52 1523.738)" fill="#d1d1d1" font-size="10" font-family="ArialMT, Arial"><tspan x="0" y="0">20%</tspan></text>
+      <text id="_30_" data-name="30%" transform="translate(52 1484.369)" fill="#d1d1d1" font-size="10" font-family="ArialMT, Arial"><tspan x="0" y="0">30%</tspan></text>
+      <text id="_40_" data-name="40%" transform="translate(52 1443)" fill="#d1d1d1" font-size="10" font-family="ArialMT, Arial"><tspan x="0" y="0">40%</tspan></text>
+    </g>
+    <g id="line">
+      <line id="Line_617" data-name="Line 617" x2="270.714" transform="translate(75.688 1558.219)" fill="none" stroke="#1e1e1e" stroke-miterlimit="10" stroke-width="1"/>
+      <line id="Line_619" data-name="Line 619" x2="270.714" transform="translate(75.688 1518.66)" fill="none" stroke="#1e1e1e" stroke-miterlimit="10" stroke-width="1"/>
+      <line id="Line_621" data-name="Line 621" x2="270.714" transform="translate(75.688 1479.173)" fill="none" stroke="#1e1e1e" stroke-miterlimit="10" stroke-width="1"/>
+      <line id="Line_623" data-name="Line 623" x2="270.714" transform="translate(75.688 1439.614)" fill="none" stroke="#1e1e1e" stroke-miterlimit="10" stroke-width="1"/>
+    </g>
+    <g id="chart_name">
+      <text id="chart_1_name" transform="translate(76 1607)" fill="#6b6b6b" font-size="12" font-family="YuGothicUI-Regular, Yu Gothic UI"><tspan x="0" y="13">燃煤</tspan></text>
+      <text id="chart_2_name" transform="translate(117 1607)" fill="#6b6b6b" font-size="12" font-family="YuGothicUI-Regular, Yu Gothic UI"><tspan x="0" y="13">燃氣</tspan></text>
+      <text id="chart_3_name" transform="translate(158 1607)" fill="#6b6b6b" font-size="12" font-family="YuGothicUI-Regular, Yu Gothic UI"><tspan x="0" y="13">核能</tspan></text>
+      <text id="chart_4_name" transform="translate(199 1607)" fill="#6b6b6b" font-size="12" font-family="YuGothicUI-Regular, Yu Gothic UI"><tspan x="0" y="13">燃油</tspan></text>
+      <text id="chart_5_name" transform="translate(240 1607)" fill="#6b6b6b" font-size="12" font-family="YuGothicUI-Regular, Yu Gothic UI"><tspan x="0" y="13">汽電</tspan></text>
+      <text id="chart_6_name" transform="translate(281 1607)" fill="#65b1ff" font-size="12" font-family="YuGothicUI-Regular, Yu Gothic UI"><tspan x="0" y="13">再生</tspan></text>
+      <text id="chart_7_name" transform="translate(322 1607)" fill="#6b6b6b" font-size="12" font-family="YuGothicUI-Regular, Yu Gothic UI"><tspan x="0" y="13">抽蓄</tspan></text>
+    </g>
+    <rect id="chart_1" width="25.9" height="153.364" transform="translate(76 1444.364)" fill="#dbdbdb"/>
+    <rect id="chart_2" width="25.9" height="152.577" transform="translate(117 1445.144)" fill="#dbdbdb"/>
+    <rect id="chart_3" width="25.9" height="45.06" transform="translate(157 1552.689)" fill="#dbdbdb"/>
+    <rect id="chart_4" width="25.9" height="11.066" transform="translate(198 1586.647)" fill="#dbdbdb"/>
+    <rect id="chart_5" width="25.9" height="7.905" transform="translate(239 1589.837)" fill="#dbdbdb"/>
+    <rect id="chart_6" width="25.9" height="19.368" transform="translate(280 1578.353)" fill="#2d95ff"/>
+    <rect id="chart_7" width="25.9" height="5.537" transform="translate(320 1592.177)" fill="#dbdbdb"/>
+    <line id="Line_605" data-name="Line 605" x2="270.813" transform="translate(75.5 1598.656)" fill="none" stroke="#1e1e1e" stroke-miterlimit="10" stroke-width="4"/>
+    <text id="_4.9_" data-name="4.9%" transform="translate(279 1571)" fill="#2d95ff" font-size="18" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">4.9</tspan><tspan y="0" font-size="10">%</tspan></text>
+  </g>
+</svg>

@@ -1,11 +1,83 @@
 <template>
   <div id="app">
-    <Anchor :currentPage="2" :anchorFixedFlag="true"/>
-    <section class="black-bg">
+    <HeadBar page="Germany"/>
+    <Cover :frogFlag="frogFlag"/>
+    <GradientConnection/>
+    <div class="cover-context black-bg">
+      <div class="content content-thin">
+        <ArticleArrow
+          v-if="!isIE"
+          startPosition="cover-highlight-text"
+          endPosition="cover-arrow-end"
+          leftPosition="cover-arrow-start"
+          :coverHighlightFlag="coverHighlightFlag"
+        />
+        <p><br></p>
+        <p>儘管全球的減碳、廢核聲量正高漲，各國政府、民間團體在推動能源轉型時，卻仍面臨各式難題。</p>
+        <p><br></p>
+        <p>「能源轉型就像革命一樣，」一位推動南韓社區能源轉型的市民想到自己曾面臨的阻礙，不禁搖了搖頭。</p>
+        <p><br></p>
+        <p id="cover-highlight-text">
+          能源轉型確實是場長期戰役。在台灣，蔡英文總統自上任來，積極推動非核、減煤目標，
+          <mark
+            id="cover-arrow-start"
+            :class="{
+              'text-highlight-ie': isIE,
+              'text-highlight': !isIE ? true : false,
+              'text-highlight-white': !isIE ? true : false,
+              'text-highlight-animate': !isIE && coverHighlightFlag,
+            }"
+          >
+            並計劃在2025年，再生能源發電佔比達20%
+          </mark>
+          ，但節節高漲的電費、供電問題卻也隨之而來；放眼全球，加速老舊燃煤電廠退役、發展綠能產業正成國際趨勢，不過各國也面臨扼制綠能產業發展的法規、過時的電力產業結構等阻礙。
+        </p>
+        <p><br></p>
+        <div id="cover-arrow-end"/>
+        <div class="energy-chart-wrapper">
+          <img
+            class="energy-chart-title"
+            :src="require('./assets/title/title_2018_tw.svg')"
+            alt="2018台灣發電結構"
+          >
+          <img
+            class="energy-chart"
+            :src="require(
+              isMob ?
+              './assets/chart/chart_2018_tw_m.svg' :
+              './assets/chart/chart_2018_tw_pc.svg'
+            )"
+            alt="2018台灣發電結構"
+          >
+        </div>
+        <div class="energy-chart-wrapper">
+          <img
+            class="energy-chart-title"
+            :src="require('./assets/title/title_2018_word.svg')"
+            alt="2018全球發電結構"
+          >
+          <img
+            class="energy-chart"          
+            :src="require(
+              isMob ?
+              './assets/chart/chart_2018_word_m.svg' :
+              './assets/chart/chart_2018_word_pc.svg'
+            )"
+            alt="2018全球發電結構"
+          >
+        </div>
+        <p><br></p>
+        <p>當能源轉型已勢在必行，各國政府如何協助燃煤產業轉型、催生再生能源產業，民間團體又如何將節能與公民發電落實於日常生活中？</p>
+        <p><br></p>
+        <p>《聯合報》採訪團隊實際走訪英國、德國、荷蘭、日本、韓國，紀錄這5個國家的能源轉型之路，希望借鏡國外經驗，讓台灣的能源轉型之路走得更順、走得更遠。</p>
+      </div>
+    </div>
+    <Anchor :currentPage="2" :anchorFixedFlag="anchorFixedFlag"/>
+    <section id="article" class="black-bg">
       <div id="section-cover-1" class="section-cover-container">
         <div :class="{
             'section-cover': true,
-            'section-cover-active': true,
+            'section-cover-active': sectionCoverFlag_1,
             'section-cover-1': true,
           }"
         >
@@ -171,12 +243,12 @@
         :directInfo="{
           'prev': {
             'title': '南韓',
-            'url': 'South_Korea/',
+            'url': 'South_Korea/#article',
             'description': '南韓再生能源中心落腳新萬金',
           },
           'next': {
             'title': '荷蘭',
-            'url': 'The_Netherlands/',
+            'url': 'The_Netherlands/#article',
             'description': '南韓再生能源中心落腳新萬金',
           }
         }"
@@ -253,7 +325,8 @@
           </div>
         </div>
         <p><br></p>
-        <Share href="https://udn.com/newmedia/2019/global_energy_transition/Germany/"/>
+        <!-- <Share href="https://udn.com/newmedia/2019/global_energy_transition/Germany/"/> -->
+        <Share href="http://nmdap.udn.com.tw/newmedia/2019/global_energy_transition/Germany/"/>
         <p><br></p>
         <p><br></p>
         <div class="logo-container">
@@ -276,7 +349,8 @@
         <Question href="https://www.surveycake.com/s/KpQKN" text="填寫閱讀體驗問卷"/>
         <p><br></p>
         <div class="content">
-          <FBComment href="https://udn.com/newmedia/2019/global_energy_transition/Germany/"/>
+          <!-- <FBComment href="https://udn.com/newmedia/2019/global_energy_transition/Germany/"/> -->
+          <FBComment href="http://nmdap.udn.com.tw/newmedia/2019/global_energy_transition/Germany/"/>
         </div>
         <p><br></p>
         <p><br></p>
@@ -289,12 +363,15 @@
 <script>
 import Utils from 'udn-newmedia-utils';
 
-import Anchor from './components/Anchor.vue'
-import GradientConnection from './components/GradientConnection.vue'
-import HandDrawn from './components/HandDrawn.vue'
+import Anchor from '@generals/components/Anchor.vue'
+import ArticleArrow from '@generals/components/ArticleArrow.vue'
+import Cover from './components/Cover.vue'
+import GradientConnection from '@generals/components/GradientConnection.vue'
 import FBComment from './components/FBComment.vue'
-import Foot from './components/Foot.vue'
-import NextSection from './components/NextSection.vue'
+import Foot from '@generals/components/Foot.vue'
+import HandDrawn from './components/HandDrawn.vue'
+import HeadBar from '@generals/components/HeadBar.vue'
+import NextSection from '@generals/components/NextSection.vue'
 import RelatedSection from './components/RelatedSection.vue'
 import Share from './components/Share.vue'
 import Question from './components/Question.vue'
@@ -304,10 +381,13 @@ export default {
   name: 'app',
   components: {
     Anchor,
-    HandDrawn,
+    ArticleArrow,
+    Cover,
+    GradientConnection,
     FBComment,
     Foot,
-    GradientConnection,
+    HandDrawn,
+    HeadBar,
     NextSection,
     RelatedSection,
     Share,
@@ -316,10 +396,14 @@ export default {
   },
   data() {
     return {
+      anchorFixedFlag: false,
+      frogFlag: false,
+      coverHighlightFlag: false,
       textHighlightFlag_1: false,
       textHighlightFlag_2: false,
       textHighlightFlag_3: false,
       sectionCoverFlag_video: false,
+      sectionCoverFlag_1: false,
       sectionCoverFlag_2: false,
       totalPageHeight: 0,
       readProgress: 0,
@@ -335,12 +419,25 @@ export default {
   },
   methods: {
     handleScroll() {
+      const anchorPosition = document.getElementById('anchor').getBoundingClientRect();
+      const coverPostition = document.getElementById('cover-highlight-text').getBoundingClientRect();
       const scoverPostition_video = document.getElementById('section-cover-video').getBoundingClientRect();
+      const scoverPostition_1 = document.getElementById('section-cover-1').getBoundingClientRect();
       const scoverPostition_2 = document.getElementById('section-cover-2').getBoundingClientRect();
       const textHighlightPosition_1 = document.getElementById('text-highlight-1').getBoundingClientRect();
       const textHighlightPosition_2 = document.getElementById('text-highlight-2').getBoundingClientRect();
       const textHighlightPosition_3 = document.getElementById('text-highlight-3').getBoundingClientRect();
 
+      // anchor fixed event
+      if (anchorPosition.top < 0) this.anchorFixedFlag = true;
+      else this.anchorFixedFlag = false;
+      // cover frog event
+      if (
+        window.pageYOffset < window.innerHeight * 2 &&
+        window.pageYOffset > window.innerHeight
+      ) this.frogFlag = true;
+      else this.frogFlag = false;
+      
       // section-cover-video
       if (
         scoverPostition_video.top < 0 &&
@@ -353,6 +450,12 @@ export default {
         document.getElementById('video-1').pause();
       }
       
+      // section-cover-1
+      if (
+        scoverPostition_1.top < 0 &&
+        scoverPostition_1.bottom > 0
+      ) this.sectionCoverFlag_1 = true;
+      else this.sectionCoverFlag_1 = false;
       // section-cover-2
       if (
         scoverPostition_2.top < 0 &&
@@ -360,12 +463,39 @@ export default {
       ) this.sectionCoverFlag_2 = true;
       else this.sectionCoverFlag_2 = false;
 
+      // cover text highlihgt event.
+      if ( coverPostition.top < window.innerHeight * 0.5 ) this.coverHighlightFlag = true;
       // text highlihgt 1 event.
       if ( textHighlightPosition_1.top < window.innerHeight * 0.5 ) this.textHighlightFlag_1 = true;
       // text highlihgt 2 event.
       if ( textHighlightPosition_2.top < window.innerHeight * 0.5 ) this.textHighlightFlag_2 = true;
       // text highlihgt 3 event.
       if ( textHighlightPosition_3.top < window.innerHeight * 0.5 ) this.textHighlightFlag_3 = true;
+
+      // read progress GA
+      this.sendReadProgressGA();
+    },
+    sendReadProgressGA() {
+      let currentHeight = window.pageYOffset;
+      let totalHeight = this.totalPageHeight - window.innerHeight;
+      let progress = ((currentHeight / totalHeight) * 100).toFixed(2);
+      if (Math.floor(progress / 10) > this.readProgress) {
+        this.readProgress = Math.floor(progress / 10);
+        window.ga("newmedia.send", {
+          "hitType": "event",
+          "eventCategory": "read",
+          "eventAction": "scroll",
+          "eventLabel": "[" + Utils.detectPlatform() + "] [" + document.querySelector('title').innerHTML + "] [page read " + (this.readProgress * 10) + "%]"
+        })
+      }
+    },
+    sendLogoGA(title) {
+      window.ga("newmedia.send", {
+        "hitType": "event",
+        "eventCategory": "related",
+        "eventAction": "click",
+        "eventLabel": "[" + Utils.detectPlatform() + "] [" + document.querySelector('title').innerHTML + "] [" + title + "]",
+      })
     },
   },
   mounted() {
@@ -379,321 +509,23 @@ export default {
 </script>
 
 <style lang="scss">
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@import '@generals/style.scss';
+.section-cover-1 {
+  background-image: url('./assets/mob/global_energy_transition_Germany_cover_m.jpg');
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    background-image: url('./assets/pad/global_energy_transition_Germany_cover_pad.jpg');
+  }
+  @media only screen and (min-width: 1025px)  {
+    background-image: url('./assets/pc/global_energy_transition_Germany_cover.jpg');
+  }
 }
-#app {
-  p {
-    font-size: 18px;
-    line-height: 1.67;
-    margin: 0;
-    text-align: justify;
-    @media only screen and (min-width: 768px) and (max-width: 1024px) {
-      font-size: 20px;
-      line-height: 1.7;
-    }
-    @media only screen and (min-width: 1025px) {
-      font-size: 21px;
-      line-height: 1.45;
-    }
+.section-cover-2 {
+  background-image: url('./assets/mob/global_energy_transition_Germany_image01_m.jpg');
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    background-image: url('./assets/pad/global_energy_transition_Germany_image01_pad.jpg');
   }
-  h3 {
-    text-align: left;
-  }
-  section {
-    position: relative;
-    width: 100%;
-    background-color: #ffffff;
-    .section-cover-container {
-      position: relative;
-      width: 100%;
-      height: 100vh;
-      .section-cover {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: flex-end;
-        background-size: cover;
-        background-position: center center;
-        color: #ffffff;
-        overflow: hidden;
-        img {
-          // section cover title
-          position: absolute;
-          bottom: 15%;
-          left: 50px;
-          width: 80px;
-          @media only screen and (min-width: 768px) and (max-width: 1024px) {
-            width: 120px;
-            bottom: 20%;
-            left: 125px;
-          }
-          @media only screen and (min-width: 1025px)  {
-            width: 120px;
-            bottom: 20%;
-            left: 300px;
-          }
-        }
-      }
-      .section-cover-active {
-        position: fixed;
-        top: 0;
-        left: 0;
-        transform: scale(1.01);
-        transition: .333s ease-in-out;
-      }
-      .section-cover-1 {
-        background-image: url('./assets/mob/global_energy_transition_Germany_cover_m.jpg');
-        @media only screen and (min-width: 768px) and (max-width: 1024px) {
-          background-image: url('./assets/pad/global_energy_transition_Germany_cover_pad.jpg');
-        }
-        @media only screen and (min-width: 1025px)  {
-          background-image: url('./assets/pc/global_energy_transition_Germany_cover.jpg');
-        }
-      }
-      .section-cover-2 {
-        background-image: url('./assets/mob/global_energy_transition_Germany_image01_m.jpg');
-        @media only screen and (min-width: 768px) and (max-width: 1024px) {
-          background-image: url('./assets/pad/global_energy_transition_Germany_image01_pad.jpg');
-        }
-        @media only screen and (min-width: 1025px)  {
-          background-image: url('./assets/pc/global_energy_transition_Germany_image01.jpg');
-        }
-      }
-    }
-    .section-cover-video {
-      background-color: #000000;
-      .section-cover {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #000000;
-      }
-      video {
-        // height: 100%;
-        // width: auto;
-        // @media only screen and (min-width: 769px)  {
-          height: auto;
-          width: 100%;
-        // }
-      }
-    }
-    .section-cover-description {
-      font-size: 15px;
-      margin-bottom: 50px;
-      padding-top: 5px;
-      text-align: justify;
-      line-height: 1.33;
-      @media only screen and (min-width: 769px) {
-        font-size: 18px;
-      }
-    }
-    .green-title {
-      display: inline-block;
-      text-align: center;
-      color: #1eee78;
-      line-height: 1.33;
-      border-bottom: solid 1px #1eee78;
-      font-size: 18px;
-      @media only screen and (min-width: 769px) {
-        font-size: 21px;
-      }
-    }
-  }
-  .content {
-    position: relative;
-    margin: 0 auto;
-    text-align: center;
-    padding: 20px 20px;
-    @media only screen and (min-width: 768px) and (max-width: 1024px) {
-      padding: 20px calc(50% - 320px);
-    }
-    @media only screen and (min-width: 1025px) {
-      padding: 20px calc(50% - 440px);
-    }
-    .image-wrapper {
-      img {
-        width: 100%;
-        margin: 5px 0;
-        @media only screen and (min-width: 768px) {
-          width: 100%;
-          &:first-child {
-            padding-right: 5px;
-          }
-          &:last-child {
-            padding-left: 5px;
-          }
-        }
-      }
-    }
-    .image-wrapper-column-2 {
-      img {
-        width: 100%;
-        margin: 5px 0;
-        @media only screen and (min-width: 768px) {
-          width: 50%;
-          &:first-child {
-            padding-right: 5px;
-          }
-          &:last-child {
-            padding-left: 5px;
-          }
-        }
-      }
-    }
-    .image-description {
-      color: #5a5a5a;
-      font-size: 15px;
-      text-align: justify;
-    }
-  }
-  .padding-top-none {
-    padding-top: 0;
-  }
-  .black-bg {
-    background-color: #000000;
-    color: #ffffff;
-  }
-  .gray-bg {
-    background-color: #f6f6f6;
-  }
-  .white-text {
-    color: #ffffff;
-  }
-  .cover-context {
-    position: relative;
-    padding-bottom: 50px;
-    overflow: hidden;
-    p {
-      color: #ffffff;
-    }
-  }
-  .ending-container {
-    position: relative;
-    font-size: 15px;
-    background-color: #f6f6f6;
-    .quesiton-comment-container {
-      background-color: #ffffff;
-    }
-  }
-  .text-highlight {
-    padding: 2px;
-    background: linear-gradient(90deg, #1eee78 50%, transparent 50%);
-    background-position: right bottom;
-    background-size: 200% 100%;
-    transition: 0s;
-  }
-  .text-highlight-ie {
-    padding: 2px;
-    background-position: left bottom;
-    background-size: 200% 100%;
-    background-color: #1eee78;
-
-  }
-  .text-highlight-black {
-    color: #000000;
-  }
-  .text-highlight-white {
-    color: #ffffff;
-  }
-  .text-highlight-animate {
-    background-position: left bottom;
-    transition: 3s ease-in-out;
-    color: #000000;
-  }
-  .editor-container {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: left;
-    .editor {
-      position: relative;
-      width: 100%;
-      display: flex;
-      .editor-title {
-        position: relative;
-        text-align: right;
-        width: 40%;
-        @media only screen and (max-width: 320px) {
-          width: 30%;
-          white-space: nowrap;
-        }
-        @media only screen and (min-width: 768px) and (max-width: 1024px) {
-          width: 45%;
-        }
-        @media only screen and (min-width: 1025px)  {
-          width: 45%;      
-        }
-      }
-      .editor-member {
-        position: relative;
-        width: 70%;
-        padding: 0 10px 0 0px;
-        @media only screen and (max-width: 320px) {
-          padding: 0 5px 0 5px;
-        }
-        @media only screen and (min-width: 768px) and (max-width: 1024px) {
-          width: 55%;        
-          padding: 0 30% 0 5px;
-        }
-        @media only screen and (min-width: 1025px)  {
-          width: 55%;
-          padding: 0 35% 0 5px;        
-        }
-        .editor-member-name {
-          position: relative;
-          display: inline-block;
-          width: 50%;
-          white-space: nowrap;
-          &:nth-child(odd) {
-            text-align: right;
-          }
-          &:nth-child(even) {
-            text-align: left;          
-          }
-        }
-      }
-    }
-  }
-  .energy-chart-wrapper {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    .energy-chart-title {
-      width: auto;
-      margin-bottom: 10px;
-    }
-    .energy-chart {
-      width: 100%;
-      margin-bottom: 50px;
-      @media only screen and (min-width: 768px) and (max-width: 1024px) {
-        width: 420px;      
-      }
-      @media only screen and (min-width: 1025px) {
-        width: 420px;
-      }
-    }
-  }
-  .logo-container {
-    text-align: center;
-    img {
-      width: 50%;
-      @media only screen and (min-width: 768px) and (max-width: 1024px) {
-        width: 33%;      
-      }
-      @media only screen and (min-width: 1280px) {
-        width: 200px;
-        margin: 0 20px;
-      }
-    }
+  @media only screen and (min-width: 1025px)  {
+    background-image: url('./assets/pc/global_energy_transition_Germany_image01.jpg');
   }
 }
 </style>

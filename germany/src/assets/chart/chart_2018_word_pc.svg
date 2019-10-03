@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="439.733" height="351.899" viewBox="0 0 439.733 351.899">
+  <g id="chart_2018_word_pc" transform="translate(-420 -1832.101)">
+    <g id="Y">
+      <text id="_0_" data-name="0%" transform="translate(420 2084.519)" fill="#8f8f8f" font-size="14" font-family="ArialMT, Arial"><tspan x="0" y="0">0%</tspan></text>
+      <text id="_10_" data-name="10%" transform="translate(420 2024.273)" fill="#8f8f8f" font-size="14" font-family="ArialMT, Arial"><tspan x="0" y="0">10%</tspan></text>
+      <text id="_20_" data-name="20%" transform="translate(420 1964.136)" fill="#8f8f8f" font-size="14" font-family="ArialMT, Arial"><tspan x="0" y="0">20%</tspan></text>
+      <text id="_30_" data-name="30%" transform="translate(420 1903.89)" fill="#8f8f8f" font-size="14" font-family="ArialMT, Arial"><tspan x="0" y="0">30%</tspan></text>
+      <text id="_40_" data-name="40%" transform="translate(420 1845.101)" fill="#8f8f8f" font-size="14" font-family="ArialMT, Arial"><tspan x="0" y="0">40%</tspan></text>
+    </g>
+    <text id="資料來源" transform="translate(640 2164)" fill="#989898" font-size="15" font-family="YuGothicUI-Regular, Yu Gothic UI"><tspan x="65" y="16">資料來源／國際能源署</tspan></text>
+    <g id="line">
+      <line id="Line_598" data-name="Line 598" x2="439.589" transform="translate(420 2029.641)" fill="none" stroke="#3e3e3e" stroke-miterlimit="10" stroke-width="1"/>
+      <line id="Line_600" data-name="Line 600" x2="439.589" transform="translate(420 1969.395)" fill="none" stroke="#3e3e3e" stroke-miterlimit="10" stroke-width="1"/>
+      <line id="Line_602" data-name="Line 602" x2="439.589" transform="translate(420 1909.258)" fill="none" stroke="#3e3e3e" stroke-miterlimit="10" stroke-width="1"/>
+      <line id="Line_604" data-name="Line 604" x2="439.589" transform="translate(420 1849.012)" fill="none" stroke="#3e3e3e" stroke-miterlimit="10" stroke-width="1"/>
+    </g>
+    <rect id="chart_1" width="49.449" height="228.749" transform="translate(466.375 1861.104)" fill="#dbdbdb"/>
+    <rect id="chart_2" width="49.449" height="60.202" transform="translate(535.149 2029.641)" fill="#dbdbdb"/>
+    <rect id="chart_3" width="49.449" height="18.063" transform="translate(603.925 2071.748)" fill="#dbdbdb"/>
+    <rect id="chart_4" width="49.449" height="138.457" transform="translate(672.591 1951.365)" fill="#dbdbdb"/>
+    <rect id="chart_4-2" data-name="chart_4" width="49.449" height="42.139" transform="translate(741.366 2047.671)" fill="#2d95ff"/>
+    <rect id="chart_5" width="49.449" height="114.38" transform="translate(810.14 1975.441)" fill="#2d95ff"/>
+    <g id="chart_name">
+      <text id="chart_1_name" transform="translate(471.63 2099.322)" fill="#bcbcbc" font-size="18" font-family="MicrosoftJhengHeiRegular, Microsoft JhengHei"><tspan x="0" y="19">燃煤</tspan></text>
+      <text id="chart_2_name" transform="translate(542.988 2099.322)" fill="#bcbcbc" font-size="18" font-family="MicrosoftJhengHeiRegular, Microsoft JhengHei"><tspan x="0" y="19">核能</tspan></text>
+      <text id="chart_3_name" transform="translate(611.434 2099.322)" fill="#bcbcbc" font-size="18" font-family="MicrosoftJhengHeiRegular, Microsoft JhengHei"><tspan x="0" y="19">石油</tspan></text>
+      <text id="chart_4_name" transform="translate(679.599 2099.322)" fill="#bcbcbc" font-size="18" font-family="MicrosoftJhengHeiRegular, Microsoft JhengHei"><tspan x="0" y="19">天然</tspan></text>
+      <text id="chart_5_name" transform="translate(739.588 2099.322)" fill="#65b1ff" font-size="18" font-family="MicrosoftJhengHeiRegular, Microsoft JhengHei"><tspan x="0.67" y="19">太陽能</tspan><tspan x="9.67" y="43">風力</tspan></text>
+      <text id="chart_6_name" transform="translate(816.772 2099.322)" fill="#65b1ff" font-size="18" font-family="MicrosoftJhengHeiRegular, Microsoft JhengHei"><tspan x="0" y="19">水力</tspan><tspan x="0" y="43">其他</tspan></text>
+    </g>
+    <line id="Line_587" data-name="Line 587" x2="439.733" transform="translate(420 2089.778)" fill="none" stroke="#3e3e3e" stroke-miterlimit="10" stroke-width="4"/>
+    <text id="_19_" data-name="19%" transform="translate(815.316 1963.586)" fill="#2d95ff" font-size="25" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">19</tspan><tspan y="0" font-size="14">%</tspan></text>
+    <text id="_7_" data-name="7%" transform="translate(755.607 2036.401)" fill="#2d95ff" font-size="25" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">7</tspan><tspan y="0" font-size="14">%</tspan></text>
+  </g>
+</svg>
