@@ -366,7 +366,7 @@ import Utils from 'udn-newmedia-utils';
 
 import Anchor from '@generals/components/Anchor.vue'
 import ArticleArrow from '@generals/components/ArticleArrow.vue'
-import Cover from './components/Cover.vue'
+import Cover from '@generals/components/Cover.vue'
 import GoTop from '@generals/components/GoTop.vue'
 import GradientConnection from '@generals/components/GradientConnection.vue'
 import FBComment from './components/FBComment.vue'
