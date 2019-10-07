@@ -2,7 +2,7 @@
   <div class="related-section-container">
     <div v-if="isMob" class="related-section related-section-mob">
       <div class="related-title-container">
-        <img :src="require('../assets/title/global_energy_transition_Japan_title_read.svg')" alt="日本能源轉型列報導">
+        <img :src="require('../assets/title/global_energy_transition_title_read.svg')" alt="日本能源轉型列報導">
       </div>
       <Slick
         ref="slick"
@@ -23,36 +23,36 @@
           name="日本能源"
           class="related-article"
           target="_blank"
-          @click="sendRelatedGA('R1')"
+          @click="sendRelatedGA('節能新挑戰')"
         >
-          <img :src="require('../assets/read/read_jp_01.jpg')" alt="日本能源">
-          <div class="related-article-name">日本的兩難：擁核還是廢核？</div>
+          <img :src="require('../assets/read/read_Germany_03.jpg')" alt="日本能源">
+          <div class="related-article-name">節能新挑戰</div>
         </a>
         <a
           href=""
           name="日本能源"
           class="related-article"
           target="_blank"
-          @click="sendRelatedGA('R2')"
+          @click="sendRelatedGA('綠能環境衝突')"
         >
-          <img :src="require('../assets/read/read_jp_02.jpg')" alt="日本能源">
-          <div class="related-article-name">日企打造智慧城，追求能源零消耗</div>
+          <img :src="require('../assets/read/read_uk_02.jpg')" alt="日本能源">
+          <div class="related-article-name">綠能環境衝突</div>
         </a>
         <a
           href=""
           name="日本能源"
           class="related-article"
           target="_blank"
-          @click="sendRelatedGA('R3')"
+          @click="sendRelatedGA('新能源創生')"
         >
-          <img :src="require('../assets/read/read_jp_03.jpg')" alt="日本能源">
-          <div class="related-article-name">三人四腳，打造日本再生能源電能躉購費率企業第一號</div>
+          <img :src="require('../assets/read/read_Netherlands_02.jpg')" alt="日本能源">
+          <div class="related-article-name">新能源創生</div>
         </a>
         </Slick>
     </div>
     <div v-else class="related-section related-section-pc">
       <div class="related-title-container">
-        <img :src="require('../assets/title/global_energy_transition_Japan_title_read.svg')" alt="日本能源轉型列報導">        
+        <img :src="require('../assets/title/global_energy_transition_title_read.svg')" alt="日本能源轉型列報導">        
       </div>
       <div class="related-article-container">
         <a
@@ -60,30 +60,30 @@
           name="日本能源"
           class="related-article"
           target="_blank"
-          @click="sendRelatedGA('R1')"
+          @click="sendRelatedGA('節能新挑戰')"
         >
-          <img :src="require('../assets/read/read_jp_01.jpg')" alt="日本能源">
-          <div class="related-article-name">日本的兩難：擁核還是廢核？</div>
+          <img :src="require('../assets/read/read_Germany_03.jpg')" alt="日本能源">
+          <div class="related-article-name">節能新挑戰</div>
         </a>
         <a
           href=""
           name="日本能源"
           class="related-article"
           target="_blank"
-          @click="sendRelatedGA('R2')"
+          @click="sendRelatedGA('綠能環境衝突')"
         >
-          <img :src="require('../assets/read/read_jp_02.jpg')" alt="日本能源">
-          <div class="related-article-name">日企打造智慧城，追求能源零消耗</div>
+          <img :src="require('../assets/read/read_uk_02.jpg')" alt="日本能源">
+          <div class="related-article-name">綠能環境衝突</div>
         </a>
         <a
           href=""
           name="日本能源"
           class="related-article"
           target="_blank"
-          @click="sendRelatedGA('R3')"
+          @click="sendRelatedGA('新能源創生')"
         >
-          <img :src="require('../assets/read/read_jp_03.jpg')" alt="日本能源">
-          <div class="related-article-name">三人四腳，打造日本再生能源電能躉購費率企業第一號</div>
+          <img :src="require('../assets/read/read_Netherlands_02.jpg')" alt="日本能源">
+          <div class="related-article-name">新能源創生</div>
         </a>
       </div>
     </div>

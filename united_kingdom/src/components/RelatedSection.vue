@@ -2,7 +2,7 @@
   <div class="related-section-container">
     <div v-if="isMob" class="related-section related-section-mob">
       <div class="related-title-container">
-        <img :src="require('../assets/title/global_energy_transition_United_Kingdom_titile_read.svg')" alt="英國能源轉型列報導">
+        <img :src="require('../assets/title/global_energy_transition_title_read.svg')" alt="英國能源轉型列報導">
       </div>
       <Slick
         ref="slick"
@@ -23,36 +23,36 @@
           name="英國能源轉型列報導"
           class="related-article"
           target="_blank"
-          @click="sendRelatedGA('R1')"
+          @click="sendRelatedGA('核去核從')"
+        >
+          <img :src="require('../assets/read/read_jp_03.jpg')" alt="英國能源轉型列報導">
+          <div class="related-article-name">核去核從</div>
+        </a>
+        <a
+          href=""
+          name="英國能源轉型列報導"
+          class="related-article"
+          target="_blank"
+          @click="sendRelatedGA('迎向非煤家園')"
         >
           <img :src="require('../assets/read/read_uk_01.jpg')" alt="英國能源轉型列報導">
-          <div class="related-article-name">零碳大業 英國無煤倒數</div>
+          <div class="related-article-name">迎向非煤家園</div>
         </a>
         <a
           href=""
           name="英國能源轉型列報導"
           class="related-article"
           target="_blank"
-          @click="sendRelatedGA('R2')"
+          @click="sendRelatedGA('影音專區')"
         >
-          <img :src="require('../assets/read/read_uk_02.jpg')" alt="英國能源轉型列報導">
-          <div class="related-article-name">風電進駐 漁村的願景與怨嘆</div>
-        </a>
-        <a
-          href=""
-          name="英國能源轉型列報導"
-          class="related-article"
-          target="_blank"
-          @click="sendRelatedGA('R3')"
-        >
-          <img :src="require('../assets/read/read_uk_03.jpg')" alt="英國能源轉型列報導">
-          <div class="related-article-name">擁抱核能的掙扎</div>
+          <img :src="require('../assets/read/read_Germany_02.jpg')" alt="英國能源轉型列報導">
+          <div class="related-article-name">影音專區</div>
         </a>
         </Slick>
     </div>
     <div v-else class="related-section related-section-pc">
       <div class="related-title-container">
-        <img :src="require('../assets/title/global_energy_transition_United_Kingdom_titile_read.svg')" alt="英國能源轉型列報導轉型列報導">        
+        <img :src="require('../assets/title/global_energy_transition_title_read.svg')" alt="英國能源轉型列報導轉型列報導">        
       </div>
       <div class="related-article-container">
         <a
@@ -60,30 +60,30 @@
           name="英國能源轉型列報導"
           class="related-article"
           target="_blank"
-          @click="sendRelatedGA('R1')"
+          @click="sendRelatedGA('核去核從')"
+        >
+          <img :src="require('../assets/read/read_jp_03.jpg')" alt="英國能源轉型列報導">
+          <div class="related-article-name">核去核從</div>
+        </a>
+        <a
+          href=""
+          name="英國能源轉型列報導"
+          class="related-article"
+          target="_blank"
+          @click="sendRelatedGA('迎向非煤家園')"
         >
           <img :src="require('../assets/read/read_uk_01.jpg')" alt="英國能源轉型列報導">
-          <div class="related-article-name">零碳大業 英國無煤倒數</div>
+          <div class="related-article-name">迎向非煤家園</div>
         </a>
         <a
           href=""
           name="英國能源轉型列報導"
           class="related-article"
           target="_blank"
-          @click="sendRelatedGA('R2')"
+          @click="sendRelatedGA('影音專區')"
         >
-          <img :src="require('../assets/read/read_uk_02.jpg')" alt="英國能源轉型列報導">
-          <div class="related-article-name">風電進駐 漁村的願景與怨嘆</div>
-        </a>
-        <a
-          href=""
-          name="英國能源轉型列報導"
-          class="related-article"
-          target="_blank"
-          @click="sendRelatedGA('R3')"
-        >
-          <img :src="require('../assets/read/read_uk_03.jpg')" alt="英國能源轉型列報導">
-          <div class="related-article-name">擁抱核能的掙扎</div>
+          <img :src="require('../assets/read/read_Germany_02.jpg')" alt="英國能源轉型列報導">
+          <div class="related-article-name">影音專區</div>
         </a>
       </div>
     </div>

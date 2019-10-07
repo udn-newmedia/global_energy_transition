@@ -13,6 +13,9 @@
           :coverHighlightFlag="coverHighlightFlag"
         />
         <p><br></p>
+        <p><br></p>
+        <p><br></p>
+        <p><br></p>
         <p>儘管全球的減碳、廢核聲量正高漲，各國政府、民間團體在推動能源轉型時，卻仍面臨各式難題。</p>
         <p><br></p>
         <p>「能源轉型就像革命一樣，」一位推動南韓社區能源轉型的市民想到自己曾面臨的阻礙，不禁搖了搖頭。</p>
@@ -32,6 +35,7 @@
           </mark>
           ，但節節高漲的電費、供電問題卻也隨之而來；放眼全球，加速老舊燃煤電廠退役、發展綠能產業正成國際趨勢，不過各國也面臨扼制綠能產業發展的法規、過時的電力產業結構等阻礙。
         </p>
+        <p><br></p>
         <p><br></p>
         <div id="cover-arrow-end"/>
         <div class="energy-chart-wrapper">
@@ -70,6 +74,10 @@
         <p>當能源轉型已勢在必行，各國政府如何協助燃煤產業轉型、催生再生能源產業，民間團體又如何將節能與公民發電落實於日常生活中？</p>
         <p><br></p>
         <p>《聯合報》採訪團隊實際走訪英國、德國、荷蘭、日本、南韓，紀錄這5個國家的能源轉型之路，希望借鏡國外經驗，讓台灣的能源轉型之路走得更順、走得更遠。</p>
+        <p><br></p>
+        <p><br></p>
+        <p><br></p>
+        <p><br></p>
       </div>
     </div>
     <Anchor :currentPage="4" :anchorFixedFlag="anchorFixedFlag"/>
@@ -89,6 +97,9 @@
     <section class="black-bg">
       <div class="content">
         <p><br></p>
+        <p><br></p>
+        <p><br></p>
+        <p><br></p>
         <h3 class="green-title">英國燃煤歸零倒數中</h3>
         <p><br></p>
         <p>英國是世界上第一個燃煤國家，而為對抗氣候變遷，該國今年通過氣候變遷法修正，將2050年底之前達到零碳排目標納進法律，成為第一個將零碳目標入法的國家。英國也計劃在2040年禁售燃油車、2050年碳排歸零。</p>
@@ -96,6 +107,8 @@
         <p><br></p>
       </div>
       <HandDrawn subTitle="英國發電結構"/>
+      <p><br></p>
+      <p><br></p>
       <p><br></p>
       <p><br></p>
     </section>
@@ -114,6 +127,12 @@
               'https://p3.udn.com.tw/global_energy_transition/uk/UK_m.mp4' :
               'https://p3.udn.com.tw/global_energy_transition/uk/UK_pc.mp4'
             "
+            :poster="
+              require(isMob ?
+              './assets/mob/UK_post.jpg' :
+              './assets/pc/UK_pc_post.jpg'
+              )
+            "
             webkit-playsinline
             playsinline
             preload="auto"
@@ -126,6 +145,10 @@
     <GradientConnection/>
     <section class="black-bg">
       <div class="content">
+        <p><br></p>
+        <p><br></p>
+        <p><br></p>
+        <p><br></p>
         <p>8月位在英國倫敦東南方的布萊頓（Brighton）正值夏季觀光旺季，沙灘上一個個穿著比基尼、曬日光浴的遊客，正享受海風吹拂。過去，布萊頓已有賞豚、海釣等海上觀光之旅，現在又多了一種觀光行程─離岸風機之旅。</p>
         <p><br></p>
         <p id="text-highlight-1">英國預計在2025年前關閉最後一波燃煤電廠。<mark
@@ -146,6 +169,8 @@
         <p><br></p>
         <p><br></p>
         <Youtube src="https://www.youtube.com/embed/xFZkhwQD4kE"></Youtube>
+        <p><br></p>
+        <p><br></p>
         <p><br></p>
         <p><br></p>
       </div>
@@ -169,6 +194,8 @@
       <div class="content gray-bg">
         <p><br></p>
         <p><br></p>
+        <p><br></p>
+        <p><br></p>
         <h3>新興離岸風機之旅<br>近距離看巨型風機</h3>
         <p><br></p>
         <p>上了船後，大衛先向大家說明出海注意事項，首先因為海上浪大，他先向大家示範「可能站不穩」的狀況，包括發生緊急事件時，要立刻穿著救生衣，此外，因為海浪太大，還可能被海水噴到全身濕，船上提供防水衣，供遊客穿著。</p>
@@ -176,6 +203,8 @@
         <p>果不其然，才剛出海不久，船上的遊客，就幾乎無法好好站穩，觀光船如海盜船在海上搖搖盪盪、忽上忽下，過不一會兒，一陣海浪打上來，一群遊客大叫，頭髮、衣服全濕透了。</p>
         <p><br></p>
         <p>隨著海浪飄漂浮浮，風機的景象也越來越接近，隨後，佇立在眼前的是16層樓高的風機，葉扇就在眼前繞轉，數十根風機排排站，十分壯觀。</p>
+        <p><br></p>
+        <p><br></p>
         <p><br></p>
         <p><br></p>
       </div>
@@ -195,8 +224,10 @@
         </div>
       </div>
     </section>
-    <section class="white-bg">
-      <div class="content gray-bg">
+    <section class="gray-bg">
+      <div class="content gray-bg padding-bottom-none">
+        <p><br></p>
+        <p><br></p>
         <p><br></p>
         <p><br></p>
         <p>觀光船隨後繞行變電中心，可以看到許多海鳥飛梭其上，成為一個海鳥的海上臨時休憩站。</p>
@@ -206,18 +237,22 @@
         <p>馬克伯朗表示，離岸風機之旅是當地人自行發展出來的遊程，公司也覺得是一種提昇多種地方創生結合的好方式。</p>
         <p><br></p>
         <p><br></p>
+        <p><br></p>
+        <p><br></p>
         <h3>風能觀光 在地人最好奇</h3>
         <p><br></p>
         <p>目前布萊頓有4家風機觀光業者，業者大衛說，參加的人主要是當地還有附近的遊客，這些居民可以說是「看著風機被建造起來」，因此對於風機特感好奇，想近距離看看風機到底是怎麼回事。</p>
         <p><br></p>
         <p><br></p>
-        <div class="image-wrapper">
-          <img
-            :src="require(isMob ? './assets/mob/global_energy_transition_United_Kingdom_artical_image_m.jpg' : './assets/pc/global_energy_transition_United_Kingdom_artical_image.jpg')"
-            alt="離岸風機觀光船船長大衛羅斯。記者余承翰／攝影"
-          >
-          <div class="image-description">離岸風機觀光船船長大衛羅斯。記者余承翰／攝影</div>
-        </div>
+      </div>
+      <div class="image-wrapper">
+        <img
+          :src="require(isMob ? './assets/mob/global_energy_transition_United_Kingdom_artical_image_m.jpg' : './assets/pc/global_energy_transition_United_Kingdom_artical_image.jpg')"
+          alt="離岸風機觀光船船長大衛羅斯。記者余承翰／攝影"
+        >
+        <div class="image-description">離岸風機觀光船船長大衛羅斯。記者余承翰／攝影</div>
+      </div>
+      <div class="content gray-bg padding-top-none">
         <p><br></p>
         <p><br></p>
         <p>大衛自2015年開始風力發電旅遊行程，一天最多有兩到三趟旅程，他的船一艘最多可以坐63個人，但英國法規規定一次最多可以搭載12人，出海得看天候、風況，即使提早預約，也不一定能如期出海。</p>
@@ -225,6 +260,9 @@
         <p>除了帶動觀光船的離岸風電遊程之外，離岸風機也讓原本就有的景點，更有看頭。搭上英國航空i360觀景塔，可以360度看到布萊頓的城市景觀並遠眺海景。</p>
         <p><br></p>
         <p><br></p>
+        <p><br></p>
+        <p><br></p>
+
       </div>
       <NextSection
         :directInfo="{
@@ -353,7 +391,7 @@ import Utils from 'udn-newmedia-utils';
 
 import Anchor from '@generals/components/Anchor.vue'
 import ArticleArrow from '@generals/components/ArticleArrow.vue'
-import Cover from './components/Cover.vue'
+import Cover from '@generals/components/Cover.vue'
 import GoTop from '@generals/components/GoTop.vue'
 import GradientConnection from '@generals/components/GradientConnection.vue'
 import FBComment from './components/FBComment.vue'
@@ -531,7 +569,7 @@ export default {
   }
 }
 .section-cover img {
-  width: 120px !important;
+  width: 100px !important;
   @media only screen and (min-width: 768px) and (max-width: 1024px) {
     width: 160px !important;
   }

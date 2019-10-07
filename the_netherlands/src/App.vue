@@ -13,6 +13,9 @@
           :coverHighlightFlag="coverHighlightFlag"
         />
         <p><br></p>
+        <p><br></p>
+        <p><br></p>
+        <p><br></p>
         <p>儘管全球的減碳、廢核聲量正高漲，各國政府、民間團體在推動能源轉型時，卻仍面臨各式難題。</p>
         <p><br></p>
         <p>「能源轉型就像革命一樣，」一位推動南韓社區能源轉型的市民想到自己曾面臨的阻礙，不禁搖了搖頭。</p>
@@ -28,6 +31,7 @@
             }"
           >並計劃在2025年，再生能源發電佔比達20%</mark>，但節節高漲的電費、供電問題卻也隨之而來；放眼全球，加速老舊燃煤電廠退役、發展綠能產業正成國際趨勢，不過各國也面臨扼制綠能產業發展的法規、過時的電力產業結構等阻礙。
         </p>
+        <p><br></p>
         <p><br></p>
         <div id="cover-arrow-end"/>
         <div class="energy-chart-wrapper">
@@ -66,6 +70,10 @@
         <p>當能源轉型已勢在必行，各國政府如何協助燃煤產業轉型、催生再生能源產業，民間團體又如何將節能與公民發電落實於日常生活中？</p>
         <p><br></p>
         <p>《聯合報》採訪團隊實際走訪英國、德國、荷蘭、日本、南韓，紀錄這5個國家的能源轉型之路，希望借鏡國外經驗，讓台灣的能源轉型之路走得更順、走得更遠。</p>
+        <p><br></p>
+        <p><br></p>
+        <p><br></p>
+        <p><br></p>
       </div>
     </div>
     <Anchor :currentPage="3" :anchorFixedFlag="anchorFixedFlag"/>
@@ -85,6 +93,9 @@
     <section class="black-bg">
       <div class="content">
         <p><br></p>
+        <p><br></p>
+        <p><br></p>
+        <p><br></p>
         <h3 class="green-title">綠能後段班的大逆轉</h3>
         <p><br></p>
         <p>荷蘭過去屬綠能後段班，直到2015年，環保組織代表百位公民「告政府」，認為政府未積極解決氣候變遷，法院判決荷蘭政府應修正減碳目標，荷蘭才開始踏上綠能覺醒之路。荷蘭政府在2019年發布多項減碳目標，包含2050年碳排放量應減少95%、2021年起正式課徵碳稅、所有燃煤電廠必須在2029年底關閉或改為生質電廠。</p>
@@ -93,6 +104,8 @@
       </div>
       <HandDrawn subTitle="荷蘭發電結構"/>
       <div class="content">
+        <p><br></p>
+        <p><br></p>
         <p><br></p>
         <p><br></p>
         <p>在荷蘭，永續、環保的觀念很早就深入生活各個角落。荷蘭民眾大量使用公共運輸工具，該國火車在2017年全數轉為風力發電，火車站內設置許多永續概念設計，而為了將綠色交通落實在人們從家裡到火車站的「最後一哩路」，荷蘭中央及地方政府也積極鼓勵民眾以腳踏車取代汽機車，要減少荷蘭碳排放量、一步步邁向綠能大國。</p>
@@ -112,6 +125,8 @@
         <p><br></p>
         <p><br></p>
         <Youtube src="https://www.youtube.com/embed/xFZkhwQD4kE"></Youtube>
+        <p><br></p>
+        <p><br></p>
         <p><br></p>
         <p><br></p>
       </div>
@@ -144,11 +159,13 @@
         </div>
       </div>
     </section>
-    <section class="white-bg">
-      <div class="content gray-bg">
+    <section class="gray-bg">
+      <div class="content gray-bg padding-bottom-none">
         <p><br></p>
         <p><br></p>
-        <h3>不只火車用綠能 車站裝置也很「綠」</h3>
+        <p><br></p>
+        <p><br></p>
+        <h3>不只火車用綠能<br>車站裝置也很「綠」</h3>
         <p><br></p>
         <p>除了使用可再生能源外，荷蘭國鐵在車站內也設有多項永續概念設計。例如荷蘭火車站多處月台屋頂上覆蓋太陽能板，供應月台看板所需電力，阿姆斯特丹站內設有風力渦輪機，靠火車頻繁進站的氣流帶動發電。</p>
         <p><br></p>
@@ -166,16 +183,20 @@
         <p>吉爾特柯倫也邀請觀光客到車站「盪鞦韆」，在烏特勒支中央火車站引入特殊的鞦韆，旅客可以盪鞦韆產生能量為手機充電，每天都吸引大人小孩到車站玩鞦韆兼充電，還是熱門打卡景點。</p>
         <p><br></p>
         <p><br></p>
-        <div class="image-wrapper">
-          <img
-            :src="require(isMob ? './assets/mob/global_energy_transition_The_Netherlands_artical_image_m.jpg' : './assets/pc/global_energy_transition_The_Netherlands_artical_image.jpg')"
-            alt="烏特勒支中央火車站引入特殊的鞦韆，旅客可以利用盪鞦韆為手機充電。記者葉信菉／攝影"
-          >
-          <div class="image-description">烏特勒支中央火車站引入特殊的鞦韆，旅客可以利用盪鞦韆為手機充電。記者葉信菉／攝影</div>
-        </div>
+      </div>
+      <div class="image-wrapper">
+        <img
+          :src="require(isMob ? './assets/mob/global_energy_transition_The_Netherlands_artical_image_m.jpg' : './assets/pc/global_energy_transition_The_Netherlands_artical_image.jpg')"
+          alt="烏特勒支中央火車站引入特殊的鞦韆，旅客可以利用盪鞦韆為手機充電。記者葉信菉／攝影"
+        >
+        <div class="image-description">烏特勒支中央火車站引入特殊的鞦韆，旅客可以利用盪鞦韆為手機充電。記者葉信菉／攝影</div>
+      </div>
+      <div class="content gray-bg padding-top-none">
         <p><br></p>
         <p><br></p>
-        <h3>廣設腳踏車友善空間  讓民眾愛上以腳踏車代步</h3>
+        <p><br></p>
+        <p><br></p>
+        <h3>廣設腳踏車友善空間<br>讓民眾愛上以腳踏車代步</h3>
         <p><br></p>
         <p>大眾交通工具逐步採用綠能，但要去火車站的路上總不能充滿汽車。</p>
         <p><br></p>
@@ -184,51 +205,55 @@
         <p>這座停車場代表烏特勒支市政府「健康城市生活」的政策，荷蘭政府多年來推動腳踏車道計畫，烏特勒支副市長維客多艾弗特（Victor Everhardt）說，荷蘭人人都有腳踏車，騎腳踏車通勤是民眾日常。</p>
         <p><br></p>
         <p><br></p>
+        <p><br></p>
+        <p><br></p>
       </div>
     </section>
     <section class="white-bg">
-        <div id="section-cover-4" class="section-cover-container">
-          <div :class="{
-              'section-cover': true,
-              'section-cover-active': sectionCoverFlag_4,
-              'section-cover-4': true,
-            }"
-          >
-            <GradientConnection :inner="true" :bottom="true"/>
-            <div class="content">
-              <div class="section-cover-description">荷蘭人人都有腳踏車，騎腳踏車通勤是民眾日常。記者葉信菉／攝影</div>
-            </div>
+      <div id="section-cover-4" class="section-cover-container">
+        <div :class="{
+            'section-cover': true,
+            'section-cover-active': sectionCoverFlag_4,
+            'section-cover-4': true,
+          }"
+        >
+          <GradientConnection :inner="true" :bottom="true"/>
+          <div class="content">
+            <div class="section-cover-description">荷蘭人人都有腳踏車，騎腳踏車通勤是民眾日常。記者葉信菉／攝影</div>
           </div>
         </div>
-        <div id="section-cover-5" class="section-cover-container">
-          <div :class="{
-              'section-cover': true,
-              'section-cover-active': sectionCoverFlag_5,
-              'section-cover-5': true,
-            }"
-          >
-            <GradientConnection :inner="true" :bottom="true"/>
-            <div class="content">
-              <div class="section-cover-description">烏特勒支市擁有荷蘭最大的腳踏車停車場。記者葉信菉／攝影</div>
-            </div>
+      </div>
+      <div id="section-cover-5" class="section-cover-container">
+        <div :class="{
+            'section-cover': true,
+            'section-cover-active': sectionCoverFlag_5,
+            'section-cover-5': true,
+          }"
+        >
+          <GradientConnection :inner="true" :bottom="true"/>
+          <div class="content">
+            <div class="section-cover-description">烏特勒支市擁有荷蘭最大的腳踏車停車場。記者葉信菉／攝影</div>
           </div>
         </div>
-        <div id="section-cover-6" class="section-cover-container">
-          <div :class="{
-              'section-cover': true,
-              'section-cover-active': sectionCoverFlag_6,
-              'section-cover-6': true,
-            }"
-          >
-            <GradientConnection :inner="true" :bottom="true"/>
-            <div class="content">
-              <div class="section-cover-description">烏特勒支市擁有荷蘭最大的腳踏車停車場。記者葉信菉／攝影</div>
-            </div>
+      </div>
+      <div id="section-cover-6" class="section-cover-container">
+        <div :class="{
+            'section-cover': true,
+            'section-cover-active': sectionCoverFlag_6,
+            'section-cover-6': true,
+          }"
+        >
+          <GradientConnection :inner="true" :bottom="true"/>
+          <div class="content">
+            <div class="section-cover-description">烏特勒支市擁有荷蘭最大的腳踏車停車場。記者葉信菉／攝影</div>
           </div>
         </div>
+      </div>
     </section>
     <section class="white-bg">
       <div class="content gray-bg">
+        <p><br></p>
+        <p><br></p>
         <p><br></p>
         <p><br></p>
         <p>城市發展同時要兼顧環保和民眾生活空間、還要滿足交通需求並不容易。隨著烏特勒支市的快速發展，市府與國鐵都遇到共同問題「怎樣讓大家放棄自家汽車、使用公共運輸系統」？</p>
@@ -236,6 +261,8 @@
         <p>維客多艾弗特坦言，不希望因為都市成長讓汽車大量進入市區，影響空氣、生活品質，還造成塞車，既然大家都騎腳踏車，就讓腳踏車成為人們從家裡到火車站的「最後一哩路」工具，所以從中央到地方，都積極改善腳踏車通路與大眾運輸基礎建設，不會讓民眾苦於找腳踏車停車位。</p>
         <p><br></p>
         <p>從風電火車到鞦韆充電架再到全球最大腳踏車停車場，荷蘭要用最接地氣的方式，實現他們的「綠色交通」藍圖。</p>
+        <p><br></p>
+        <p><br></p>
         <p><br></p>
         <p><br></p>
       </div>
@@ -366,7 +393,7 @@ import Utils from 'udn-newmedia-utils';
 
 import Anchor from '@generals/components/Anchor.vue'
 import ArticleArrow from '@generals/components/ArticleArrow.vue'
-import Cover from './components/Cover.vue'
+import Cover from '@generals/components/Cover.vue'
 import GoTop from '@generals/components/GoTop.vue'
 import GradientConnection from '@generals/components/GradientConnection.vue'
 import FBComment from './components/FBComment.vue'
@@ -589,7 +616,7 @@ export default {
   }
 }
 .section-cover img {
-  width: 65px !important;
+  width: 60px !important;
   @media only screen and (min-width: 768px) and (max-width: 1024px) {
     width: 100px !important;
   }

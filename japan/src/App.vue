@@ -13,6 +13,9 @@
           :coverHighlightFlag="coverHighlightFlag"
         />
         <p><br></p>
+        <p><br></p>
+        <p><br></p>
+        <p><br></p>
         <p>儘管全球的減碳、廢核聲量正高漲，各國政府、民間團體在推動能源轉型時，卻仍面臨各式難題。</p>
         <p><br></p>
         <p>「能源轉型就像革命一樣，」一位推動南韓社區能源轉型的市民想到自己曾面臨的阻礙，不禁搖了搖頭。</p>
@@ -28,6 +31,7 @@
             }"
           >並計劃在2025年，再生能源發電佔比達20%</mark>，但節節高漲的電費、供電問題卻也隨之而來；放眼全球，加速老舊燃煤電廠退役、發展綠能產業正成國際趨勢，不過各國也面臨扼制綠能產業發展的法規、過時的電力產業結構等阻礙。
         </p>
+        <p><br></p>
         <p><br></p>
         <div id="cover-arrow-end"/>
         <div class="energy-chart-wrapper">
@@ -66,6 +70,10 @@
         <p>當能源轉型已勢在必行，各國政府如何協助燃煤產業轉型、催生再生能源產業，民間團體又如何將節能與公民發電落實於日常生活中？</p>
         <p><br></p>
         <p>《聯合報》採訪團隊實際走訪英國、德國、荷蘭、日本、南韓，紀錄這5個國家的能源轉型之路，希望借鏡國外經驗，讓台灣的能源轉型之路走得更順、走得更遠。</p>
+        <p><br></p>
+        <p><br></p>
+        <p><br></p>
+        <p><br></p>
       </div>
     </div>
     <Anchor :currentPage="0" :anchorFixedFlag="anchorFixedFlag"/>
@@ -85,6 +93,9 @@
     <section class="black-bg">
       <div class="content">
         <p><br></p>
+        <p><br></p>
+        <p><br></p>
+        <p><br></p>
         <h3 class="green-title">日本的兩難：擁核還是廢核？</h3>
         <p><br></p>
         <p>福島核災事件後，日本能源政策在8年間兩次大轉彎，最終考慮降低發電成本、氣候變遷、降低能源海外依存度等因素，決定再次擁抱核電，並計劃在2030年，將核電佔比恢復到逼近核事故前的水準。</p>
@@ -97,6 +108,8 @@
     </section>
     <section class="black-bg">
       <div class="content">
+        <p><br></p>
+        <p><br></p>
         <p><br></p>
         <p><br></p>
         <p>車子一路駛於福島田間道路，稻田與太陽能板不斷在眼前交錯，越往東南的海邊走，太陽能板的數量也越來越多。福島縣在2011年東日本大地震中受到核事故重創後，正力爭轉型，從核災縣變為引領日本再生能源發展的新能源大縣。</p>
@@ -118,6 +131,8 @@
         <Youtube src="https://www.youtube.com/embed/_4Pxf78migU"></Youtube>
         <p><br></p>
         <p><br></p>
+        <p><br></p>
+        <p><br></p>
       </div>
     </section>
     <section class="gray-bg">
@@ -137,6 +152,8 @@
       <div class="content gray-bg padding-top-none">
         <p><br></p>
         <p><br></p>
+        <p><br></p>
+        <p><br></p>
         <h3>一場大地震 扭轉福島發展方向</h3>
         <p><br></p>
         <p>福島除了是農作種類豐富的農業大縣，傳統上更是日本的能源大縣，不僅水力發電興盛，也是火力、核能發電重鎮，東日本大地震前，福島提供首都東京在內首都圈4成用電。</p>
@@ -144,6 +161,8 @@
         <p>山田清貴表示，東日本大地震後，福島做為關東電力供給主力的結構崩解，以核能為中心的能源產業必須轉型，再生能源是代表性的新技術，也是福島未來發展方向。</p>
         <p><br></p>
         <p>福島沿海因海嘯重創，加上核事故影響，曾經較大範圍的疏散居民，雖然經過這幾年輻射檢測，避難指示區域已縮小到全縣的2.3%，但許多人、特別是年輕一代離家多年，早已在他鄉展開新生活，閒置的土地為發展再生能源提供了充分的空間。</p>
+        <p><br></p>
+        <p><br></p>
         <p><br></p>
         <p><br></p>
       </div>
@@ -163,6 +182,8 @@
       <div class="content gray-bg padding-top-none">
         <p><br></p>
         <p><br></p>
+        <p><br></p>
+        <p><br></p>
         <p>福島縣企畫調整部能源課主幹（相當於課長）武內正志表示，利用政府補助，福島大力推進太陽能光電收購以及蓄電池設施的興建，2017年已順利將再生能源所占電源比例提升到30.3%，對2020年達到4成的近程目標，縣府充滿信心。</p>
         <p><br></p>
         <p>武內分析，包括太陽能、風力甚至生質能發電，福島具備了發展再生能源豐沛條件，且再生能源發電都不是巨型電廠，中小企業也能發展，在推動再生能源的普及上，並不需要仰賴大型電力公司的協助。</p>
@@ -178,6 +199,9 @@
           >
           <div class="image-description">福島的可移動式氫能系統。記者蔡佩芳／攝影</div>
         </div>
+        <p><br></p>
+        <p><br></p>
+        <p><br></p>
         <p><br></p>
         <h3>重生的福島 不會再走回頭路</h3>
         <p><br></p>
@@ -199,6 +223,7 @@
         </p>
         <p><br></p>
         <p>山田表示，能源是國家政策的一環，有很多考慮的面向，福島縣無法干涉國家的決定。在國家補助下，有些地方在確保安全運轉前提下願意接受核電，但他表示，「福島不會再走回頭路。」</p>
+        <p><br></p>
         <p><br></p>
         <p><br></p>
         <p><br></p>
@@ -326,7 +351,7 @@ import Utils from 'udn-newmedia-utils';
 
 import Anchor from '@generals/components/Anchor.vue'
 import ArticleArrow from '@generals/components/ArticleArrow.vue'
-import Cover from './components/Cover.vue'
+import Cover from '@generals/components/Cover.vue'
 import GoTop from '@generals/components/GoTop.vue'
 import GradientConnection from '@generals/components/GradientConnection.vue'
 import FBComment from './components/FBComment.vue'

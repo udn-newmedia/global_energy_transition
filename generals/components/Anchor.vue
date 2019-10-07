@@ -127,8 +127,11 @@ export default {
     background-color: #000000;
     transition: border .333s ease-in-out;
     padding: 0 60px;
-    @media only screen and (min-width: 769px) {
-      padding: 0 calc(50vw - 440px);
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+      padding: 0 calc(50% - 320px);
+    }
+    @media only screen and (min-width: 1025px) {
+      padding: 0 calc(50vw - 384px);
     }
     .anchor {
       height: 100%;

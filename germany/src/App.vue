@@ -13,6 +13,9 @@
           :coverHighlightFlag="coverHighlightFlag"
         />
         <p><br></p>
+        <p><br></p>
+        <p><br></p>
+        <p><br></p>
         <p>儘管全球的減碳、廢核聲量正高漲，各國政府、民間團體在推動能源轉型時，卻仍面臨各式難題。</p>
         <p><br></p>
         <p>「能源轉型就像革命一樣，」一位推動南韓社區能源轉型的市民想到自己曾面臨的阻礙，不禁搖了搖頭。</p>
@@ -28,6 +31,7 @@
             }"
           >並計劃在2025年，再生能源發電佔比達20%</mark>，但節節高漲的電費、供電問題卻也隨之而來；放眼全球，加速老舊燃煤電廠退役、發展綠能產業正成國際趨勢，不過各國也面臨扼制綠能產業發展的法規、過時的電力產業結構等阻礙。
         </p>
+        <p><br></p>
         <p><br></p>
         <div id="cover-arrow-end"/>
         <div class="energy-chart-wrapper">
@@ -66,6 +70,10 @@
         <p>當能源轉型已勢在必行，各國政府如何協助燃煤產業轉型、催生再生能源產業，民間團體又如何將節能與公民發電落實於日常生活中？</p>
         <p><br></p>
         <p>《聯合報》採訪團隊實際走訪英國、德國、荷蘭、日本、南韓，紀錄這5個國家的能源轉型之路，希望借鏡國外經驗，讓台灣的能源轉型之路走得更順、走得更遠。</p>
+        <p><br></p>
+        <p><br></p>
+        <p><br></p>
+        <p><br></p>
       </div>
     </div>
     <Anchor :currentPage="2" :anchorFixedFlag="anchorFixedFlag"/>
@@ -84,6 +92,9 @@
     <GradientConnection/>
     <section class="black-bg">
       <div class="content">
+        <p><br></p>
+        <p><br></p>
+        <p><br></p>
         <p><br></p>
         <h3 class="green-title">德國的綠能奇蹟</h3>
         <p><br></p>
@@ -110,6 +121,12 @@
               'https://p3.udn.com.tw/global_energy_transition/germany/longform_Germany_m2.mp4' :
               'https://p3.udn.com.tw/global_energy_transition/germany/longform_Germany_pc.mp4'
             "
+            :poster="
+              require(isMob ?
+              './assets/mob/longform_Germany_post_m.jpg' :
+              './assets/pc/longform_Germany_post_pc.jpg'
+              )
+            "
             webkit-playsinline
             playsinline
             preload="auto"
@@ -122,6 +139,10 @@
     <GradientConnection/>
     <section class="black-bg">
       <div class="content">
+        <p><br></p>
+        <p><br></p>
+        <p><br></p>
+        <p><br></p>
         <p id="text-highlight-1">燃煤會惡化空氣，還會增加排碳量，造成地球暖化，不過，<mark
             :class="{
               'text-highlight-ie': isIE,
@@ -136,6 +157,8 @@
         <p><br></p>
         <p><br></p>
         <Youtube src="https://www.youtube.com/embed/xFZkhwQD4kE"></Youtube>
+        <p><br></p>
+        <p><br></p>
         <p><br></p>
         <p><br></p>
       </div>
@@ -155,8 +178,10 @@
         </div>
       </div>
     </section>
-    <section class="white-bg">
-      <div class="content gray-bg">
+    <section class="gray-bg">
+      <div class="content gray-bg padding-bottom-none">
+        <p><br></p>
+        <p><br></p>
         <p><br></p>
         <p><br></p>
         <h3>開採燃煤讓水變差<br>釀出來的啤酒也會不好喝</h3>
@@ -168,13 +193,15 @@
         <p>柏林人能源圓桌也把一張張「別讓啤酒加鹽（Lasst Euch Das bier nicht versalzen）」的杯墊送給參加的民眾，讓民眾對於燃煤的壞處更有感，也因此對燃煤更反感。</p>
         <p><br></p>
         <p><br></p>
-        <div class="image-wrapper">
-          <img
-            :src="require(isMob ? './assets/mob/global_energy_transition_Germany_artical_image01_m.jpg' : './assets/pc/global_energy_transition_Germany_artical_image01.jpg')"
-            alt="德國能源轉型"
-          >
-          <div class="image-description">柏林人能源圓桌特別製作「別讓啤酒加鹽」的杯墊。記者余承翰／攝影</div>
-        </div>
+      </div>
+      <div class="image-wrapper">
+        <img
+          :src="require(isMob ? './assets/mob/global_energy_transition_Germany_artical_image01_m.jpg' : './assets/pc/global_energy_transition_Germany_artical_image01.jpg')"
+          alt="德國能源轉型"
+        >
+        <div class="image-description">柏林人能源圓桌特別製作「別讓啤酒加鹽」的杯墊。記者余承翰／攝影</div>
+      </div>
+      <div class="content gray-bg padding-top-none">
         <p><br></p>
         <p><br></p>
         <p id="text-highlight-2">
@@ -187,6 +214,8 @@
             }"
           >預期未來10到30年再這樣開採下去的話，柏林的水一定會變差，變差的水，釀出來的啤酒也會不好喝。</mark>
         </p>
+        <p><br></p>
+        <p><br></p>
         <p><br></p>
         <p><br></p>
         <h3>柏林人：拿回發電自主權</h3>
@@ -223,6 +252,8 @@
         <p>羅德表示，現在柏林的城市產電能力還很小、很低弱，但希望未來，柏林不只是讓燃煤退場，還要全部用再生能源；此外，也要把仍由跨國企業掌握的發電、供電權拿回柏林人手中，分散式的讓公民參與，讓公民獲得發電利潤，進而可以跟大型發電廠競爭。</p>
         <p><br></p>
         <p>從德國人最重視的啤酒出發，柏林人能源圓桌要讓民眾更了解能源，進而促進民眾選擇綠電供應商，用公民的力量合力推動能源轉型。</p>
+        <p><br></p>
+        <p><br></p>
         <p><br></p>
         <p><br></p>
       </div>
@@ -353,7 +384,7 @@ import Utils from 'udn-newmedia-utils';
 
 import Anchor from '@generals/components/Anchor.vue'
 import ArticleArrow from '@generals/components/ArticleArrow.vue'
-import Cover from './components/Cover.vue'
+import Cover from '@generals/components/Cover.vue'
 import GoTop from '@generals/components/GoTop.vue'
 import GradientConnection from '@generals/components/GradientConnection.vue'
 import FBComment from './components/FBComment.vue'
@@ -519,7 +550,7 @@ export default {
   }
 }
 .section-cover img {
-  width: 70px !important;
+  width: 60px !important;
   @media only screen and (min-width: 768px) and (max-width: 1024px) {
     width: 100px !important;
   }

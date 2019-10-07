@@ -2,7 +2,7 @@
   <div class="related-section-container">
     <div v-if="isMob" class="related-section related-section-mob">
       <div class="related-title-container">
-        <img :src="require('../assets/title/global_energy_transition_Germany_title_read.svg')" alt="德國能源轉型列報導">
+        <img :src="require('../assets/title/global_energy_transition_title_read.svg')" alt="德國能源轉型列報導">
       </div>
       <Slick
         ref="slick"
@@ -23,36 +23,36 @@
           name="德國能源轉型列報導"
           class="related-article"
           target="_blank"
-          @click="sendRelatedGA('R1')"
+          @click="sendRelatedGA('新能源創生')"
         >
-          <img :src="require('../assets/read/read_Germany_01.jpg')" alt="德國能源轉型列報導">
-          <div class="related-article-name">柏林千萬宅 徵節能意識房客</div>
+          <img :src="require('../assets/read/read_Netherlands_02.jpg')" alt="德國能源轉型列報導">
+          <div class="related-article-name">新能源創生</div>
         </a>
         <a
           href=""
           name="德國能源轉型列報導"
           class="related-article"
           target="_blank"
-          @click="sendRelatedGA('R2')"
+          @click="sendRelatedGA('核去核從')"
         >
-          <img :src="require('../assets/read/read_Germany_02.jpg')" alt="德國能源轉型列報導">
-          <div class="related-article-name">氣候覺醒 德國周五行動計畫敲到政府醒為止</div>
+          <img :src="require('../assets/read/read_jp_03.jpg')" alt="德國能源轉型列報導">
+          <div class="related-article-name">核去核從</div>
         </a>
         <a
           href=""
           name="德國能源轉型列報導"
           class="related-article"
           target="_blank"
-          @click="sendRelatedGA('R3')"
+          @click="sendRelatedGA('迎向非煤家園')"
         >
-          <img :src="require('../assets/read/read_Germany_03.jpg')" alt="德國能源轉型列報導">
-          <div class="related-article-name">節能健檢搶救能源貧窮</div>
+          <img :src="require('../assets/read/read_uk_01.jpg')" alt="德國能源轉型列報導">
+          <div class="related-article-name">迎向非煤家園</div>
         </a>
         </Slick>
     </div>
     <div v-else class="related-section related-section-pc">
       <div class="related-title-container">
-        <img :src="require('../assets/title/global_energy_transition_Germany_title_read.svg')" alt="德國能源轉型列報導轉型列報導">        
+        <img :src="require('../assets/title/global_energy_transition_title_read.svg')" alt="德國能源轉型列報導轉型列報導">        
       </div>
       <div class="related-article-container">
         <a
@@ -60,30 +60,30 @@
           name="德國能源轉型列報導"
           class="related-article"
           target="_blank"
-          @click="sendRelatedGA('R1')"
+          @click="sendRelatedGA('新能源創生')"
         >
-          <img :src="require('../assets/read/read_Germany_01.jpg')" alt="德國能源轉型列報導">
-          <div class="related-article-name">柏林千萬宅 徵節能意識房客</div>
+          <img :src="require('../assets/read/read_Netherlands_02.jpg')" alt="德國能源轉型列報導">
+          <div class="related-article-name">新能源創生</div>
         </a>
         <a
           href=""
           name="德國能源轉型列報導"
           class="related-article"
           target="_blank"
-          @click="sendRelatedGA('R2')"
+          @click="sendRelatedGA('核去核從')"
         >
-          <img :src="require('../assets/read/read_Germany_02.jpg')" alt="德國能源轉型列報導">
-          <div class="related-article-name">氣候覺醒 德國周五行動計畫敲到政府醒為止</div>
+          <img :src="require('../assets/read/read_jp_03.jpg')" alt="德國能源轉型列報導">
+          <div class="related-article-name">核去核從</div>
         </a>
         <a
           href=""
           name="德國能源轉型列報導"
           class="related-article"
           target="_blank"
-          @click="sendRelatedGA('R3')"
+          @click="sendRelatedGA('迎向非煤家園')"
         >
-          <img :src="require('../assets/read/read_Germany_03.jpg')" alt="德國能源轉型列報導">
-          <div class="related-article-name">節能健檢搶救能源貧窮</div>
+          <img :src="require('../assets/read/read_uk_01.jpg')" alt="德國能源轉型列報導">
+          <div class="related-article-name">迎向非煤家園</div>
         </a>
       </div>
     </div>

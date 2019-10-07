@@ -13,6 +13,9 @@
           :coverHighlightFlag="coverHighlightFlag"
         />
         <p><br></p>
+        <p><br></p>
+        <p><br></p>
+        <p><br></p>
         <p>儘管全球的減碳、廢核聲量正高漲，各國政府、民間團體在推動能源轉型時，卻仍面臨各式難題。</p>
         <p><br></p>
         <p>「能源轉型就像革命一樣，」一位推動南韓社區能源轉型的市民想到自己曾面臨的阻礙，不禁搖了搖頭。</p>
@@ -28,6 +31,7 @@
             }"
           >並計劃在2025年，再生能源發電佔比達20%</mark>，但節節高漲的電費、供電問題卻也隨之而來；放眼全球，加速老舊燃煤電廠退役、發展綠能產業正成國際趨勢，不過各國也面臨扼制綠能產業發展的法規、過時的電力產業結構等阻礙。
         </p>
+        <p><br></p>
         <p><br></p>
         <div id="cover-arrow-end"/>
         <div class="energy-chart-wrapper">
@@ -66,6 +70,10 @@
         <p>當能源轉型已勢在必行，各國政府如何協助燃煤產業轉型、催生再生能源產業，民間團體又如何將節能與公民發電落實於日常生活中？</p>
         <p><br></p>
         <p>《聯合報》採訪團隊實際走訪英國、德國、荷蘭、日本、南韓，紀錄這5個國家的能源轉型之路，希望借鏡國外經驗，讓台灣的能源轉型之路走得更順、走得更遠。</p>
+        <p><br></p>
+        <p><br></p>
+        <p><br></p>
+        <p><br></p>
       </div>
     </div>
     <Anchor :currentPage="1" :anchorFixedFlag="anchorFixedFlag"/>
@@ -84,6 +92,9 @@
     <GradientConnection/>
     <section class="black-bg">
       <div class="content">
+        <p><br></p>
+        <p><br></p>
+        <p><br></p>
         <p><br></p>
         <h3 class="green-title">南韓的「脫核去煤」之路</h3>
         <p><br></p>
@@ -110,6 +121,12 @@
               'https://p3.udn.com.tw/global_energy_transition/south_korea/korea_m.mp4' :
               'https://p3.udn.com.tw/global_energy_transition/south_korea/korea_pc.mp4'
             "
+            :poster="
+              require(isMob ?
+              './assets/mob/korea_m_post.jpg' :
+              './assets/pc/korea_pc_post.jpg'
+              )
+            "
             webkit-playsinline
             playsinline
             preload="auto"
@@ -122,6 +139,10 @@
     <GradientConnection/>
     <section class="black-bg">
       <div class="content">
+        <p><br></p>
+        <p><br></p>
+        <p><br></p>
+        <p><br></p>
         <p>南韓西岸全羅北道的新萬金有一道長33.9公里的世界最長人工海堤，其宏偉景象連在外太空也看得見，在南韓政府的規劃下，新萬金海堤內已變身409平方公里的填海造陸地區，而未來，該填海造陸地區還會再創一個世界之最──世界最大再生能源中心。</p>
         <p><br></p>
         <p id="text-highlight-1">
@@ -136,12 +157,14 @@
         </p>
         <p><br></p>
         <p><br></p>
-        <Youtube src="https://www.youtube.com/embed/sItQomOkvrg"></Youtube>
+        <Youtube src="https://www.youtube.com/embed/mX-5aA7IEIE"></Youtube>
+        <p><br></p>
+        <p><br></p>
         <p><br></p>
         <p><br></p>
       </div>
     </section>
-    <section class="white-bg">
+    <section class="gray-bg">
       <div id="section-cover-2" class="section-cover-container">
         <div :class="{
             'section-cover': true,
@@ -171,6 +194,8 @@
       <div class="content gray-bg">
         <p><br></p>
         <p><br></p>
+        <p><br></p>
+        <p><br></p>
         <h3>新萬金將帶來20億韓元經濟效益</h3>
         <p><br></p>
         <p>「小心！有蜘蛛網！」《聯合報》採訪團隊實際走訪位新萬金將規劃為太陽能發電廠的預定地，只見該處仍是滿地紅土，雜草已長到一人高，方圓數公里內均未見人跡，若未多加留意，每走幾步路還會撞上大片蜘蛛網，但若隔幾年再訪這塊土地，眼前的荒煙漫草景象將會換成上萬片太陽能板及繁榮的再生能源產業聚落，總發電裝置容量上看2.6GW。</p>
@@ -180,6 +205,8 @@
         <p>新萬金開發計畫將先從人工海堤附近開始建設，再逐漸往內地拓展，計劃斥資6.5兆韓元，落成後將帶來逾20兆韓元的經濟效益。新萬金開發公司隸屬南韓國土交通部，與同樣隸屬南韓政府的新萬金開發廳一同負責此計畫的招商、投資獎勵等業務。</p>
         <p><br></p>
         <p>新萬金附近原是小漁村，居民大多靠海吃飯、從事捕魚業，而根據新萬金開發廳，新萬金再生能源中心完工後，預計將吸引100家再生能源廠商進駐，為當地帶來10萬個工作機會。</p>
+        <p><br></p>
+        <p><br></p>
         <p><br></p>
         <p><br></p>
       </div>
@@ -196,7 +223,9 @@
           </div>
         </div>
       </div>
-      <div class="content gray-bg">
+      <div class="content gray-bg padding-bottom-none">
+        <p><br></p>
+        <p><br></p>
         <p><br></p>
         <p><br></p>
         <h3>鼓勵居民投資再生能源<br>不如讓他們能繼續捕魚</h3>
@@ -208,13 +237,17 @@
         <p>不過，全羅北道居民的生計問題讓吳昌桓開始有了不同想法，由於當地居民大多以海為生，吳昌桓認為，若要促進當地就業，勢必得開發生態環境，現在，他主張有條件的開發，要求政府「在開發的同時也要能復原生態」。</p>
         <p><br></p>
         <p><br></p>
-        <div class="image-wrapper">
-          <img
-            :src="require(isMob ? './assets/mob/global_energy_transition_South_Korea_artical_image01_m.jpg' : './assets/pc/global_energy_transition_South_Korea_artical_image01.jpg')"
-            alt="韓國能源轉型"
-          >
-          <div class="image-description">新萬金附近捕魚業原本年產值達9,000億韓元，但新萬金海堤落成後，對當地捕魚業、水產造成極大傷害。記者鄭超文／攝影</div>
-        </div>
+      </div>
+    </section>
+    <section class="gray-bg">
+      <div class="image-wrapper gray-bg">
+        <img
+          :src="require(isMob ? './assets/mob/global_energy_transition_South_Korea_artical_image01_m.jpg' : './assets/pc/global_energy_transition_South_Korea_artical_image01.jpg')"
+          alt="韓國能源轉型"
+        >
+        <div class="image-description">新萬金附近捕魚業原本年產值達9,000億韓元，但新萬金海堤落成後，對當地捕魚業、水產造成極大傷害。記者鄭超文／攝影</div>
+      </div>
+      <div class="content gray-bg padding-top-none padding-bottom-none">
         <p><br></p>
         <p><br></p>
         <p>吳昌桓目前擔任新萬金再生能源公私協調委員會共同會長，該委員會於2018年底成立，成員包含當地漁民、學者、政府代表等，專門協調當地漁民與政府間的歧見。</p>
@@ -222,22 +255,26 @@
         <p>在委員會的協調下，全羅北道的居民將能優先投資、參與建設新萬金再生能源計畫。然而，吳昌桓也表示，參與再生能源建設的成本很高，光是1MW的發電容量就得砸下20億韓元，全羅北道有資本能實際參與建設的公司不多。</p>
         <p><br></p>
         <p><br></p>
-        <div class="image-wrapper">
-          <img
-            :src="require(isMob ? './assets/mob/global_energy_transition_South_Korea_artical_image02_m.jpg' : './assets/pc/global_energy_transition_South_Korea_artical_image02.jpg')"
-            alt="韓國能源轉型"
-          >
-          <div class="image-description">全北大學地球與環境科學教授吳昌桓長期關注環保議題，過去也不贊成政府開發新萬金。記者鄭超文／攝影</div>
-          <p><br></p>
-          <p><br></p>
-          <p>「讓當地居民投資再生能源計畫，不如讓他們能繼續捕魚」，吳昌桓指出，新萬金的海堤於2010年落成後，當地的海水遭到淡化，對捕魚業、水產造成極大傷害，參與協調委員會的漁民代表因此極力主張將新萬金的海堤部分打通，讓新萬金附近的海水能流通。</p>
-          <p><br></p>
-          <p>「你們知道嗎？我的專業領域其實是地球科學，不是再生能源，」採訪接近尾聲，吳昌桓秀出他擔任新萬金計畫協調者所研讀的各項報告，笑稱自己現在都快成為再生能源領域的專家了。</p>
-          <p><br></p>
-          <p>儘管過程艱辛，但為了能讓新萬金開發計畫也能兼顧生態保育及居民利益，吳昌桓仍繼續為一個更「永續發展」的新萬金奔走。</p>
-          <p><br></p>
-          <p><br></p>
-        </div>
+      </div>
+      <div class="image-wrapper">
+        <img
+          :src="require(isMob ? './assets/mob/global_energy_transition_South_Korea_artical_image02_m.jpg' : './assets/pc/global_energy_transition_South_Korea_artical_image02.jpg')"
+          alt="韓國能源轉型"
+        >
+        <div class="image-description">全北大學地球與環境科學教授吳昌桓長期關注環保議題，過去也不贊成政府開發新萬金。記者鄭超文／攝影</div>
+      </div>
+      <div class="content gray-bg padding-top-none">
+        <p><br></p>
+        <p><br></p>
+        <p>「讓當地居民投資再生能源計畫，不如讓他們能繼續捕魚」，吳昌桓指出，新萬金的海堤於2010年落成後，當地的海水遭到淡化，對捕魚業、水產造成極大傷害，參與協調委員會的漁民代表因此極力主張將新萬金的海堤部分打通，讓新萬金附近的海水能流通。</p>
+        <p><br></p>
+        <p>「你們知道嗎？我的專業領域其實是地球科學，不是再生能源，」採訪接近尾聲，吳昌桓秀出他擔任新萬金計畫協調者所研讀的各項報告，笑稱自己現在都快成為再生能源領域的專家了。</p>
+        <p><br></p>
+        <p>儘管過程艱辛，但為了能讓新萬金開發計畫也能兼顧生態保育及居民利益，吳昌桓仍繼續為一個更「永續發展」的新萬金奔走。</p>
+        <p><br></p>
+        <p><br></p>
+        <p><br></p>
+        <p><br></p>
       </div>
       <NextSection
         :directInfo="{

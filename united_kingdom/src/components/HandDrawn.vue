@@ -269,7 +269,12 @@ export default {
             break;
         }
       }
-      function dragEnded() {}
+      function dragEnded() {
+        let userAnswer = customData.map((e) => {
+          return +customYScale(e).toFixed(1);
+        })
+        vm.sendAnwserGA(userAnswer);
+      }
       function drawCustomLine() {
         svg.select("#custom-line").remove();
         svg
@@ -388,6 +393,14 @@ export default {
           "] [" +
           document.querySelector("title").innerHTML +
           "] [畫畫看]"
+      });
+    },
+    sendAnwserGA(customData) {
+      window.ga("newmedia.send", {
+        "hitType": "event",
+        "eventCategory": "test",
+        "eventAction": "draw",
+        "eventLabel": "[" + Utils.detectPlatform() + "] [" + document.querySelector('title').innerHTML + "] [使用者回答] [" + customData + "]",
       });
     },
     sendSolutionGA() {

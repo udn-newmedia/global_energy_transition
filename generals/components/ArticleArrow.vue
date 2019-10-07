@@ -157,6 +157,7 @@ export default {
 <style lang="scss" scoped>
 .article-arrow-container {
   position: absolute;
+  z-index: 1;
   left: 0;
   width: 100vw;
   .arrow {

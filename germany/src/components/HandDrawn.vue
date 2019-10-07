@@ -112,6 +112,10 @@ export default {
         .scaleLinear()
         .domain([0, 50])
         .range([config.height, 0]);
+      const customYScale = d3
+        .scaleLinear()
+        .domain([config.height, 0])
+        .range([0, 50]);
       const customXScale = d3
         .scaleQuantize()
         .domain([config.marginSide, config.width - config.marginSide * config.marginSideRatio])
@@ -258,7 +262,12 @@ export default {
             break;
         }
       }
-      function dragEnded() {}
+      function dragEnded() {
+        let userAnswer = customData.map((e) => {
+          return +customYScale(e).toFixed(1);
+        })
+        vm.sendAnwserGA(userAnswer);
+      }
       function drawCustomLine() {
         svg.select('#custom-line').remove();
         svg.append('path')
@@ -337,6 +346,14 @@ export default {
         "eventCategory": "test",
         "eventAction": "draw",
         "eventLabel": "[" + Utils.detectPlatform() + "] [" + document.querySelector('title').innerHTML + "] [畫畫看]",
+      });
+    },
+    sendAnwserGA(customData) {
+      window.ga("newmedia.send", {
+        "hitType": "event",
+        "eventCategory": "test",
+        "eventAction": "draw",
+        "eventLabel": "[" + Utils.detectPlatform() + "] [" + document.querySelector('title').innerHTML + "] [使用者回答] [" + customData + "]",
       });
     },
     sendSolutionGA() {
