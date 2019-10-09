@@ -36,6 +36,9 @@ export default {
     isMob() {
       return window.innerWidth <= 768 ? true : false;
     },
+    outerWidth() {
+      return window.outerWidth;
+    }
   },
   watch: {
     frogFlag: {
@@ -50,6 +53,7 @@ export default {
       const vm = this;
       let canvasWidth = vm.windowWidth;
       let canvasHeight = vm.windowHeight;
+      
       let pCount = 0;
       let pCollection = new Array();
       let puffs = 1;

@@ -4,7 +4,7 @@
       <div class="fb-like" :data-href="setProps('href')" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
     </div>
     <div class="line-block" @click="shareToLine">
-      <img class="line-share" src="//media.line.me/img/button/zh-hant/84x20.png" width="84" height="20" alt="LINE分享給朋友">
+      <img class="line-share" src="https://media.line.me/img/button/zh-hant/84x20.png" width="84" height="20" alt="LINE分享給朋友">
     </div>
   </div>
 </template>

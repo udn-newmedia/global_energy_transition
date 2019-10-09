@@ -10,6 +10,7 @@
   "dependencies": {
     "core-js": "^2.6.5",
     "d3": "^5.12.0",
+    "detect-inapp": "^1.4.0",
     "jquery": "^3.4.1",
     "lodash.throttle": "^4.1.1",
     "udn-newmedia-utils": "^1.1.0",

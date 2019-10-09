@@ -2,7 +2,9 @@
   <div class="head-bar-container">
     <div class="logo-wrapper" @click="sendLogoGA()">
       <a :href="homePath" target="_blank" name="udn-logo-button">
-        <i class="udn-icon udn-icon-logo"/>
+        <!-- <i class="udn-icon udn-icon-logo"/>
+         -->
+        <img :src="require('../assets/vision_project_logo.png')" alt="fb-icon">
       </a>
     </div>
     <div class="share-button-container">
@@ -105,14 +107,23 @@ export default {
   }
   .logo-wrapper {
     position: relative;
-    width: 30px;
-    height: 30px;
+    // width: 30px;
+    // height: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 30px;
+    // font-size: 30px;
     margin: 10px;
+    @media only screen and (min-width: 1025px)  {
+    }
     cursor: pointer;
+    img {
+      width: 130px;
+      @media only screen and (min-width: 1025px)  {
+        width: 160px;
+        margin-top: 20px;
+      }
+    }
     i {
       color: #f1f1f1;
       transform: rotate(0deg);
@@ -125,6 +136,9 @@ export default {
   .share-button-container {
     position: relative;
     margin: 0 5px;
+    @media only screen and (min-width: 1025px)  {
+      margin: 0 15px;
+    }
     .share-button {
       position: relative;
       width: 30px;

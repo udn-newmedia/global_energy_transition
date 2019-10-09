@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <HeadBar page="Germany"/>
-    <Cover :frogFlag="frogFlag"/>
+    <Cover :frogFlag="frogFlag" />
     <GradientConnection/>
     <div class="cover-context black-bg">
       <div class="content content-thin">
@@ -381,6 +381,7 @@
 
 <script>
 import Utils from 'udn-newmedia-utils';
+import InApp from 'detect-inapp';
 
 import Anchor from '@generals/components/Anchor.vue'
 import ArticleArrow from '@generals/components/ArticleArrow.vue'
@@ -522,6 +523,26 @@ export default {
   mounted() {
     this.totalPageHeight = document.body.scrollHeight;
     window.addEventListener('scroll', this.handleScroll);
+  },
+  created() {
+    // 處理inapp browser window.innerWidth問題
+    (function() {
+      const inapp = new InApp(navigator.userAgent || navigator.vendor || window.opera);
+      let currentWidth = window.innerWidth;
+      let executeCount = 0;
+      if (inapp.isInApp) {
+        const inappWidthListener = setInterval(() => {
+          executeCount++;
+          if (window.innerWidth !== currentWidth) {
+            window.location.reload();
+            currentWidth = window.innerWidth;
+          }
+          if (executeCount > 10) {
+            clearInterval(inappWidthListener);
+          }
+        }, 100);
+      }
+    })();
   },
   destroyed() {
     window.addEventListener('scroll', this.handleScroll);
