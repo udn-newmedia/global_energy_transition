@@ -128,7 +128,7 @@
         <p>福島縣企畫調整部復興綜合計劃課副課長山田清貴表示，福島的復興不能只是重建，眼光必須看得更遠，過去的福島曾是能源重鎮，未來要成為引領日本新能源的大縣，只有創造走在新時代尖端的產業，福島才能獲得重生。</p>
         <p><br></p>
         <p><br></p>
-        <Youtube src="https://www.youtube.com/embed/_4Pxf78migU"></Youtube>
+        <Youtube src="https://www.youtube.com/embed/Jcpv_4G0MGE"></Youtube>
         <p><br></p>
         <p><br></p>
         <p><br></p>
@@ -310,8 +310,8 @@
           </div>
         </div>
         <p><br></p>
-        <!-- <Share href="https://udn.com/newmedia/2019/global_energy_transition/Japan/"/> -->
-        <Share href="http://nmdap.udn.com.tw/newmedia/2019/global_energy_transition/Japan/"/>
+        <Share href="https://udn.com/newmedia/2019/global_energy_transition/Japan/"/>
+        <!-- <Share href="http://nmdap.udn.com.tw/newmedia/2019/global_energy_transition/Japan/"/> -->
         <p><br></p>
         <p><br></p>
         <div class="logo-container">
@@ -334,8 +334,8 @@
         <Question href="https://www.surveycake.com/s/KpQKN" text="填寫閱讀體驗問卷"/>
         <p><br></p>
         <div class="content">
-          <!-- <FBComment href="https://udn.com/newmedia/2019/global_energy_transition/Japan/"/> -->
-          <FBComment href="http://nmdap.udn.com.tw/newmedia/2019/global_energy_transition/Japan/"/>
+          <FBComment href="https://udn.com/newmedia/2019/global_energy_transition/Japan/"/>
+          <!-- <FBComment href="http://nmdap.udn.com.tw/newmedia/2019/global_energy_transition/Japan/"/> -->
         </div>
         <p><br></p>
         <p><br></p>

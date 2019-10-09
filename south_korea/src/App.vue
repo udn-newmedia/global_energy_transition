@@ -362,8 +362,8 @@
           </div>
         </div>
         <p><br></p>
-        <!-- <Share href="https://udn.com/newmedia/2019/global_energy_transition/South_Korea/"/> -->
-        <Share href="http://nmdap.udn.com.tw/newmedia/2019/global_energy_transition/South_Korea/"/>
+        <Share href="https://udn.com/newmedia/2019/global_energy_transition/South_Korea/"/>
+        <!-- <Share href="http://nmdap.udn.com.tw/newmedia/2019/global_energy_transition/South_Korea/"/> -->
         <p><br></p>
         <p><br></p>
         <div class="logo-container">
@@ -386,8 +386,8 @@
         <Question href="https://www.surveycake.com/s/KpQKN" text="填寫閱讀體驗問卷"/>
         <p><br></p>
         <div class="content">
-          <!-- <FBComment href="https://udn.com/newmedia/2019/global_energy_transition/South_Korea/"/> -->
-          <FBComment href="http://nmdap.udn.com.tw/newmedia/2019/global_energy_transition/South_Korea/"/>
+          <FBComment href="https://udn.com/newmedia/2019/global_energy_transition/South_Korea/"/>
+          <!-- <FBComment href="http://nmdap.udn.com.tw/newmedia/2019/global_energy_transition/South_Korea/"/> -->
         </div>
         <p><br></p>
         <p><br></p>

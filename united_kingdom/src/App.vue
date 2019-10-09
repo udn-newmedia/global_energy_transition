@@ -168,7 +168,7 @@
         <p>行至碼頭，我們踏上船長大衛羅斯（David Ross）的觀光船，預計進行一趟來回3小時的離岸風電之旅。當天雖然風感覺不大，但出發時，天色看來有些陰暗，幸好，大衛點點頭表示，今天的風況看來還可以，出海應是沒問題。</p>
         <p><br></p>
         <p><br></p>
-        <Youtube src="https://www.youtube.com/embed/xFZkhwQD4kE"></Youtube>
+        <Youtube src="https://www.youtube.com/embed/nWtXZRK1gyk"></Youtube>
         <p><br></p>
         <p><br></p>
         <p><br></p>
@@ -350,8 +350,8 @@
           </div>
         </div>
         <p><br></p>
-        <!-- <Share href="https://udn.com/newmedia/2019/global_energy_transition/United_Kingdom/"/> -->
-        <Share href="http://nmdap.udn.com.tw/newmedia/2019/global_energy_transition/United_Kingdom/"/>
+        <Share href="https://udn.com/newmedia/2019/global_energy_transition/United_Kingdom/"/>
+        <!-- <Share href="http://nmdap.udn.com.tw/newmedia/2019/global_energy_transition/United_Kingdom/"/> -->
         <p><br></p>
         <p><br></p>
         <div class="logo-container">
@@ -374,8 +374,8 @@
         <Question href="https://www.surveycake.com/s/KpQKN" text="填寫閱讀體驗問卷"/>
         <p><br></p>
         <div class="content">
-          <!-- <FBComment href="https://udn.com/newmedia/2019/global_energy_transition/United_Kingdom/"/> -->
-          <FBComment href="http://nmdap.udn.com.tw/newmedia/2019/global_energy_transition/United_Kingdom/"/>
+          <FBComment href="https://udn.com/newmedia/2019/global_energy_transition/United_Kingdom/" />
+          <!-- <FBComment href="http://nmdap.udn.com.tw/newmedia/2019/global_energy_transition/United_Kingdom/" /> -->
         </div>
         <p><br></p>
         <p><br></p>

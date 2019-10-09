@@ -156,7 +156,7 @@
         <p>能源轉型的過程之中，民眾的參與與支持非常重要。德國推動2038年非煤家園、2050年完全使用綠能，除了政府訂定政策目標之外，更多是由微小的個人齊聚成的集體力量。柏林人能源圓桌每個月固定在柏林發起一場城市能源導覽之旅，喊出「別讓燃煤壞了德國啤酒」的口號，導覽目的是要讓民眾了解能源的重要性，對燃煤電廠更加同仇敵愾，並透過增加民眾參與，推動成功的能源轉型。</p>
         <p><br></p>
         <p><br></p>
-        <Youtube src="https://www.youtube.com/embed/xFZkhwQD4kE"></Youtube>
+        <Youtube src="https://www.youtube.com/embed/Owt5R0F21MU"></Youtube>
         <p><br></p>
         <p><br></p>
         <p><br></p>
@@ -343,8 +343,8 @@
           </div>
         </div>
         <p><br></p>
-        <!-- <Share href="https://udn.com/newmedia/2019/global_energy_transition/Germany/"/> -->
-        <Share href="http://nmdap.udn.com.tw/newmedia/2019/global_energy_transition/Germany/"/>
+        <Share href="https://udn.com/newmedia/2019/global_energy_transition/Germany/"/>
+        <!-- <Share href="http://nmdap.udn.com.tw/newmedia/2019/global_energy_transition/Germany/"/> -->
         <p><br></p>
         <p><br></p>
         <div class="logo-container">
@@ -367,8 +367,8 @@
         <Question href="https://www.surveycake.com/s/KpQKN" text="填寫閱讀體驗問卷"/>
         <p><br></p>
         <div class="content">
-          <!-- <FBComment href="https://udn.com/newmedia/2019/global_energy_transition/Germany/"/> -->
-          <FBComment href="http://nmdap.udn.com.tw/newmedia/2019/global_energy_transition/Germany/"/>
+          <FBComment href="https://udn.com/newmedia/2019/global_energy_transition/Germany/"/>
+          <!-- <FBComment href="http://nmdap.udn.com.tw/newmedia/2019/global_energy_transition/Germany/"/> -->
         </div>
         <p><br></p>
         <p><br></p>

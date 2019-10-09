@@ -130,7 +130,7 @@
         <p>荷蘭國鐵發言人吉爾特柯倫（Geert Koolen）指出，最大困難是要確保綠能供應量穩定持續，因此在能源供應上採多方採購，與荷蘭最大永續能源業者Eneco合作，確保能源來自新的永續能源供應地區。目前，一半的風能來自荷蘭，另一半來自瑞典（33%），芬蘭（15%）和比利時（2%）。吉爾特柯倫說，荷蘭鐵路每天運送超過百萬名乘客，但不排放任何二氧化碳。他說，如果每個汽車用戶每年乘坐一次火車，每年就可以減少14萬噸二氧化碳排放，希望幫助政府實現氣候協定目標。</p>
         <p><br/></p>
         <p><br/></p>
-        <Youtube src="https://www.youtube.com/embed/xFZkhwQD4kE"></Youtube>
+        <Youtube src="https://www.youtube.com/embed/PfktfnwOgVk"></Youtube>
         <p><br/></p>
         <p><br/></p>
         <p><br/></p>
@@ -382,10 +382,8 @@
           </div>
         </div>
         <p><br/></p>
-        <!-- <Share href="https://udn.com/newmedia/2019/global_energy_transition/The_Netherlands/"/> -->
-        <Share
-          href="http://nmdap.udn.com.tw/newmedia/2019/global_energy_transition/The_Netherlands/"
-        />
+        <Share href="https://udn.com/newmedia/2019/global_energy_transition/The_Netherlands/" />
+        <!-- <Share href="http://nmdap.udn.com.tw/newmedia/2019/global_energy_transition/The_Netherlands/" /> -->
         <p><br/></p>
         <p><br/></p>
         <div class="logo-container">
@@ -423,10 +421,8 @@
         <Question href="https://www.surveycake.com/s/KpQKN" text="填寫閱讀體驗問卷" />
         <p><br/></p>
         <div class="content">
-          <!-- <FBComment href="https://udn.com/newmedia/2019/global_energy_transition/The_Netherlands/"/> -->
-          <FBComment
-            href="http://nmdap.udn.com.tw/newmedia/2019/global_energy_transition/The_Netherlands/"
-          />
+          <FBComment href="https://udn.com/newmedia/2019/global_energy_transition/The_Netherlands/" />
+          <!-- <FBComment href="http://nmdap.udn.com.tw/newmedia/2019/global_energy_transition/The_Netherlands/" /> -->
         </div>
         <p><br/></p>
         <p><br/></p>
