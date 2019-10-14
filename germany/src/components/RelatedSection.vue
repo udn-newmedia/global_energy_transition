@@ -19,27 +19,27 @@
         }"
       >
         <a
-          href=""
+          href="https://topic.udn.com/event/Hydrogenpower"
           name="德國能源轉型列報導"
           class="related-article"
           target="_blank"
-          @click="sendRelatedGA('新能源創生')"
+          @click="sendRelatedGA('社企新能源')"
         >
           <img :src="require('../assets/read/read_Netherlands_02.jpg')" alt="德國能源轉型列報導">
-          <div class="related-article-name">新能源創生</div>
+          <div class="related-article-name">社企新能源</div>
         </a>
         <a
-          href=""
+          href="https://topic.udn.com/event/globalnuclear"
           name="德國能源轉型列報導"
           class="related-article"
           target="_blank"
-          @click="sendRelatedGA('核去核從')"
+          @click="sendRelatedGA('今夕核夕？')"
         >
           <img :src="require('../assets/read/read_jp_03.jpg')" alt="德國能源轉型列報導">
-          <div class="related-article-name">核去核從</div>
+          <div class="related-article-name">今夕核夕？</div>
         </a>
         <a
-          href=""
+          href="https://topic.udn.com/event/zerocoalpowerland"
           name="德國能源轉型列報導"
           class="related-article"
           target="_blank"
@@ -56,27 +56,27 @@
       </div>
       <div class="related-article-container">
         <a
-          href=""
+          href="https://topic.udn.com/event/Hydrogenpower"
           name="德國能源轉型列報導"
           class="related-article"
           target="_blank"
-          @click="sendRelatedGA('新能源創生')"
+          @click="sendRelatedGA('社企新能源')"
         >
           <img :src="require('../assets/read/read_Netherlands_02.jpg')" alt="德國能源轉型列報導">
-          <div class="related-article-name">新能源創生</div>
+          <div class="related-article-name">社企新能源</div>
         </a>
         <a
-          href=""
+          href="https://topic.udn.com/event/globalnuclear"
           name="德國能源轉型列報導"
           class="related-article"
           target="_blank"
-          @click="sendRelatedGA('核去核從')"
+          @click="sendRelatedGA('今夕核夕？')"
         >
           <img :src="require('../assets/read/read_jp_03.jpg')" alt="德國能源轉型列報導">
-          <div class="related-article-name">核去核從</div>
+          <div class="related-article-name">今夕核夕？</div>
         </a>
         <a
-          href=""
+          href="https://topic.udn.com/event/zerocoalpowerland"
           name="德國能源轉型列報導"
           class="related-article"
           target="_blank"

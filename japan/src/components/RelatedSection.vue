@@ -19,17 +19,17 @@
         }"
       >
         <a
-          href=""
+          href="https://topic.udn.com/event/energysaving"
           name="日本能源"
           class="related-article"
           target="_blank"
-          @click="sendRelatedGA('節能新挑戰')"
+          @click="sendRelatedGA('搶救能源貧窮')"
         >
           <img :src="require('../assets/read/read_Germany_03.jpg')" alt="日本能源">
-          <div class="related-article-name">節能新挑戰</div>
+          <div class="related-article-name">搶救能源貧窮</div>
         </a>
         <a
-          href=""
+          href="https://topic.udn.com/event/greenpowerpeople"
           name="日本能源"
           class="related-article"
           target="_blank"
@@ -39,14 +39,14 @@
           <div class="related-article-name">綠能環境衝突</div>
         </a>
         <a
-          href=""
+          href="https://topic.udn.com/event/Hydrogenpower"
           name="日本能源"
           class="related-article"
           target="_blank"
-          @click="sendRelatedGA('新能源創生')"
+          @click="sendRelatedGA('社企新能源')"
         >
           <img :src="require('../assets/read/read_Netherlands_02.jpg')" alt="日本能源">
-          <div class="related-article-name">新能源創生</div>
+          <div class="related-article-name">社企新能源</div>
         </a>
         </Slick>
     </div>
@@ -56,17 +56,17 @@
       </div>
       <div class="related-article-container">
         <a
-          href=""
+          href="https://topic.udn.com/event/energysaving"
           name="日本能源"
           class="related-article"
           target="_blank"
-          @click="sendRelatedGA('節能新挑戰')"
+          @click="sendRelatedGA('搶救能源貧窮')"
         >
           <img :src="require('../assets/read/read_Germany_03.jpg')" alt="日本能源">
-          <div class="related-article-name">節能新挑戰</div>
+          <div class="related-article-name">搶救能源貧窮</div>
         </a>
         <a
-          href=""
+          href="https://topic.udn.com/event/greenpowerpeople"
           name="日本能源"
           class="related-article"
           target="_blank"
@@ -76,14 +76,14 @@
           <div class="related-article-name">綠能環境衝突</div>
         </a>
         <a
-          href=""
+          href="https://topic.udn.com/event/Hydrogenpower"
           name="日本能源"
           class="related-article"
           target="_blank"
-          @click="sendRelatedGA('新能源創生')"
+          @click="sendRelatedGA('社企新能源')"
         >
           <img :src="require('../assets/read/read_Netherlands_02.jpg')" alt="日本能源">
-          <div class="related-article-name">新能源創生</div>
+          <div class="related-article-name">社企新能源</div>
         </a>
       </div>
     </div>
