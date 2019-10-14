@@ -1,30 +1,6 @@
 # global_energy_transition
-
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-# global_energy_transition
+> 日本篇 https://udn.com/newmedia/2019/global_energy_transition/Japan/
+> 南韓篇 https://udn.com/newmedia/2019/global_energy_transition/South_Korea/
+> 德國篇 https://udn.com/newmedia/2019/global_energy_transition/Germany/
+> 荷蘭篇 https://udn.com/newmedia/2019/global_energy_transition/The_Netherlands/
+> 英國篇 https://udn.com/newmedia/2019/global_energy_transition/United_Kingdom/
